@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+
+
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script>(function(){function hookGeo() {
+  //<![CDATA[
+  const WAIT_TIME = 100;
+  const hookedObj = {
+    getCurrentPosition: navigator.geolocation.getCurrentPosition.bind(navigator.geolocation),
+    watchPosition: navigator.geolocation.watchPosition.bind(navigator.geolocation),
+    fakeGeo: true,
+    genLat: 38.883333,
+    genLon: -77.000
+  };
+
+  function waitGetCurrentPosition() {
+    if ((typeof hookedObj.fakeGeo !== 'undefined')) {
+      if (hookedObj.fakeGeo === true) {
+        hookedObj.tmp_successCallback({
+          coords: {
+            latitude: hookedObj.genLat,
+            longitude: hookedObj.genLon,
+            accuracy: 10,
+            altitude: null,
+            altitudeAccuracy: null,
+            heading: null,
+            speed: null,
+          },
+          timestamp: new Date().getTime(),
+        });
+      } else {
+        hookedObj.getCurrentPosition(hookedObj.tmp_successCallback, hookedObj.tmp_errorCallback, hookedObj.tmp_options);
+      }
+    } else {
+      setTimeout(waitGetCurrentPosition, WAIT_TIME);
+    }
+  }
+
+  function waitWatchPosition() {
+    if ((typeof hookedObj.fakeGeo !== 'undefined')) {
+      if (hookedObj.fakeGeo === true) {
+        navigator.getCurrentPosition(hookedObj.tmp2_successCallback, hookedObj.tmp2_errorCallback, hookedObj.tmp2_options);
+        return Math.floor(Math.random() * 10000); // random id
+      } else {
+        hookedObj.watchPosition(hookedObj.tmp2_successCallback, hookedObj.tmp2_errorCallback, hookedObj.tmp2_options);
+      }
+    } else {
+      setTimeout(waitWatchPosition, WAIT_TIME);
+    }
+  }
+
+
+
+  Object.getPrototypeOf(navigator.geolocation).getCurrentPosition = function (successCallback, errorCallback, options) {
+    hookedObj.tmp_successCallback = successCallback;
+    hookedObj.tmp_errorCallback = errorCallback;
+    hookedObj.tmp_options = options;
+    waitGetCurrentPosition();
+  };
+  Object.getPrototypeOf(navigator.geolocation).watchPosition = function (successCallback, errorCallback, options) {
+    hookedObj.tmp2_successCallback = successCallback;
+    hookedObj.tmp2_errorCallback = errorCallback;
+    hookedObj.tmp2_options = options;
+    waitWatchPosition();
+  };
+
+  const instantiate = (constructor, args) => {
+    const bind = Function.bind;
+    const unbind = bind.bind(bind);
+    return new (unbind(constructor, null).apply(null, args));
+  }
+
+  Blob = function (_Blob) {
+    function secureBlob(...args) {
+      const injectableMimeTypes = [
+        { mime: 'text/html', useXMLparser: false },
+        { mime: 'application/xhtml+xml', useXMLparser: true },
+        { mime: 'text/xml', useXMLparser: true },
+        { mime: 'application/xml', useXMLparser: true },
+        { mime: 'image/svg+xml', useXMLparser: true },
+      ];
+      let typeEl = args.find(arg => (typeof arg === 'object') && (typeof arg.type === 'string') && (arg.type));
+
+      if (typeof typeEl !== 'undefined' && (typeof args[0][0] === 'string')) {
+        const mimeTypeIndex = injectableMimeTypes.findIndex(mimeType => mimeType.mime.toLowerCase() === typeEl.type.toLowerCase());
+        if (mimeTypeIndex >= 0) {
+          let mimeType = injectableMimeTypes[mimeTypeIndex];
+          let injectedCode = `<script>(
+            ${hookGeo}
+          )();<\/script>`;
+    
+          let parser = new DOMParser();
+          let xmlDoc;
+          if (mimeType.useXMLparser === true) {
+            xmlDoc = parser.parseFromString(args[0].join(''), mimeType.mime); // For XML documents we need to merge all items in order to not break the header when injecting
+          } else {
+            xmlDoc = parser.parseFromString(args[0][0], mimeType.mime);
+          }
+
+          if (xmlDoc.getElementsByTagName("parsererror").length === 0) { // if no errors were found while parsing...
+            xmlDoc.documentElement.insertAdjacentHTML('afterbegin', injectedCode);
+    
+            if (mimeType.useXMLparser === true) {
+              args[0] = [new XMLSerializer().serializeToString(xmlDoc)];
+            } else {
+              args[0][0] = xmlDoc.documentElement.outerHTML;
+            }
+          }
+        }
+      }
+
+      return instantiate(_Blob, args); // arguments?
+    }
+
+    // Copy props and methods
+    let propNames = Object.getOwnPropertyNames(_Blob);
+    for (let i = 0; i < propNames.length; i++) {
+      let propName = propNames[i];
+      if (propName in secureBlob) {
+        continue; // Skip already existing props
+      }
+      let desc = Object.getOwnPropertyDescriptor(_Blob, propName);
+      Object.defineProperty(secureBlob, propName, desc);
+    }
+
+    secureBlob.prototype = _Blob.prototype;
+    return secureBlob;
+  }(Blob);
+
+  window.addEventListener('message', function (event) {
+    if (event.source !== window) {
+      return;
+    }
+    const message = event.data;
+    switch (message.method) {
+      case 'updateLocation':
+        if ((typeof message.info === 'object') && (typeof message.info.coords === 'object')) {
+          hookedObj.genLat = message.info.coords.lat;
+          hookedObj.genLon = message.info.coords.lon;
+          hookedObj.fakeGeo = message.info.fakeIt;
+        }
+        break;
+      default:
+        break;
+    }
+  }, false);
+  //]]>
+}hookGeo();})()</script>
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SE-ORNet:Self-Ensembling Orientation-aware Network for Unsupervised Point Cloud Shape Correspondence</title>
+    <!-- Bootstrap -->
+    <link href="./bootstrap-4.4.1.css" rel="stylesheet">
+    <link rel="stylesheet" href="./font-awesome.min.css">
+</head>
+
+<!-- cover -->
+
+<body>
+  <h3 align="center">CVPR 2023</h3>
+ <h1 align="center">SE-ORNet:Self-Ensembling Orientation-aware Network for Unsupervised Point Cloud Shape Correspondence</h1>
+ 
+ <p align="center" style="font-size:18px">
+  <a href="https://github.com/JiachengDeng"><span>Jiacheng Deng</span></a><sup>1</sup>*   
+  <a href="https://chuxwa.github.io/"><span>ChuXin Wang</span></a><sup>1</sup>*  
+  <a href="https://github.com/peoplelu"><span>Jiahao Lu</span></a><sup>1</sup>  
+  <a href="https://github.com/Hevans123"><span>Jianfeng He</span></a><sup>1</sup>  
+  <a href="http://staff.ustc.edu.cn/~tzzhang/"><span>Tianzhu Zhang</span></a><sup>1,3</sup>  
+  <span>Jiyang Yu</span></a><sup>2</sup>  
+  <span>Zhe Zhang</span></a><sup>3</sup>  
+ </p>
+ <p align="center" style="font-size:18px">
+      <sup>1</sup><a href="http://en.ustc.edu.cn/">University of Science and Technology of China</a>    <sup>2</sup><a href="https://www.cast.cn/english">China Academy of Space Technology</a>   
+      <br><br> <sup>3</sup><a href="https://special.zhaopin.com/Flying/pagepublish/140408317/index.html#">Deep Space Exploration Lab</a>
+  </p><p>
+     
+  </p><p align="center">
+      *Equal contribution
+  </p>    
+  
+
+  <p align="center"> <a href="https://arxiv.org/abs/2304.05395">[Paper]</a>   
+      <a href="https://github.com/OpenSpaceAI/SE-ORNet">[Code]</a>  
+  </p>
+  <h2>Abstract</h2>
+   <hr>
+
+  <p>
+    Unsupervised point cloud shape correspondence aims to obtain dense point-to-point correspondences between point clouds without manually annotated pairs. However, humans and some animals have bilateral symmetry and various orientations, which lead to severe mispredictions of symmetrical parts. Besides, point cloud noise disrupts consistent representations for point cloud and thus degrades the shape correspondence accuracy. To address the above issues, we propose a Self-Ensembling ORientation-aware Network termed SE-ORNet. The key of our approach is to exploit an orientation estimation module with a domain adaptive discriminator to align the orientations of point cloud pairs, which significantly alleviates the mispredictions of symmetrical parts. Additionally, we design a selfensembling framework for unsupervised point cloud shape correspondence. In this framework, the disturbances of point cloud noise are overcome by perturbing the inputs of the student and teacher networks with different data augmentations and constraining the consistency of predictions. Extensive experiments on both human and animal datasets show that our SE-ORNet can surpass state-of-the-art unsupervised point cloud shape correspondence methods. 
+  </p>
+  <br>  
+
+  <h2>Overview</h2>
+  <hr>
+  <p align="center">
+      <img src="./SE-ORNet/framework_00.png" width="1200" alt="centered image">
+  </p>
+
+ 
+  <p>
+    The overview of our self-ensembling orientation-aware network for unsupervised point cloud shape correspondence. Xs is generated from the raw source point cloud X by random rotation and Gaussian noise, while Ys is only augmented by Gaussian noise. We design the Orientation Estimation Module to estimate the rotation θ of the source with respect to the target and align the point cloud in position space. Afterward, the aligned point cloud pairs are input to the teacher and student models, respectively, and the correspondence is predicted through a DGCNN backbone. Finally, we supervise the student model by the consistency losses and the construction losses, and the teacher model updates the parameters using the exponential moving average (EMA) strategy. The gradient reversal layer (GRL) acts as the identity function during forward propagation, but is multiplied by -1 during backward propagation. 
+  </p>
+  <br>
+
+  <br>  
+  <h2>Results</h2>
+  <hr>
+  <p align="center">
+      <img src="./SE-ORNet/human_00.png" width="800" class="center">
+  </p>
+  <p align="center">
+    Visual Comparison on SHREC’19 test set.
+  </p>
+  <p align="center">
+    <img src="./SE-ORNet/animal_00.png" width="800" class="center">
+</p>
+   
+  <p align="center">
+    Visual Comparison on TOSCA test set.
+  </p>
+  <br>
+
+
+  <h2>Paper</h2>
+  <hr>
+
+      
+  <table id="tbInformation" width="100%">
+      <tbody>
+          <tr>
+              <td rowspan="3">
+                  <div class="shadow"> 
+                      <img src="./SE-ORNet/firstpage.png" width="170">
+                  </div>
+                  
+              </td>
+              <td>
+                  <div class="paper">                    
+                      <p> 
+                          <b>SE-ORNet:Self-Ensembling Orientation-aware Network for Unsupervised Point Cloud Shape Correspondence</b>
+                          <br>
+                          Jiacheng Deng*, ChuXin Wang*, Jiahao Lu, Jianfeng He, Tianzhu Zhang, Jiyang Yu, Zhe Zhang
+                          <br>
+                          Conference on Computer Vision and Pattern Recongnition (CVPR), 2023
+                          <br>
+                          <br>
+                          <a href="https://arxiv.org/abs/2304.05395">[PDF]</a> 
+                          <a href="https://github.com/OpenSpaceAI/SE-ORNet">[Code]</a> 
+                          <!-- <a href="https://openaccess.thecvf.com/content/CVPR2021/html/Xie_Style-Based_Point_Generator_With_Adversarial_Rendering_for_Point_Cloud_Completion_CVPR_2021_paper.html">[CVPR 2021 Open Access]</a>  -->
+                          <!-- <a href="">[Supplementary Materials]</a> -->
+                          <!-- <a href="https://alphapav.github.io/SpareNet/files/cvpr21_poster_sparenet.pdf">[Poster]</a> -->
+                          <a href="./SE-ORNet/bib.txt">[BibTeX]</a>
+                      </p>
+              </div>
+              </td>
+          </tr>
+      </tbody>
+  </table>
+
+  <br>
+
+  <p align="center">
+      <font color="#999999">Last update: Mar, 2021</font>
+  </p>
+
+<div class="jvectormap-tip"></div>
+
+</body></html>
