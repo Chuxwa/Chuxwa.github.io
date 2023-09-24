@@ -1,9 +1,7 @@
-@ARTICLE{10124821,
-  author={Wang, Chuxin and Deng, Jiacheng and He, Jianfeng and Zhang, Tianzhu and Zhang, Zhe and Zhang, Yongdong},
-  journal={IEEE Transactions on Circuits and Systems for Video Technology}, 
-  title={Long-short Range Adaptive Transformer with Dynamic Sampling for 3D Object Detection}, 
-  year={2023},
-  volume={},
-  number={},
-  pages={1-1},
-  doi={10.1109/TCSVT.2023.3272734}}
+@InProceedings{Wang_2023_ICCV,
+    author    = {ChuXin Wang and Wenfei Yang and Tianzhu Zhang},
+    title     = {Not Every Side Is Equal: Localization Uncertainty Estimation for Semi-Supervised 3D Object Detection},
+    booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
+    month     = {October},
+    year      = {2023},
+}

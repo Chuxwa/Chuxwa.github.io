@@ -19,17 +19,17 @@
 
 <body>
   <h3 align="center">ICCV 2023</h3>
-  <h1 align="center">Not Every Side Is Equal: Localization Uncertainty Estimation for Semi-Supervised 3D Object Detection</h1>
+  <h1 align="center">Not Every Side Is Equal: Localization Uncertainty Estimation for Semi-Supervised 3D Object
+    Detection</h1>
 
   <p align="center" style="font-size:18px">
     <a href="https://chuxwa.github.io/"><span>ChuXin Wang</span></a><sup>1</sup>
     <a href="https://scholar.google.com/citations?user=rtO5VmQAAAAJ&hl=zh-CN"><span>Wenfei Yang</span></a><sup>1</sup>
-    <a href="http://staff.ustc.edu.cn/~tzzhang/"><span>Tianzhu Zhang</span></a><sup>1,2</sup> 
+    <a href="http://staff.ustc.edu.cn/~tzzhang/"><span>Tianzhu Zhang</span></a><sup>1,2</sup>
   </p>
   <p align="center" style="font-size:18px">
     <sup>1</sup><a href="http://en.ustc.edu.cn/">University of Science and Technology of China</a>   <sup>2</sup><a
-      href="https://www.cast.cn/english">China Academy of Space Technology</a>  
-    <br><br> <sup>2</sup><a href="https://special.zhaopin.com/Flying/pagepublish/140408317/index.html#">Deep Space
+      href="https://special.zhaopin.com/Flying/pagepublish/140408317/index.html#">Deep Space
       Exploration Lab</a>
   </p>
   <p>
@@ -46,17 +46,92 @@
   <hr>
 
   <p>
-    Semi-supervised 3D object detection from point cloud aims to train a detector with a small number of labeled data and a large number of unlabeled data. The core of existing methods lies in how to select high-quality pseudo-labels using the designed quality evaluation criterion. However, these methods treat each pseudo bounding box as a whole and assign equal importance to each side during training, which is detrimental to model performance due to many sides having poor localization quality. Besides, existing methods filter out a large number of low-quality pseudo-labels, which also contain some correct regression values that can help with model training. To address the above issues, we propose a side-aware framework for semi-supervised 3D object detection consisting of three key designs: a 3D bounding box parameterization method, an uncertainty estimation module, and a pseudo-label selection strategy. These modules work together to explicitly estimate the localization quality of each side and assign different levels of importance during the training phase. Extensive experiment results demonstrate that the proposed method can consistently outperform baseline models under different scenes and evaluation criteria. Moreover, our method achieves state-of-the-art performance on three datasets with different labeled ratios.
+    Semi-supervised 3D object detection from point cloud aims to train a detector with a small number of labeled data
+    and a large number of unlabeled data. The core of existing methods lies in how to select high-quality pseudo-labels
+    using the designed quality evaluation criterion. However, these methods treat each pseudo bounding box as a whole
+    and assign equal importance to each side during training, which is detrimental to model performance due to many
+    sides having poor localization quality. Besides, existing methods filter out a large number of low-quality
+    pseudo-labels, which also contain some correct regression values that can help with model training. To address the
+    above issues, we propose a side-aware framework for semi-supervised 3D object detection consisting of three key
+    designs: a 3D bounding box parameterization method, an uncertainty estimation module, and a pseudo-label selection
+    strategy. These modules work together to explicitly estimate the localization quality of each side and assign
+    different levels of importance during the training phase. Extensive experiment results demonstrate that the proposed
+    method can consistently outperform baseline models under different scenes and evaluation criteria. Moreover, our
+    method achieves state-of-the-art performance on three datasets with different labeled ratios.
   </p>
   <br>
 
-  <h2>Overview</h2>
+  <h2>Video</h2>
+  <hr>
+  <p align="center">
+    <iframe width="960" height="540" src="https://www.youtube.com/embed/P6tZDed1ahg" title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen></iframe>
+  </p>
+
+  <h2>Nesie</h2>
+  <hr>
+  <br><br>
+  <table id="tbInformation" width="100%">
+    <tbody>
+      <tr>
+        <td rowspan="3">
+          <div class="smallimg">
+            <img src="./figures/method_01.png" width="450" class="left">
+          </div>
+        </td>
+        <td>
+          <div class="smallpara">
+            <p>
+              Previous pseudo-label based methods use global metric scores (IoU, classification confidence, and voting
+              score, et al.) to select pseudo-labels. Pseudo-labels with high global scores may not cover each side
+              well, while pseudo-labels with low global scores may provide correct predictions for some object sides. An
+              intuitive way is to estimate the localization quality of each side and treat different sides with
+              different importance for model training.
+            </p>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+    <tbody>
+      <tr>
+        <td>
+          <div class="smallpara">
+            <p>
+              How to estimate the localization quality of each side?
+            </p>
+            <p>
+              (1). Decouple the localization task and predict the position of each side as a probability distribution.
+            </p>
+            <p>
+              (2). Propose a side-aware uncertainty estimation module to evaluate the quality of each side.
+            </p>
+          </div>
+        </td>
+        <td rowspan="3">
+          <div class="smallimg">
+            <img src="./figures/method_02.png" width="450" class="left">
+            <img src="./figures/method_03.png" width="450" class="left">
+          </div>
+
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Framework</h2>
   <hr>
   <p align="center">
     <img src="./figures/framework_1_00.png" width="850" alt="centered image">
   </p>
   <p>
-    Our method is based on the mean-teacher framework. We start by augmenting the point cloud data and feeding it into the student model to obtain both the detection result and the  uncertainty of the sides. For labeled data, we directly use the ground-truth to constrain the predicted results. For unlabeled data, we apply the soft-PLS method to filter the predicted results of the teacher model to generate pseudo labels, which are used to supervise the student model. To update the parameters of the teacher model, we employ the Exponential Moving Average (EMA) strategy.
+    Our method is based on the mean-teacher framework. We start by augmenting the point cloud data and feeding it into
+    the student model to obtain both the detection result and the uncertainty of the sides. For labeled data, we
+    directly use the ground-truth to constrain the predicted results. For unlabeled data, we apply the soft-PLS method
+    to filter the predicted results of the teacher model to generate pseudo labels, which are used to supervise the
+    student model. To update the parameters of the teacher model, we employ the Exponential Moving Average (EMA)
+    strategy.
   </p>
   <br>
 
@@ -66,14 +141,26 @@
 
   <p align="center">
     <img src="./figures/result.png" width="850" class="center">
+    <img src="./figures/result_0.png" width="850" class="center">
   </p>
   <br>
 
 
+  <h2>Conclusion</h2>
+  <hr>
+  <p>(1) In this paper, we propose a side-aware framework with three specific designs: a probabilistic parameterization
+    method, an uncertainty estimation module, and a soft pseudo-label selection.
+  </p>
+  <p>(2) To the best of our knowledge, our approach is the first to consider the quality of local sides for 3D
+    pseudo-label filtering, enabling full exploitation and utilization of valid information in the model prediction
+    results for supervising student models.
+  </p>
+  <p>(3) Experiment results indicate that our method outperforms state-of-the-art methods on two indoor datasets and one
+    outdoor dataset.
+  </p>
+  <br>
   <h2>Paper</h2>
   <hr>
-
-
   <table id="tbInformation" width="100%">
     <tbody>
       <tr>
@@ -81,12 +168,12 @@
           <div class="shadow">
             <img src="./figures/firstpage.png" width="170">
           </div>
-
         </td>
         <td>
           <div class="paper">
             <p>
-              <b>Not Every Side Is Equal: Localization Uncertainty Estimation for Semi-Supervised 3D Object Detection</b>
+              <b>Not Every Side Is Equal: Localization Uncertainty Estimation for Semi-Supervised 3D Object
+                Detection</b>
               <br>
               ChuXin Wang, Wenfei Yang, Tianzhu Zhang
               <br>
@@ -97,7 +184,7 @@
               <a href="https://github.com/OpenSpaceAI/Nesie">[Code]</a>
               <!-- <a href="https://openaccess.thecvf.com/content/CVPR2021/html/Xie_Style-Based_Point_Generator_With_Adversarial_Rendering_for_Point_Cloud_Completion_CVPR_2021_paper.html">[CVPR 2021 Open Access]</a>  -->
               <a href="https://chuxwa.github.io/Nesie/">[Website]</a>
-              <!-- <a href="https://chuxwa.github.io/Nesie/files/cvpr21_poster_.pdf">[Poster]</a> -->
+              <a href="https://chuxwa.github.io/Nesie/files/iccv23_poster.pdf">[Poster]</a>
               <a href="https://chuxwa.github.io/Nesie/files/bib.txt">[BibTeX]</a>
             </p>
           </div>
