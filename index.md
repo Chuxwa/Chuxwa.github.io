@@ -10,7 +10,7 @@ no_excerpt: false
 cover: true
 ---
 
-<h1 id="about"><span style="color:rgb(237, 118, 74);">Short Bio</span></h1>
+<h2 id="about"><span style="color:rgb(237, 118, 74); font-size: 1.5em;">Biography</span></h2>
 
 Hi! I am a PhD student in Department of Automation at [University of Science and Technology of China](https://www.ustc.edu.cn/), advised by Prof. [Weiren Wu](https://en.wikipedia.org/wiki/Wu_Weiren) and [Tianzhu Zhang](https://scholar.google.com/citations?user=9sCGe-gAAAAJ&hl=zh-CN).
 
@@ -32,7 +32,7 @@ Previously, I interned with the Visual Computing Group at [Microsoft Research As
   </ul>
 </div>
 
-<div style="height: 30px;"></div> <!-- 空行 -->
+<div style="height: 10px;"></div> <!-- 空行 -->
 **Experiences 📖**
 <style>
   .experience-item {
@@ -69,8 +69,8 @@ Previously, I interned with the Visual Computing Group at [Microsoft Research As
   <a><img src="assets/img/logo-dsel.png" alt="DSEL" style="height: 130px; width: auto;"></a>
 </div>
 
-
-<h1 id="publications"><span style="color:rgb(237, 118, 74);">Publications</span></h1>
+<div style="height: 30px;"></div> <!-- 空行 -->
+<h2 id="publications"><span style="color:rgb(237, 118, 74); font-size: 1.5em;">Publications</span></h2>
 
 \* denotes equal contribution. More publications can be found in <a href="https://scholar.google.com/citations?user=0kS2MgIAAAAJ&hl=en">Google Scholar</a>.
 
@@ -239,8 +239,8 @@ Previously, I interned with the Visual Computing Group at [Microsoft Research As
 
 </table>
 
-
-<h1 id="services"><span style="color:rgb(237, 118, 74);">Academic Services</span></h1>
+<div style="height: 30px;"></div> <!-- 空行 -->
+<h2 id="services"><span style="color:rgb(237, 118, 74); font-size: 1.5em;">Academic Services</span></h2>
 
 *Conference Reviewer*
 - IEEE Conference on Computer Vision and Pattern Recognition (CVPR)
@@ -257,7 +257,9 @@ Previously, I interned with the Visual Computing Group at [Microsoft Research As
 - IEEE Transactions on Image Processing (TIP)
 - IEEE Transactions on Circuits and Systems for Video Technology (TCSVT)
 
-<h1 id="honors"><span style="color:rgb(237, 118, 74);">Honors and Awards</span></h1>
+
+<div style="height: 30px;"></div> <!-- 空行 -->
+<h2 id="honors"><span style="color:rgb(237, 118, 74); font-size: 1.5em;">Honors and Awards</span></h2>
 
 <style>
   .honor-item {
