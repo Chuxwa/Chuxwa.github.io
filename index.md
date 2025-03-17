@@ -79,7 +79,7 @@ Previously, I interned with the Visual Computing Group at [Microsoft Research As
 
   <tr style="border: none;">
     <td style="align-items:center; width: 25%; border: none;">
-      <img src="/assets/img/logo-DEST3D.png" style="vertical-align:middle;"/>
+      <img src="/assets/img/logo-DEST.png" style="vertical-align:middle;"/>
     </td>
     <td style="align-items:center; border: none;">
       <a href="https://openreview.net/forum?id=Tisu1L0Jwt"> <b>"State Space Model Meets Transformer: A New Paradigm for 3D Object Detection" </b> </a>
@@ -87,15 +87,16 @@ Previously, I interned with the Visual Computing Group at [Microsoft Research As
       <br> International Conference on Learning Representations (ICLR), 2025
       <br> 
       <a href="https://openreview.net/forum?id=Tisu1L0Jwt">[Paper]</a>
-      <!-- <a href="https://chuxwa.github.io/project_Nesie/">[Webpage]</a> -->
-      <!-- <a href="https://github.com/OpenSpaceAI/QRT3D">[Code]</a> -->
-      <!-- <a href="https://chuxwa.github.io/project_Nesie/files/bib.txt">[BibTeX]</a> -->
+      <a href="https://chuxwa.github.io/project_DEST/">[Webpage]</a>
+      <a href="https://github.com/OpenSpaceAI/DEST">[Code]</a>
+      <a href="https://chuxwa.github.io/project_DEST/files/poster.pdf">[Poster]</a>
+      <a href="https://chuxwa.github.io/project_DEST/files/bib.txt">[BibTeX]</a>
     </td>
   </tr>
 
   <tr style="border: none;">
     <td style="align-items:center; width: 25%; border: none;">
-      <img src="/assets/img/logo-RMAE3D.png" style="vertical-align:middle;"/>
+      <img src="/assets/img/logo-OTMae3D.png" style="vertical-align:middle;"/>
     </td>
     <td style="align-items:center; border: none;">
       <a href="https://ieeexplore.ieee.org/document/10815033"> <b>"Rethinking Masked Representation Learning for 3D Point Cloud Understanding" </b> </a>
