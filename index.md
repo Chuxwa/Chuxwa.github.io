@@ -87,9 +87,9 @@ Previously, I interned with the Visual Computing Group at [Microsoft Research As
       <br> International Conference on Learning Representations (ICLR), 2025
       <br> 
       <a href="https://openreview.net/forum?id=Tisu1L0Jwt">[Paper]</a>
-      <!-- <a href="https://chuxwa.github.io/Nesie/">[Webpage]</a> -->
+      <!-- <a href="https://chuxwa.github.io/project_Nesie/">[Webpage]</a> -->
       <!-- <a href="https://github.com/OpenSpaceAI/QRT3D">[Code]</a> -->
-      <!-- <a href="https://chuxwa.github.io/Nesie/files/bib.txt">[BibTeX]</a> -->
+      <!-- <a href="https://chuxwa.github.io/project_Nesie/files/bib.txt">[BibTeX]</a> -->
     </td>
   </tr>
 
@@ -103,9 +103,9 @@ Previously, I interned with the Visual Computing Group at [Microsoft Research As
       <br> IEEE Transactions on Image Processing (TIP), 2025
       <br> 
       <a href="https://ieeexplore.ieee.org/document/10815033">[Paper]</a>
-      <a href="https://chuxwa.github.io/OTMae3D/">[Webpage]</a>
+      <a href="https://chuxwa.github.io/project_OTMae3D/">[Webpage]</a>
       <a href="https://github.com/OpenSpaceAI/OTMae3D">[Code]</a>
-      <a href="https://chuxwa.github.io/OTMae3D/files/bib.txt">[BibTeX]</a>
+      <a href="https://chuxwa.github.io/project_Nesie/files/bib.txt">[BibTeX]</a>
     </td>
   </tr>
 
@@ -119,9 +119,9 @@ Previously, I interned with the Visual Computing Group at [Microsoft Research As
       <br> Association for the Advancement of Artificial Intelligence (AAAI), 2025
       <br> 
       <a href="https://arxiv.org/abs/2406.17442">[Paper]</a>
-      <!-- <a href="https://chuxwa.github.io/Nesie/">[Webpage]</a> -->
+      <!-- <a href="https://chuxwa.github.io/project_Nesie/">[Webpage]</a> -->
       <!-- <a href="https://github.com/OpenSpaceAI/QRT3D">[Code]</a> -->
-      <!-- <a href="https://chuxwa.github.io/Nesie/files/bib.txt">[BibTeX]</a> -->
+      <!-- <a href="https://chuxwa.github.io/project_Nesie/files/bib.txt">[BibTeX]</a> -->
     </td>
   </tr>
 
@@ -130,14 +130,14 @@ Previously, I interned with the Visual Computing Group at [Microsoft Research As
       <img src="/assets/img/logo-Nesie.png" style="vertical-align:middle;"/>
     </td>
     <td style="align-items:center; border: none;">
-      <a href="https://chuxwa.github.io/Nesie/"> <b>"Not Every Side Is Equal: Localization Uncertainty Estimation for Semi-Supervised 3D Object Detection" </b> </a>
+      <a href="https://chuxwa.github.io/project_Nesie/"> <b>"Not Every Side Is Equal: Localization Uncertainty Estimation for Semi-Supervised 3D Object Detection" </b> </a>
       <br> <b>Chuxin Wang</b>, Wenfei Yang, Tianzhu Zhang
       <br> International Conference on Computer Vision 2023 (ICCV), 2023
       <br> 
       <a href="https://openaccess.thecvf.com/content/ICCV2023/papers/Wang_Not_Every_Side_Is_Equal_Localization_Uncertainty_Estimation_for_Semi-Supervised_ICCV_2023_paper.pdf">[Paper]</a>
-      <a href="https://chuxwa.github.io/Nesie/">[Webpage]</a>
+      <a href="https://chuxwa.github.io/project_Nesie/">[Webpage]</a>
       <a href="https://github.com/OpenSpaceAI/Nesie">[Code]</a>
-      <a href="https://chuxwa.github.io/Nesie/files/bib.txt">[BibTeX]</a>
+      <a href="https://chuxwa.github.io/project_Nesie/files/bib.txt">[BibTeX]</a>
     </td>
   </tr>
 
@@ -151,9 +151,9 @@ Previously, I interned with the Visual Computing Group at [Microsoft Research As
       <br> International Conference on Computer Vision 2023 (ICCV), 2023
       <br> 
       <a href="https://openaccess.thecvf.com/content/ICCV2023/papers/Lu_Query_Refinement_Transformer_for_3D_Instance_Segmentation_ICCV_2023_paper.pdf">[Paper]</a>
-      <!-- <a href="https://chuxwa.github.io/Nesie/">[Webpage]</a> -->
+      <!-- <a href="https://chuxwa.github.io/project_Nesie/">[Webpage]</a> -->
       <!-- <a href="https://github.com/OpenSpaceAI/QRT3D">[Code]</a> -->
-      <!-- <a href="https://chuxwa.github.io/Nesie/files/bib.txt">[BibTeX]</a> -->
+      <!-- <a href="https://chuxwa.github.io/project_Nesie/files/bib.txt">[BibTeX]</a> -->
     </td>
   </tr>
 
@@ -162,14 +162,14 @@ Previously, I interned with the Visual Computing Group at [Microsoft Research As
       <img src="/assets/img/logo-LeadNet.png" style="vertical-align:middle;"/>
     </td>
     <td style="align-items:center; border: none;">
-      <a href="https://chuxwa.github.io/LeadNet/"> <b>"Long-short Range Adaptive Transformer with Dynamic Sampling for 3D Object Detection" </b> </a>
+      <a href="https://chuxwa.github.io/project_LeadNet/"> <b>"Long-short Range Adaptive Transformer with Dynamic Sampling for 3D Object Detection" </b> </a>
       <br> <b>Chuxin Wang*</b>, Jiacheng Deng*, Jianfeng He, Tianzhu Zhang, Zhe Zhang, Yongdong Zhang
       <br> IEEE Transactions on Circuits and Systems for Video Technology (TCSVT), 2023
       <br> 
       <a href="https://ieeexplore.ieee.org/abstract/document/10124821">[Paper]</a>
-      <a href="https://chuxwa.github.io/LeadNet/">[Webpage]</a>
+      <a href="https://chuxwa.github.io/project_LeadNet/">[Webpage]</a>
       <!-- <a href="https://github.com/OpenSpaceAI/LeadNet">[Code]</a> -->
-      <a href="https://chuxwa.github.io/LeadNet/files/bib.txt">[BibTeX]</a>
+      <a href="https://chuxwa.github.io/project_LeadNet/files/bib.txt">[BibTeX]</a>
     </td>
   </tr>
 
@@ -178,15 +178,15 @@ Previously, I interned with the Visual Computing Group at [Microsoft Research As
       <img src="/assets/img/logo-SE-ORNet.png" style="vertical-align:middle;"/>
     </td>
     <td style="align-items:center; border: none;">
-      <a href="https://chuxwa.github.io/SE-ORNet/"> <b>"SE-ORNet: Self-Ensembling Orientation-aware Network for Unsupervised Point Cloud Shape Correspondence" </b> </a>
+      <a href="https://chuxwa.github.io/project_SE-ORNet/"> <b>"SE-ORNet: Self-Ensembling Orientation-aware Network for Unsupervised Point Cloud Shape Correspondence" </b> </a>
       <br> Jiacheng Deng*, <b>Chuxin Wang*</b>, Jiahao Lu, Jianfeng He, Tianzhu Zhang, Jiyang Yu, Zhe Zhang
       <br> Conference on Computer Vision and Pattern Recognition (CVPR), 2023
       <br> 
       <a href="https://openaccess.thecvf.com/content/CVPR2023/papers/Deng_SE-ORNet_Self-Ensembling_Orientation-Aware_Network_for_Unsupervised_Point_Cloud_Shape_Correspondence_CVPR_2023_paper.pdf">[Paper]</a>
-      <a href="https://chuxwa.github.io/SE-ORNet/">[Webpage]</a>
+      <a href="https://chuxwa.github.io/project_SE-ORNet/">[Webpage]</a>
       <a href="https://github.com/OpenSpaceAI/SE-ORNet">[Code]</a>
-      <a href="https://chuxwa.github.io/SE-ORNet/files/bib.txt">[BibTeX]</a>
-      <a href="https://chuxwa.github.io/SE-ORNet/files/cvpr23_poster_SE-ORNet.pdf">[Poster]</a>
+      <a href="https://chuxwa.github.io/project_SE-ORNet/files/bib.txt">[BibTeX]</a>
+      <a href="https://chuxwa.github.io/project_SE-ORNet/files/cvpr23_poster_SE-ORNet.pdf">[Poster]</a>
     </td>
   </tr>
 
