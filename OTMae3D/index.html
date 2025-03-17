@@ -1,0 +1,185 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- saved from url=(0036)https://chuxwa.github.io/Nesie/ -->
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <meta name="keywords" content="OTMae3D">
+  <meta name="description" content="OTMae3D">
+  <link href="./main.css" media="all" rel="stylesheet">
+  <link rel="icon" type="image/png" href="https://chuxwa.github.io/Nesie/">
+  <title>Rethinking Masked Representation Learning for 3D Point Cloud Understanding</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com/">
+  <link href="./css2" rel="stylesheet">
+  <script type="text/javascript" src="./jquery-1.12.4.min.js"></script>
+</head>
+
+<!-- cover -->
+
+<body>
+  <h3 align="center">TIP 2024</h3>
+  <h1 align="center">Rethinking Masked Representation Learning for 3D Point Cloud Understanding</h1>
+
+  <p align="center" style="font-size:18px">
+    <a href="https://chuxwa.github.io/"><span>ChuXin Wang</span></a><sup>1</sup>
+    <a><span>Yixin Zha</span></a><sup>1</sup>
+    <a href="https://github.com/Hevans123"><span>Jianfeng He</span></a><sup>1</sup> 
+    <a href="https://scholar.google.com/citations?user=rtO5VmQAAAAJ&hl=zh-CN"><span>Wenfei Yang</span></a><sup>1</sup>
+    <a href="http://staff.ustc.edu.cn/~tzzhang/"><span>Tianzhu Zhang</span></a><sup>1</sup>
+  </p>
+  <p align="center" style="font-size:18px">
+    <sup>1</sup><a href="http://en.ustc.edu.cn/">School of Information Science and Technology and Deep Space Exploration Laboratory, University of Science and Technology of China</a> 
+  </p>
+  <p>
+
+  </p>
+
+  <p align="center">
+    <a href="https://ieeexplore.ieee.org/document/10815033">[Paper]</a>
+    <a href="https://github.com/OpenSpaceAI/OTMae3D">[Code]</a>
+    <a href="https://chuxwa.github.io/OTMae3D/">[Website]</a>
+    <a href="https://chuxwa.github.io/OTMae3D/files/bib.txt">[BibTeX]</a>
+  </p>
+  <h2>Abstract</h2>
+  <hr>
+
+  <p>
+    Self-supervised point cloud representation learning aims to acquire robust and general feature representations from unlabeled data. Recently, masked point modeling-based methods have shown significant performance improvements for point cloud understanding, yet these methods rely on overlapping grouping strategies (k-nearest neighbor algorithm) resulting in early leakage of structural information of mask groups, and overlook the semantic modeling of object components resulting in parts with the same semantics having obvious feature differences due to position differences.
+    In this work, we rethink grouping strategies and pretext tasks that are more suitable for self-supervised point cloud representation learning and propose a novel hierarchical masked representation learning method, including an optimal transport-based hierarchical grouping strategy, a prototype-based part modeling module, and a hierarchical attention encoder.
+    The proposed method enjoys several merits.
+    First, the proposed grouping strategy partitions the point cloud into non-overlapping groups, eliminating the early leakage of structural information in the masked groups.
+    Second, the proposed prototype-based part modeling module dynamically models different object components, ensuring feature consistency on parts with the same semantics.
+    Extensive experiments on four downstream tasks demonstrate that our method surpasses state-of-the-art 3D representation learning methods.
+    Comprehensive ablation studies and visualizations demonstrate the effectiveness of the proposed modules.
+    
+  </p>
+  <br>
+
+  <!-- <h2>Video</h2>
+  <hr>
+  <p align="center">
+    <iframe width="960" height="540" src="https://www.youtube.com/embed/zX0lpcbzxwk?si=5wnBUaucNpaKGYSV"
+      title="YouTube video player" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen></iframe>
+  </p> -->
+
+  <h2>Nesie</h2>
+  <hr>
+  <br><br>
+  <table id="tbInformation" width="100%">
+    <tbody>
+      <tr>
+        <td rowspan="3">
+          <div class="smallimg">
+            <img src="./figures/Figure1_00.png" width="450" class="left">
+          </div>
+        </td>
+        <td>
+          <div class="smallpara">
+            <p>
+              <strong>(1) Early leakage of structural information of mask groups.</strong> Existing MPM-based methods usually utilize the KNN algorithm to group point clouds, leading to overlap between masked and visible groups. When inputting points from the visible groups, masked points in the overlapping areas are also input into the encoder. As shown in the Figure, Both PointMAE and PointM2AE involve a substantial number of masked points being input into the encoder along with visible points. However, these masked points contain rich structural information. The leakage of structural information to the encoder simplifies the local shape prediction task for mask groups in the decoder, thereby diminishing the effectiveness of the pre-text task in pre-training.
+            </p>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+    <tbody>
+      <tr>
+        <td rowspan="3">
+          <div class="smallimg">
+            <img src="./figures/Figure1_00.png" width="450" class="left">
+          </div>
+        </td>
+        <td>
+          <div class="smallpara">
+            <p>
+              <strong>(2) Lack of modeling on semantic information of object parts.</strong> The MPM-based methods obtain fine-grained local features by inferring the structure of masked groups. However, the obtained features exhibit significant positional dependency and lack semantic modeling of different object parts. As shown in the Figure, Parts with the same semantics have obvious feature differences due to position differences, such as wings, chair armrests, and tops of desk lamps. Parts with the same semantics have obvious feature differences due to position differences, such as wings, chair armrests, and tops of desk lamps. Cross-modal methods solve this problem with pre-trained image or language models, which require massive amounts of data and large computational costs.
+            </p>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Framework</h2>
+  <hr>
+  <p align="center">
+    <img src="./figures/Figure3_00.png" width="850" alt="centered image">
+  </p>
+  <p>
+    The object of this work is to extract diverse information from point clouds in a self-supervised manner, including structural and semantic features, for complex 3D computer vision tasks. Figure 3(a) illustrates the pipeline of our approach. Generally, given an input point cloud <i>S<sub>0</sub></i>, we utilize an optimal transport-based hierarchical grouping strategy to divide it into non-overlapping groups at different scales. Then, we randomly select a portion of these groups as the masked groups, while the remaining groups have all their points <i>S̃<sub>0</sub></i> encoded through a point embedding module and fed into the proposed hierarchical encoder. Note that the hierarchical encoder consists of several intra-group attention layers and inter-group attention layers. The intra-group attention layer models the local structure within each group, while the inter-group attention layer captures relationships across groups. After encoding by the hierarchical encoder, the group features <i>F<sub>e</sub></i> are input into the prototype-based part modeling module. We design a set of learnable part-aware prototypes <i>Pt<sub>i</sub></i>, which adapt to the current object component shapes through cross-attention mechanisms. Subsequently, we use a prototype-based adapter to enhance the group features <i>F<sub>p</sub></i>, which will be described in detail later. The enhanced group features <i>F<sub>p</sub></i>, along with position encodings <i>E<sub>m</sub></i> of the central points of the masked region, are then input into the decoder. The output features <i>F<sub>m</sub></i> are used to predict the local structure <i>P<sub>pred</sub></i> of the masked groups. Finally, we use three kinds of losses to guide model pre-training:
+    <ul>
+      <li>To learn robust contextual information and part semantics, we design a part-aware contrastive loss to enforce consistency between the prototype features {<i>Pt<sub>o</sub></i>, <i>P̂t<sub>o</sub></i>} produced by the teacher and student models.</li>
+      <li>To enhance the ability to infer complete semantics from partial point clouds, we design a group-aware consistency loss between the group features {<i>F<sub>v</sub></i>, <i>F̂<sub>v</sub></i>, <i>F<sub>m</sub></i>, <i>F̂<sub>m</sub></i>} produced by the teacher and student models.</li>
+      <li>To guide the model in modeling delicate local structures of objects, we design a reconstruction loss on the predictions <i>P<sub>pred</sub></i> of the masked groups.</li>
+    </ul>
+  </p>
+  <br>
+
+  <br>
+  <h2>Results</h2>
+  <hr>
+
+  <p align="center">
+    <img src="./figures/results_00.png" width="850" class="center">
+    <img src="./figures/results_01.png" width="850" class="center">
+    <!-- <img src="./figures/results_02.png" width="450" class="center"> -->
+  </p>
+  <br>
+
+
+  <h2>Conclusion</h2>
+  <hr>
+  <p>(1) We propose a new single-modal hierarchical mask autoencoder to solve two problems in the MPM-based method: early leakage of structural information of mask groups and lack of modeling on semantic information of object parts.
+  </p>
+  <p>(2) We design an OTG-based hierarchical grouping method, a PPM module, and a hierarchical encoder. The OTG-based hierarchical grouping method partitions the point cloud into non-overlapping groups while maintaining consistency between point cloud groups across different scales. The PPM module dynamically models different object components, ensuring feature consistency on parts with the same semantics. Additionally, the hierarchical encoder effectively models the relationship between local and global 3D shapes.
+  </p>
+  <p>(3) Our method attains state-of-the-art performance on various downstream tasks, such as a 2.07% accuracy improvement on the ScanObjectNN dataset. Extensive and comprehensive ablation experiments and visualizations verify the superiority of the proposed modules.
+  </p>
+  <br>
+  <h2>Paper</h2>
+  <hr>
+  <table id="tbInformation" width="100%">
+    <tbody>
+      <tr>
+        <td rowspan="3">
+          <div class="shadow">
+            <img src="./figures/firstpage.png" width="170">
+          </div>
+        </td>
+        <td>
+          <div class="paper">
+            <p>
+              <b>Rethinking Masked Representation Learning for 3D Point Cloud Understanding</b>
+              <br>
+              ChuXin Wang, Yixin Zha, Jianfeng He, Wenfei Yang, Tianzhu Zhang
+              <br>
+              IEEE Transactions on Image Processing 2024(TIP), 2024
+              <br>
+              <br>
+              <!-- <a href="https://ieeexplore.ieee.org/abstract/document/10124821">[PDF]</a> -->
+              <a href="https://github.com/OpenSpaceAI/OTMae3D">[Code]</a>
+              <a href="https://ieeexplore.ieee.org/document/10815033">[Paper]</a> 
+              <a href="https://chuxwa.github.io/OTMae3D/">[Website]</a>
+              <!-- <a href="https://chuxwa.github.io/OTMae3D/files/tip24_poster.pdf">[Poster]</a> -->
+              <a href="https://chuxwa.github.io/OTMae3D/files/bib.txt">[BibTeX]</a>
+            </p>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <br>
+
+  <p align="center">
+    <font color="#999999">Last update: March 17, 2025</font>
+  </p>
+
+  <div class="jvectormap-tip"></div>
+
+</body>
+
+</html>

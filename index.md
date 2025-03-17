@@ -103,9 +103,9 @@ Previously, I interned with the Visual Computing Group at [Microsoft Research As
       <br> IEEE Transactions on Image Processing (TIP), 2025
       <br> 
       <a href="https://ieeexplore.ieee.org/document/10815033">[Paper]</a>
-      <!-- <a href="https://chuxwa.github.io/Nesie/">[Webpage]</a> -->
-      <!-- <a href="https://github.com/OpenSpaceAI/QRT3D">[Code]</a> -->
-      <!-- <a href="https://chuxwa.github.io/Nesie/files/bib.txt">[BibTeX]</a> -->
+      <a href="https://chuxwa.github.io/OTMae3D/">[Webpage]</a>
+      <a href="https://github.com/OpenSpaceAI/OTMae3D">[Code]</a>
+      <a href="https://chuxwa.github.io/OTMae3D/files/bib.txt">[BibTeX]</a>
     </td>
   </tr>
 

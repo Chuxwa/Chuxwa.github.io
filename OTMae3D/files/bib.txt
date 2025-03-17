@@ -1,0 +1,10 @@
+@ARTICLE{10815033,
+  author={Wang, Chuxin and Zha, Yixin and He, Jianfeng and Yang, Wenfei and Zhang, Tianzhu},
+  journal={IEEE Transactions on Image Processing}, 
+  title={Rethinking Masked Representation Learning for 3D Point Cloud Understanding}, 
+  year={2025},
+  volume={34},
+  number={},
+  pages={247-262},
+  keywords={Point cloud compression;Semantics;Feature extraction;Three-dimensional displays;Representation learning;Solid modeling;Prototypes;Shape;Nearest neighbor methods;Image reconstruction;Self-supervised point cloud representation learning;optimal transport;and part modeling},
+  doi={10.1109/TIP.2024.3520008}}
