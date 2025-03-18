@@ -88,7 +88,7 @@ Previously, I interned with the Visual Computing Group at [Microsoft Research As
       <br> 
       <a href="https://openreview.net/forum?id=Tisu1L0Jwt">[Paper]</a>
       <a href="https://chuxwa.github.io/project_DEST/">[Webpage]</a>
-      <a href="https://github.com/OpenSpaceAI/DEST">[Code]</a>
+      <a href="https://github.com/OpenSpaceAI/DEST3D">[Code]</a>
       <a href="https://chuxwa.github.io/project_DEST/files/poster.pdf">[Poster]</a>
       <a href="https://chuxwa.github.io/project_DEST/files/bib.txt">[BibTeX]</a>
     </td>
