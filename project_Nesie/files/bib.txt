@@ -1,5 +1,5 @@
 @InProceedings{Wang_2023_ICCV,
-    author    = {ChuXin Wang and Wenfei Yang and Tianzhu Zhang},
+    author    = {Chuxin Wang and Wenfei Yang and Tianzhu Zhang},
     title     = {Not Every Side Is Equal: Localization Uncertainty Estimation for Semi-Supervised 3D Object Detection},
     booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
     month     = {October},

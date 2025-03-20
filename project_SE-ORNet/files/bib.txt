@@ -1,7 +1,7 @@
 @inproceedings{
 Deng2023seornet,
 title={{SE}-{ORN}et: Self-Ensembling Orientation-aware Network for Unsupervised Point Cloud Shape Correspondence},
-author={Jiacheng Deng, ChuXin Wang, Jiahao Lu, Jianfeng He, Tianzhu Zhang, Jiyang Yu, Zhe Zhang},
+author={Jiacheng Deng, Chuxin Wang, Jiahao Lu, Jianfeng He, Tianzhu Zhang, Jiyang Yu, Zhe Zhang},
 booktitle={Conference on Computer Vision and Pattern Recognition 2023},
 year={2023},
 url={https://openreview.net/forum?id=DS6AyDWnAv}
