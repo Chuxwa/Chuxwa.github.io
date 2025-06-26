@@ -14,14 +14,15 @@ cover: true
 
 Hi! I am a PhD student in Department of Automation at [University of Science and Technology of China](https://www.ustc.edu.cn/), advised by Prof. [Weiren Wu](https://en.wikipedia.org/wiki/Wu_Weiren) and [Tianzhu Zhang](https://scholar.google.com/citations?user=9sCGe-gAAAAJ&hl=zh-CN).
 
-My research primarily focuses on 3D computer vision, including point cloud representation learning, point cloud completion, point cloud detection, and point cloud segmentation.
-    
-Previously, I interned with the Visual Computing Group at [Microsoft Research Asia](https://www.microsoft.com/en-us/research/lab/microsoft-research-asia/) (2020-2021) and [Deep Space Exploration Laboratory](http://www.dsel.cc/#/spaceFile/index) (2023-2024).
+My research primarily focuses on 3D computer vision, including vision-3D foundation models, self-supervised/semi-supervised learning, 3D scene understanding, and representation learning. Previously, I interned with the Visual Computing Group at [Microsoft Research Asia](https://www.microsoft.com/en-us/research/lab/microsoft-research-asia/) (2020-2021) and [Deep Space Exploration Laboratory](http://www.dsel.cc/#/spaceFile/index) (2024-2025).
 
 <div style="height: 10px;"></div> <!-- 空行 -->
 **News 🔥**
 <div style="border: 1px solid #ddd; padding: 10px; height: 300px; overflow-y: scroll;">
   <ul>
+    <li>Jun. 2025: <a href="#">StruMamba3D: Exploring Structural Mamba for Self-supervised Point Cloud Representation Learning</a> was accepted by ICCV 2025.</li>
+    <li>May 2025: <a href="https://openreview.net/pdf?id=0gX9f5xTrD">Exploring Vision Semantic Prompt for Efficient Point Cloud Understanding</a> was accepted by ICML 2025.</li>
+    <li>May 2025: <a href="#">Exploring Semantic Masked Autoencoder for Self-supervised Point Cloud Understanding</a> was accepted by IJCAI 2025.</li>
     <li>Jan. 2025: <a href="https://openreview.net/forum?id=Tisu1L0Jwt">State Space Model Meets Transformer: A New Paradigm for 3D Object Detection</a> was accepted by ICLR 2025.</li>
     <li>Dec. 2024: <a href="https://ieeexplore.ieee.org/document/10815033">RMAE3D: Rethinking Masked Representation Learning for 3D Point Cloud Understanding</a> was accepted by TIP 2025.</li>
     <li>Aug. 2024: <a href="https://arxiv.org/abs/2406.17442">Pamba: Enhancing Global Interaction in Point Clouds via State Space Model</a> was accepted by AAAI 2025.</li>
@@ -47,7 +48,7 @@ Previously, I interned with the Visual Computing Group at [Microsoft Research As
 </style>
 
 <div class="experience-item">
-  <span class="experience-date">Feb. 2022 - Now:</span> Algorithm development intern, DSEL
+  <span class="experience-date">Feb. 2024 - Now:</span> Algorithm development intern, DSEL
 </div>
 <div class="experience-item">
   <span class="experience-date">Sep. 2021 - Now:</span> PhD Student, USTC
@@ -76,6 +77,40 @@ Previously, I interned with the Visual Computing Group at [Microsoft Research As
 
 
 <table style="border-collapse: collapse; border: none;">
+
+  <tr style="border: none;">
+    <td style="align-items:center; width: 25%; border: none;">
+      <img src="/assets/img/logo-DEST.png" style="vertical-align:middle;"/>
+    </td>
+    <td style="align-items:center; border: none;">
+      <a href="#"> <b>"StruMamba3D: Exploring Structural Mamba for Self-supervised Point Cloud Representation Learning" </b> </a>
+      <br> <b>Chuxin Wang</b>, Yixin Zha, Wenfei Yang, Tianzhu Zhang
+      <br> International Conference on Computer Vision (ICCV), 2025
+      <br> 
+      <!-- <a href="https://openreview.net/forum?id=Tisu1L0Jwt">[Paper]</a>
+      <a href="https://chuxwa.github.io/project_DEST/">[Webpage]</a>
+      <a href="https://github.com/OpenSpaceAI/DEST3D">[Code]</a>
+      <a href="https://chuxwa.github.io/project_DEST/files/poster.pdf">[Poster]</a>
+      <a href="https://chuxwa.github.io/project_DEST/files/bib.txt">[BibTeX]</a> -->
+    </td>
+  </tr>
+
+  <tr style="border: none;">
+    <td style="align-items:center; width: 25%; border: none;">
+      <img src="/assets/img/logo-PETL.png" style="vertical-align:middle;"/>
+    </td>
+    <td style="align-items:center; border: none;">
+      <a href="https://openreview.net/pdf?id=0gX9f5xTrD"> <b>"Exploring Vision Semantic Prompt for Efficient Point Cloud Understanding" </b> </a>
+      <br> Yixin Zha, <b>Chuxin Wang</b>, Wenfei Yang, Xiang Liu, Tianzhu Zhang, Feng Wu
+      <br> International Conference on Machine Learning (ICML), 2025
+      <br> 
+      <a href="https://openreview.net/pdf?id=0gX9f5xTrD">[Paper]</a>
+      <!-- <a href="https://chuxwa.github.io/project_DEST/">[Webpage]</a>
+      <a href="https://github.com/OpenSpaceAI/DEST3D">[Code]</a>
+      <a href="https://chuxwa.github.io/project_DEST/files/poster.pdf">[Poster]</a>
+      <a href="https://chuxwa.github.io/project_DEST/files/bib.txt">[BibTeX]</a> -->
+    </td>
+  </tr>
 
   <tr style="border: none;">
     <td style="align-items:center; width: 25%; border: none;">
@@ -112,22 +147,6 @@ Previously, I interned with the Visual Computing Group at [Microsoft Research As
 
   <tr style="border: none;">
     <td style="align-items:center; width: 25%; border: none;">
-      <img src="/assets/img/logo-Pamba.png" style="vertical-align:middle;"/>
-    </td>
-    <td style="align-items:center; border: none;">
-      <a href="https://arxiv.org/abs/2406.17442"> <b>"Pamba: Enhancing Global Interaction in Point Clouds via State Space Model" </b> </a>
-      <br> Zhuoyuan Li, Yubo Ai, Jiahao Lu, <b>Chuxin Wang</b>, Jiacheng Deng, Hanzhi Chang, Yanzhe Liang, Wenfei Yang, Shifeng Zhang, Tianzhu Zhang
-      <br> Association for the Advancement of Artificial Intelligence (AAAI), 2025
-      <br> 
-      <a href="https://arxiv.org/abs/2406.17442">[Paper]</a>
-      <!-- <a href="https://chuxwa.github.io/project_Nesie/">[Webpage]</a> -->
-      <!-- <a href="https://github.com/OpenSpaceAI/QRT3D">[Code]</a> -->
-      <!-- <a href="https://chuxwa.github.io/project_Nesie/files/bib.txt">[BibTeX]</a> -->
-    </td>
-  </tr>
-
-  <tr style="border: none;">
-    <td style="align-items:center; width: 25%; border: none;">
       <img src="/assets/img/logo-Nesie.png" style="vertical-align:middle;"/>
     </td>
     <td style="align-items:center; border: none;">
@@ -144,17 +163,18 @@ Previously, I interned with the Visual Computing Group at [Microsoft Research As
 
   <tr style="border: none;">
     <td style="align-items:center; width: 25%; border: none;">
-      <img src="/assets/img/logo-QRT3D.png" style="vertical-align:middle;"/>
+      <img src="/assets/img/logo-DEST.png" style="vertical-align:middle;"/>
     </td>
     <td style="align-items:center; border: none;">
-      <a href="https://openaccess.thecvf.com/content/ICCV2023/papers/Lu_Query_Refinement_Transformer_for_3D_Instance_Segmentation_ICCV_2023_paper.pdf"> <b>"QRT3D: Query Refinement Transformer for 3D Instance Segmentation" </b> </a>
-      <br> Jiahao Lu, Jiacheng Deng, <b>Chuxin Wang</b>, Jianfeng He, Tianzhu Zhang
-      <br> International Conference on Computer Vision 2023 (ICCV), 2023
+      <a href="#"> <b>"Exploring Semantic Masked Autoencoder for Self-supervised Point Cloud Understanding" </b> </a>
+      <br> Yixin Zha*, <b>Chuxin Wang*<b>, Wenfei Yang, Tianzhu Zhang
+      <br> International Joint Conference on Artificial Intelligence (IJCAI), 2025
       <br> 
-      <a href="https://openaccess.thecvf.com/content/ICCV2023/papers/Lu_Query_Refinement_Transformer_for_3D_Instance_Segmentation_ICCV_2023_paper.pdf">[Paper]</a>
-      <!-- <a href="https://chuxwa.github.io/project_Nesie/">[Webpage]</a> -->
-      <!-- <a href="https://github.com/OpenSpaceAI/QRT3D">[Code]</a> -->
-      <!-- <a href="https://chuxwa.github.io/project_Nesie/files/bib.txt">[BibTeX]</a> -->
+      <!-- <a href="https://openreview.net/forum?id=Tisu1L0Jwt">[Paper]</a>
+      <a href="https://chuxwa.github.io/project_DEST/">[Webpage]</a>
+      <a href="https://github.com/OpenSpaceAI/DEST3D">[Code]</a>
+      <a href="https://chuxwa.github.io/project_DEST/files/poster.pdf">[Poster]</a>
+      <a href="https://chuxwa.github.io/project_DEST/files/bib.txt">[BibTeX]</a> -->
     </td>
   </tr>
 
@@ -164,7 +184,7 @@ Previously, I interned with the Visual Computing Group at [Microsoft Research As
     </td>
     <td style="align-items:center; border: none;">
       <a href="https://chuxwa.github.io/project_LeadNet/"> <b>"Long-short Range Adaptive Transformer with Dynamic Sampling for 3D Object Detection" </b> </a>
-      <br> <b>Chuxin Wang*</b>, Jiacheng Deng*, Jianfeng He, Tianzhu Zhang, Zhe Zhang, Yongdong Zhang
+      <br> <b>Chuxin Wang</b>, Jiacheng Deng, Jianfeng He, Tianzhu Zhang, Zhe Zhang, Yongdong Zhang
       <br> IEEE Transactions on Circuits and Systems for Video Technology (TCSVT), 2023
       <br> 
       <a href="https://ieeexplore.ieee.org/abstract/document/10124821">[Paper]</a>
@@ -205,6 +225,39 @@ Previously, I interned with the Visual Computing Group at [Microsoft Research As
       <a href="https://github.com/microsoft/SpareNet">[Code]</a>
       <a href="https://alphapav.github.io/SpareNet/files/bib.txt">[BibTeX]</a>
       <a href="https://alphapav.github.io/SpareNet/files/cvpr21_poster_sparenet.pdf">[Poster]</a>
+    </td>
+  </tr>
+
+
+  <tr style="border: none;">
+    <td style="align-items:center; width: 25%; border: none;">
+      <img src="/assets/img/logo-QRT3D.png" style="vertical-align:middle;"/>
+    </td>
+    <td style="align-items:center; border: none;">
+      <a href="https://openaccess.thecvf.com/content/ICCV2023/papers/Lu_Query_Refinement_Transformer_for_3D_Instance_Segmentation_ICCV_2023_paper.pdf"> <b>"QRT3D: Query Refinement Transformer for 3D Instance Segmentation" </b> </a>
+      <br> Jiahao Lu, Jiacheng Deng, <b>Chuxin Wang</b>, Jianfeng He, Tianzhu Zhang
+      <br> International Conference on Computer Vision 2023 (ICCV), 2023
+      <br> 
+      <a href="https://openaccess.thecvf.com/content/ICCV2023/papers/Lu_Query_Refinement_Transformer_for_3D_Instance_Segmentation_ICCV_2023_paper.pdf">[Paper]</a>
+      <!-- <a href="https://chuxwa.github.io/project_Nesie/">[Webpage]</a> -->
+      <!-- <a href="https://github.com/OpenSpaceAI/QRT3D">[Code]</a> -->
+      <!-- <a href="https://chuxwa.github.io/project_Nesie/files/bib.txt">[BibTeX]</a> -->
+    </td>
+  </tr>
+
+  <tr style="border: none;">
+    <td style="align-items:center; width: 25%; border: none;">
+      <img src="/assets/img/logo-Pamba.png" style="vertical-align:middle;"/>
+    </td>
+    <td style="align-items:center; border: none;">
+      <a href="https://arxiv.org/abs/2406.17442"> <b>"Pamba: Enhancing Global Interaction in Point Clouds via State Space Model" </b> </a>
+      <br> Zhuoyuan Li, Yubo Ai, Jiahao Lu, <b>Chuxin Wang</b>, Jiacheng Deng, Hanzhi Chang, Yanzhe Liang, Wenfei Yang, Shifeng Zhang, Tianzhu Zhang
+      <br> Association for the Advancement of Artificial Intelligence (AAAI), 2025
+      <br> 
+      <a href="https://arxiv.org/abs/2406.17442">[Paper]</a>
+      <!-- <a href="https://chuxwa.github.io/project_Nesie/">[Webpage]</a> -->
+      <!-- <a href="https://github.com/OpenSpaceAI/QRT3D">[Code]</a> -->
+      <!-- <a href="https://chuxwa.github.io/project_Nesie/files/bib.txt">[BibTeX]</a> -->
     </td>
   </tr>
 
