@@ -20,7 +20,7 @@ Previously, I interned with the Visual Computing Group at [Microsoft Research As
 
 <div style="height: 10px;"></div> <!-- 空行 -->
 **News 🔥**
-<div class="news-scroll" style="border: 1px solid #eee; background: #fcfaf8; border-radius: 10px; padding: 12px; height: 300px; overflow-y: scroll;">
+<div class="news-scroll" style="border: 1px solid #eee; border-radius: 10px; padding: 12px; height: 300px; overflow-y: scroll;">
   <ul>
     <li>Jun. 2025: <a href="#">StruMamba3D: Exploring Structural Mamba for Self-supervised Point Cloud Representation Learning</a> was accepted by ICCV 2025.</li>
     <li>May 2025: <a href="https://openreview.net/pdf?id=0gX9f5xTrD">Exploring Vision Semantic Prompt for Efficient Point Cloud Understanding</a> was accepted by ICML 2025.</li>
