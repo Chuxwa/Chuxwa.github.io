@@ -14,11 +14,13 @@ cover: true
 
 Hi! I am a PhD student in Department of Automation at [University of Science and Technology of China](https://www.ustc.edu.cn/), advised by Prof. [Weiren Wu](https://en.wikipedia.org/wiki/Wu_Weiren) and [Tianzhu Zhang](https://scholar.google.com/citations?user=9sCGe-gAAAAJ&hl=zh-CN).
 
-My research primarily focuses on 3D computer vision, including vision-3D foundation models, self-supervised/semi-supervised learning, 3D scene understanding, and representation learning. Previously, I interned with the Visual Computing Group at [Microsoft Research Asia](https://www.microsoft.com/en-us/research/lab/microsoft-research-asia/) (2020-2021) and [Deep Space Exploration Laboratory](http://www.dsel.cc/#/spaceFile/index) (2024-2025).
+My research primarily focuses on 3D computer vision, including vision-3D foundation models, self-supervised/semi-supervised learning, 3D scene understanding, and representation learning. 
+
+Previously, I interned with the Visual Computing Group at [Microsoft Research Asia](https://www.microsoft.com/en-us/research/lab/microsoft-research-asia/) (2020-2021) and [Deep Space Exploration Laboratory](http://www.dsel.cc/#/spaceFile/index) (2024-2025).
 
 <div style="height: 10px;"></div> <!-- 空行 -->
 **News 🔥**
-<div style="border: 1px solid #ddd; padding: 10px; height: 300px; overflow-y: scroll;">
+<div class="news-scroll" style="border: 1px solid #eee; border-radius: 10px; padding: 12px; height: 300px; overflow-y: scroll;">
   <ul>
     <li>Jun. 2025: <a href="#">StruMamba3D: Exploring Structural Mamba for Self-supervised Point Cloud Representation Learning</a> was accepted by ICCV 2025.</li>
     <li>May 2025: <a href="https://openreview.net/pdf?id=0gX9f5xTrD">Exploring Vision Semantic Prompt for Efficient Point Cloud Understanding</a> was accepted by ICML 2025.</li>
@@ -32,6 +34,49 @@ My research primarily focuses on 3D computer vision, including vision-3D foundat
     <li>May. 2023: <a href="https://ieeexplore.ieee.org/abstract/document/10124821">Long-Short Range Adaptive Transformer With Dynamic Sampling for 3D Object Detection</a> were accepted by TCSVT 2023.</li>
   </ul>
 </div>
+
+<style>
+/* 新闻区滚动条美化 */
+.news-scroll::-webkit-scrollbar {
+  width: 8px;
+  background: #f5f5f5;
+  border-radius: 8px;
+}
+.news-scroll::-webkit-scrollbar-thumb {
+  background: #ed764a;
+  border-radius: 8px;
+  min-height: 30px;
+}
+.news-scroll::-webkit-scrollbar-thumb:hover {
+  background: #d65c2a;
+}
+/* Firefox */
+.news-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: #ed764a #f5f5f5;
+}
+
+/* 白天模式（浅色） */
+.news-scroll {
+  background: #fcfaf8;
+  color: #222;
+  border: 1px solid #eee;
+}
+/* 夜间模式（深色） */
+@media (prefers-color-scheme: dark) {
+  .news-scroll {
+    background: #232323;
+    color: #f3f3f3;
+    border: 1px solid #444;
+  }
+  .news-scroll::-webkit-scrollbar {
+    background: #232323;
+  }
+  .news-scroll::-webkit-scrollbar-thumb {
+    background: #ed764a;
+  }
+}
+</style>
 
 <div style="height: 10px;"></div> <!-- 空行 -->
 **Experiences 📖**
@@ -77,10 +122,29 @@ My research primarily focuses on 3D computer vision, including vision-3D foundat
 
 
 <table style="border-collapse: collapse; border: none;">
+  <tr style="border: none;">
+    <td style="width: 120px; text-align: center; border: none; vertical-align: middle;">
+      <img src="assets/img/logo-DEST.png" alt="论文图片" style="width: 100%; max-width: 180px; min-width: 100px; height: auto; object-fit: contain; border-radius: 8px;" onerror="this.onerror=null;this.src='https://via.placeholder.com/180x60?text=No+Image';"/>
+    </td>
+    <td style="border: none; vertical-align: middle;">
+      <div style="font-size: 1.1em; font-weight: bold; margin-bottom: 2px;">
+        StruMamba3D: Exploring Structural Mamba for Self-supervised Point Cloud Representation Learning
+      </div>
+      <div style="margin-bottom: 2px;">
+        <b>Chuxin Wang</b>, Yixin Zha, Wenfei Yang, Tianzhu Zhang
+      </div>
+      <div style="margin-bottom: 4px;">
+        <span style="color: #ED764A; font-weight: bold;">ICCV 2025</span>
+      </div>
+      <div>
+        <a href="#" style="border:1px solid #ED764A; border-radius:4px; padding:2px 8px; margin-right:4px; text-decoration:none; color:#ED764A;">Paper</a>
+      </div>
+    </td>
+  </tr>
 
   <tr style="border: none;">
     <td style="width: 120px; text-align: center; border: none; vertical-align: middle;">
-      <img src="/assets/img/logo-DEST.png" style="height: 60px; width: auto; border-radius: 8px;"/>
+      <img src="assets/img/logo-DEST.png" alt="论文图片" style="width: 100%; max-width: 180px; min-width: 100px; height: auto; object-fit: contain; border-radius: 8px;" onerror="this.onerror=null;this.src='https://via.placeholder.com/180x60?text=No+Image';"/>
     </td>
     <td style="border: none; vertical-align: middle;">
       <div style="font-size: 1.1em; font-weight: bold; margin-bottom: 2px;">
@@ -104,27 +168,7 @@ My research primarily focuses on 3D computer vision, including vision-3D foundat
 
   <tr style="border: none;">
     <td style="width: 120px; text-align: center; border: none; vertical-align: middle;">
-      <img src="/assets/img/logo-DEST.png" style="height: 60px; width: auto; border-radius: 8px;"/>
-    </td>
-    <td style="border: none; vertical-align: middle;">
-      <div style="font-size: 1.1em; font-weight: bold; margin-bottom: 2px;">
-        StruMamba3D: Exploring Structural Mamba for Self-supervised Point Cloud Representation Learning
-      </div>
-      <div style="margin-bottom: 2px;">
-        <b>Chuxin Wang</b>, Yixin Zha, Wenfei Yang, Tianzhu Zhang
-      </div>
-      <div style="margin-bottom: 4px;">
-        <span style="color: #ED764A; font-weight: bold;">ICCV 2025</span>
-      </div>
-      <div>
-        <!-- 暂无链接 -->
-      </div>
-    </td>
-  </tr>
-
-  <tr style="border: none;">
-    <td style="width: 120px; text-align: center; border: none; vertical-align: middle;">
-      <img src="/assets/img/logo-OTMae3D.png" style="height: 60px; width: auto; border-radius: 8px;"/>
+      <img src="assets/img/logo-OTMae3D.png" alt="论文图片" style="width: 100%; max-width: 180px; min-width: 100px; height: auto; object-fit: contain; border-radius: 8px;" onerror="this.onerror=null;this.src='https://via.placeholder.com/180x60?text=No+Image';"/>
     </td>
     <td style="border: none; vertical-align: middle;">
       <div style="font-size: 1.1em; font-weight: bold; margin-bottom: 2px;">
@@ -147,7 +191,7 @@ My research primarily focuses on 3D computer vision, including vision-3D foundat
 
   <tr style="border: none;">
     <td style="width: 120px; text-align: center; border: none; vertical-align: middle;">
-      <img src="/assets/img/logo-Nesie.png" style="height: 60px; width: auto; border-radius: 8px;"/>
+      <img src="assets/img/logo-Nesie.png" alt="论文图片" style="width: 100%; max-width: 180px; min-width: 100px; height: auto; object-fit: contain; border-radius: 8px;" onerror="this.onerror=null;this.src='https://via.placeholder.com/180x60?text=No+Image';"/>
     </td>
     <td style="border: none; vertical-align: middle;">
       <div style="font-size: 1.1em; font-weight: bold; margin-bottom: 2px;">
@@ -170,7 +214,7 @@ My research primarily focuses on 3D computer vision, including vision-3D foundat
 
   <tr style="border: none;">
     <td style="width: 120px; text-align: center; border: none; vertical-align: middle;">
-      <img src="/assets/img/logo-LeadNet.png" style="height: 60px; width: auto; border-radius: 8px;"/>
+      <img src="assets/img/logo-LeadNet.png" alt="论文图片" style="width: 100%; max-width: 180px; min-width: 100px; height: auto; object-fit: contain; border-radius: 8px;" onerror="this.onerror=null;this.src='https://via.placeholder.com/180x60?text=No+Image';"/>
     </td>
     <td style="border: none; vertical-align: middle;">
       <div style="font-size: 1.1em; font-weight: bold; margin-bottom: 2px;">
@@ -192,7 +236,7 @@ My research primarily focuses on 3D computer vision, including vision-3D foundat
 
   <tr style="border: none;">
     <td style="width: 120px; text-align: center; border: none; vertical-align: middle;">
-      <img src="/assets/img/logo-DEST.png" style="height: 60px; width: auto; border-radius: 8px;"/>
+      <img src="assets/img/logo-DEST.png" alt="论文图片" style="width: 100%; max-width: 180px; min-width: 100px; height: auto; object-fit: contain; border-radius: 8px;" onerror="this.onerror=null;this.src='https://via.placeholder.com/180x60?text=No+Image';"/>
     </td>
     <td style="border: none; vertical-align: middle;">
       <div style="font-size: 1.1em; font-weight: bold; margin-bottom: 2px;">
@@ -205,14 +249,14 @@ My research primarily focuses on 3D computer vision, including vision-3D foundat
         <span style="color: #ED764A; font-weight: bold;">IJCAI 2025</span>
       </div>
       <div>
-        <!-- 暂无链接 -->
+        <a href="#" style="border:1px solid #ED764A; border-radius:4px; padding:2px 8px; margin-right:4px; text-decoration:none; color:#ED764A;">Paper</a>
       </div>
     </td>
   </tr>
 
   <tr style="border: none;">
     <td style="width: 120px; text-align: center; border: none; vertical-align: middle;">
-      <img src="/assets/img/logo-SE-ORNet.png" style="height: 60px; width: auto; border-radius: 8px;"/>
+      <img src="assets/img/logo-SE-ORNet.png" alt="论文图片" style="width: 100%; max-width: 180px; min-width: 100px; height: auto; object-fit: contain; border-radius: 8px;" onerror="this.onerror=null;this.src='https://via.placeholder.com/180x60?text=No+Image';"/>
     </td>
     <td style="border: none; vertical-align: middle;">
       <div style="font-size: 1.1em; font-weight: bold; margin-bottom: 2px;">
@@ -236,7 +280,7 @@ My research primarily focuses on 3D computer vision, including vision-3D foundat
 
   <tr style="border: none;">
     <td style="width: 120px; text-align: center; border: none; vertical-align: middle;">
-      <img src="/assets/img/logo-SpareNet.png" style="height: 60px; width: auto; border-radius: 8px;"/>
+      <img src="assets/img/logo-SpareNet.png" alt="论文图片" style="width: 100%; max-width: 180px; min-width: 100px; height: auto; object-fit: contain; border-radius: 8px;" onerror="this.onerror=null;this.src='https://via.placeholder.com/180x60?text=No+Image';"/>
     </td>
     <td style="border: none; vertical-align: middle;">
       <div style="font-size: 1.1em; font-weight: bold; margin-bottom: 2px;">
@@ -260,7 +304,7 @@ My research primarily focuses on 3D computer vision, including vision-3D foundat
 
   <tr style="border: none;">
     <td style="width: 120px; text-align: center; border: none; vertical-align: middle;">
-      <img src="/assets/img/logo-PETL.png" style="height: 60px; width: auto; border-radius: 8px;"/>
+      <img src="assets/img/logo-PETL.png" alt="论文图片" style="width: 100%; max-width: 180px; min-width: 100px; height: auto; object-fit: contain; border-radius: 8px;" onerror="this.onerror=null;this.src='https://via.placeholder.com/180x60?text=No+Image';"/>
     </td>
     <td style="border: none; vertical-align: middle;">
       <div style="font-size: 1.1em; font-weight: bold; margin-bottom: 2px;">
@@ -280,7 +324,7 @@ My research primarily focuses on 3D computer vision, including vision-3D foundat
 
   <tr style="border: none;">
     <td style="width: 120px; text-align: center; border: none; vertical-align: middle;">
-      <img src="/assets/img/logo-QRT3D.png" style="height: 60px; width: auto; border-radius: 8px;"/>
+      <img src="assets/img/logo-QRT3D.png" alt="论文图片" style="width: 100%; max-width: 180px; min-width: 100px; height: auto; object-fit: contain; border-radius: 8px;" onerror="this.onerror=null;this.src='https://via.placeholder.com/180x60?text=No+Image';"/>
     </td>
     <td style="border: none; vertical-align: middle;">
       <div style="font-size: 1.1em; font-weight: bold; margin-bottom: 2px;">
@@ -300,7 +344,7 @@ My research primarily focuses on 3D computer vision, including vision-3D foundat
 
   <tr style="border: none;">
     <td style="width: 120px; text-align: center; border: none; vertical-align: middle;">
-      <img src="/assets/img/logo-Pamba.png" style="height: 60px; width: auto; border-radius: 8px;"/>
+      <img src="assets/img/logo-Pamba.png" alt="论文图片" style="width: 100%; max-width: 180px; min-width: 100px; height: auto; object-fit: contain; border-radius: 8px;" onerror="this.onerror=null;this.src='https://via.placeholder.com/180x60?text=No+Image';"/>
     </td>
     <td style="border: none; vertical-align: middle;">
       <div style="font-size: 1.1em; font-weight: bold; margin-bottom: 2px;">
@@ -320,7 +364,7 @@ My research primarily focuses on 3D computer vision, including vision-3D foundat
 
   <tr style="border: none;">
     <td style="width: 120px; text-align: center; border: none; vertical-align: middle;">
-      <img src="/assets/img/logo-ScaleDepth.png" style="height: 60px; width: auto; border-radius: 8px;"/>
+      <img src="assets/img/logo-ScaleDepth.png" alt="论文图片" style="width: 100%; max-width: 180px; min-width: 100px; height: auto; object-fit: contain; border-radius: 8px;" onerror="this.onerror=null;this.src='https://via.placeholder.com/180x60?text=No+Image';"/>
     </td>
     <td style="border: none; vertical-align: middle;">
       <div style="font-size: 1.1em; font-weight: bold; margin-bottom: 2px;">
@@ -342,7 +386,7 @@ My research primarily focuses on 3D computer vision, including vision-3D foundat
 
   <tr style="border: none;">
     <td style="width: 120px; text-align: center; border: none; vertical-align: middle;">
-      <img src="/assets/img/logo-ECDepth.png" style="height: 60px; width: auto; border-radius: 8px;"/>
+      <img src="assets/img/logo-ECDepth.png" alt="论文图片" style="width: 100%; max-width: 180px; min-width: 100px; height: auto; object-fit: contain; border-radius: 8px;" onerror="this.onerror=null;this.src='https://via.placeholder.com/180x60?text=No+Image';"/>
     </td>
     <td style="border: none; vertical-align: middle;">
       <div style="font-size: 1.1em; font-weight: bold; margin-bottom: 2px;">
