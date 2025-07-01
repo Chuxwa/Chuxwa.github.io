@@ -22,9 +22,9 @@ Previously, I interned with the Visual Computing Group at [Microsoft Research As
 **News 🔥**
 <div class="news-scroll" style="border: 1px solid #eee; border-radius: 10px; padding: 12px; height: 300px; overflow-y: scroll;">
   <ul>
-    <li>Jun. 2025: <a href="#">StruMamba3D: Exploring Structural Mamba for Self-supervised Point Cloud Representation Learning</a> was accepted by ICCV 2025.</li>
+    <li>Jun. 2025: <a href="https://arxiv.org/pdf/2506.21541">StruMamba3D: Exploring Structural Mamba for Self-supervised Point Cloud Representation Learning</a> was accepted by ICCV 2025.</li>
     <li>May 2025: <a href="https://openreview.net/pdf?id=0gX9f5xTrD">Exploring Vision Semantic Prompt for Efficient Point Cloud Understanding</a> was accepted by ICML 2025.</li>
-    <li>May 2025: <a href="#">Exploring Semantic Masked Autoencoder for Self-supervised Point Cloud Understanding</a> was accepted by IJCAI 2025.</li>
+    <li>May 2025: <a href="https://arxiv.org/pdf/2506.21957">Exploring Semantic Masked Autoencoder for Self-supervised Point Cloud Understanding</a> was accepted by IJCAI 2025.</li>
     <li>Jan. 2025: <a href="https://openreview.net/forum?id=Tisu1L0Jwt">State Space Model Meets Transformer: A New Paradigm for 3D Object Detection</a> was accepted by ICLR 2025.</li>
     <li>Dec. 2024: <a href="https://ieeexplore.ieee.org/document/10815033">RMAE3D: Rethinking Masked Representation Learning for 3D Point Cloud Understanding</a> was accepted by TIP 2025.</li>
     <li>Aug. 2024: <a href="https://arxiv.org/abs/2406.17442">Pamba: Enhancing Global Interaction in Point Clouds via State Space Model</a> was accepted by AAAI 2025.</li>
@@ -103,7 +103,7 @@ Previously, I interned with the Visual Computing Group at [Microsoft Research As
 <table style="border-collapse: collapse; border: none;">
   <tr style="border: none;">
     <td style="width: 120px; text-align: center; border: none; vertical-align: middle;">
-      <img src="assets/img/logo-DEST.png" alt="论文图片" style="width: 100%; max-width: 180px; min-width: 100px; height: auto; object-fit: contain; border-radius: 8px;" onerror="this.onerror=null;this.src='https://via.placeholder.com/180x60?text=No+Image';"/>
+      <img src="assets/img/logo-iccv.png" alt="论文图片" style="width: 100%; max-width: 180px; min-width: 100px; height: auto; object-fit: contain; border-radius: 8px;" onerror="this.onerror=null;this.src='https://via.placeholder.com/180x60?text=No+Image';"/>
     </td>
     <td style="border: none; vertical-align: middle;">
       <div style="font-size: 1.1em; font-weight: bold; margin-bottom: 2px;">
@@ -116,7 +116,7 @@ Previously, I interned with the Visual Computing Group at [Microsoft Research As
         <span style="color: #ED764A; font-weight: bold;">ICCV 2025</span>
       </div>
       <div>
-        <a href="#" style="border:1px solid #ED764A; border-radius:4px; padding:2px 8px; margin-right:4px; text-decoration:none; color:#ED764A;">Paper</a>
+        <a href="https://arxiv.org/pdf/2506.21541" style="border:1px solid #ED764A; border-radius:4px; padding:2px 8px; margin-right:4px; text-decoration:none; color:#ED764A;">Paper</a>
       </div>
     </td>
   </tr>
@@ -215,7 +215,7 @@ Previously, I interned with the Visual Computing Group at [Microsoft Research As
 
   <tr style="border: none;">
     <td style="width: 120px; text-align: center; border: none; vertical-align: middle;">
-      <img src="assets/img/logo-DEST.png" alt="论文图片" style="width: 100%; max-width: 180px; min-width: 100px; height: auto; object-fit: contain; border-radius: 8px;" onerror="this.onerror=null;this.src='https://via.placeholder.com/180x60?text=No+Image';"/>
+      <img src="assets/img/logo-ijcai.png" alt="论文图片" style="width: 100%; max-width: 180px; min-width: 100px; height: auto; object-fit: contain; border-radius: 8px;" onerror="this.onerror=null;this.src='https://via.placeholder.com/180x60?text=No+Image';"/>
     </td>
     <td style="border: none; vertical-align: middle;">
       <div style="font-size: 1.1em; font-weight: bold; margin-bottom: 2px;">
@@ -228,7 +228,7 @@ Previously, I interned with the Visual Computing Group at [Microsoft Research As
         <span style="color: #ED764A; font-weight: bold;">IJCAI 2025</span>
       </div>
       <div>
-        <a href="#" style="border:1px solid #ED764A; border-radius:4px; padding:2px 8px; margin-right:4px; text-decoration:none; color:#ED764A;">Paper</a>
+        <a href="https://arxiv.org/pdf/2506.21541" style="border:1px solid #ED764A; border-radius:4px; padding:2px 8px; margin-right:4px; text-decoration:none; color:#ED764A;">Paper</a>
       </div>
     </td>
   </tr>
