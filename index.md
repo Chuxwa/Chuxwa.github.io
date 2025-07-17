@@ -14,7 +14,7 @@ cover: true
 
 Hi! I am a PhD student in Department of Automation at [University of Science and Technology of China](https://www.ustc.edu.cn/), advised by Prof. [Weiren Wu](https://en.wikipedia.org/wiki/Wu_Weiren) and [Tianzhu Zhang](https://scholar.google.com/citations?user=9sCGe-gAAAAJ&hl=zh-CN).
 
-My research primarily focuses on 3D computer vision, including vision-3D foundation models, self-supervised/semi-supervised learning, 3D scene understanding, and representation learning. 
+My research primarily focuses on <strong style="color:rgb(240, 92, 38);">3D computer vision</strong>, including 3D foundation models, self-supervised/semi-supervised learning, 3D scene understanding, and representation learning. 
 
 Previously, I interned with the Visual Computing Group at [Microsoft Research Asia](https://www.microsoft.com/en-us/research/lab/microsoft-research-asia/) (2020-2021) and [Deep Space Exploration Laboratory](http://www.dsel.cc/#/spaceFile/index) (2024-2025).
 
@@ -22,16 +22,16 @@ Previously, I interned with the Visual Computing Group at [Microsoft Research As
 **News 🔥**
 <div class="news-scroll" style="border: 1px solid #eee; border-radius: 10px; padding: 12px; height: 300px; overflow-y: scroll;">
   <ul>
-    <li>Jun. 2025: <a href="https://arxiv.org/pdf/2506.21541">StruMamba3D: Exploring Structural Mamba for Self-supervised Point Cloud Representation Learning</a> was accepted by ICCV 2025.</li>
-    <li>May 2025: <a href="https://openreview.net/pdf?id=0gX9f5xTrD">Exploring Vision Semantic Prompt for Efficient Point Cloud Understanding</a> was accepted by ICML 2025.</li>
-    <li>May 2025: <a href="https://arxiv.org/pdf/2506.21957">Exploring Semantic Masked Autoencoder for Self-supervised Point Cloud Understanding</a> was accepted by IJCAI 2025.</li>
-    <li>Jan. 2025: <a href="https://openreview.net/forum?id=Tisu1L0Jwt">State Space Model Meets Transformer: A New Paradigm for 3D Object Detection</a> was accepted by ICLR 2025.</li>
-    <li>Dec. 2024: <a href="https://ieeexplore.ieee.org/document/10815033">RMAE3D: Rethinking Masked Representation Learning for 3D Point Cloud Understanding</a> was accepted by TIP 2025.</li>
+    <li>Jun. 2025: <a href="https://arxiv.org/pdf/2506.21541">StruMamba3D: Exploring Structural Mamba for Self-supervised Point Cloud Representation Learning</a> was accepted by <strong style="color:rgb(240, 92, 38);">ICCV 2025</strong>.</li>
+    <li>May 2025: <a href="https://openreview.net/pdf?id=0gX9f5xTrD">Exploring Vision Semantic Prompt for Efficient Point Cloud Understanding</a> was accepted by <strong style="color:rgb(240, 92, 38);">ICML 2025</strong>.</li>
+    <li>May 2025: <a href="https://arxiv.org/pdf/2506.21957">Exploring Semantic Masked Autoencoder for Self-supervised Point Cloud Understanding</a> was accepted by <strong style="color:rgb(240, 92, 38);">IJCAI 2025</strong>.</li>
+    <li>Jan. 2025: <a href="https://openreview.net/forum?id=Tisu1L0Jwt">State Space Model Meets Transformer: A New Paradigm for 3D Object Detection</a> was accepted by <strong style="color:rgb(240, 92, 38);">ICLR 2025</strong>.</li>
+    <li>Dec. 2024: <a href="https://ieeexplore.ieee.org/document/10815033">RMAE3D: Rethinking Masked Representation Learning for 3D Point Cloud Understanding</a> was accepted by <strong style="color:rgb(240, 92, 38);">TIP 2024</strong>.</li>
     <li>Aug. 2024: <a href="https://arxiv.org/abs/2406.17442">Pamba: Enhancing Global Interaction in Point Clouds via State Space Model</a> was accepted by AAAI 2025.</li>
-    <li>Oct. 2023: <a href="https://openaccess.thecvf.com/content/ICCV2023/papers/Wang_Not_Every_Side_Is_Equal_Localization_Uncertainty_Estimation_for_Semi-Supervised_ICCV_2023_paper.pdf">Not Every Side Is Equal: Localization Uncertainty Estimation for Semi-Supervised 3D Object Detection</a> were accepted by ICCV 2023.</li>
-    <li>Oct. 2023: <a href="https://openaccess.thecvf.com/content/ICCV2023/papers/Lu_Query_Refinement_Transformer_for_3D_Instance_Segmentation_ICCV_2023_paper.pdf">Query Refinement Transformer for 3D Instance Segmentation</a> were accepted by ICCV 2023.</li>
-    <li>Apr. 2023: <a href="https://openaccess.thecvf.com/content/CVPR2023/papers/Deng_SE-ORNet_Self-Ensembling_Orientation-Aware_Network_for_Unsupervised_Point_Cloud_Shape_Correspondence_CVPR_2023_paper.pdf">SE-ORNet: Self-Ensembling Orientation-aware Network for Unsupervised Point Cloud Shape Correspondence</a> were accepted by CVPR 2023.</li>
-    <li>May. 2023: <a href="https://ieeexplore.ieee.org/abstract/document/10124821">Long-Short Range Adaptive Transformer With Dynamic Sampling for 3D Object Detection</a> were accepted by TCSVT 2023.</li>
+    <li>Oct. 2023: <a href="https://openaccess.thecvf.com/content/ICCV2023/papers/Wang_Not_Every_Side_Is_Equal_Localization_Uncertainty_Estimation_for_Semi-Supervised_ICCV_2023_paper.pdf">Not Every Side Is Equal: Localization Uncertainty Estimation for Semi-Supervised 3D Object Detection</a> were accepted by <strong style="color:rgb(240, 92, 38);">ICCV 2023</strong>.</li>
+    <li>Oct. 2023: <a href="https://openaccess.thecvf.com/content/ICCV2023/papers/Lu_Query_Refinement_Transformer_for_3D_Instance_Segmentation_ICCV_2023_paper.pdf">Query Refinement Transformer for 3D Instance Segmentation</a> were accepted by <strong style="color:rgb(240, 92, 38);">ICCV 2023</strong>.</li>
+    <li>Apr. 2023: <a href="https://openaccess.thecvf.com/content/CVPR2023/papers/Deng_SE-ORNet_Self-Ensembling_Orientation-Aware_Network_for_Unsupervised_Point_Cloud_Shape_Correspondence_CVPR_2023_paper.pdf">SE-ORNet: Self-Ensembling Orientation-aware Network for Unsupervised Point Cloud Shape Correspondence</a> were accepted by <strong style="color:rgb(240, 92, 38);">CVPR 2023</strong>.</li>
+    <li>May. 2023: <a href="https://ieeexplore.ieee.org/abstract/document/10124821">Long-Short Range Adaptive Transformer With Dynamic Sampling for 3D Object Detection</a> were accepted by <strong style="color:rgb(240, 92, 38);">TCSVT 2023</strong>.</li>
   </ul>
 </div>
 
