@@ -89,7 +89,7 @@ publications:
     authors: "Wenfei Yang, <b>Chuxin Wang+</b>, Tianzhu Zhang, Yongdong Zhang, Feng Wu"
     venue: "TPAMI 2025"
     year: 2025
-    image: "assets/img/logo-SA3Det.png"
+    image: "assets/img/logo-sa3det.png"
     links:
       webpage: "https://chuxwa.github.io/project_SA3Det/"
       code: "https://github.com/OpenSpaceAI/Nesie"
