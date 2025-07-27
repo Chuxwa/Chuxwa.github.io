@@ -22,16 +22,9 @@ Previously, I interned with the Visual Computing Group at [Microsoft Research As
 **News 🔥**
 <div class="news-scroll" style="border: 1px solid #eee; border-radius: 10px; padding: 12px; height: 300px; overflow-y: scroll;">
   <ul>
-    <li>Jun. 2025: <a href="https://arxiv.org/pdf/2506.21541">StruMamba3D: Exploring Structural Mamba for Self-supervised Point Cloud Representation Learning</a> was accepted by <strong style="color:rgb(240, 92, 38);">ICCV 2025</strong>.</li>
-    <li>May 2025: <a href="https://openreview.net/pdf?id=0gX9f5xTrD">Exploring Vision Semantic Prompt for Efficient Point Cloud Understanding</a> was accepted by <strong style="color:rgb(240, 92, 38);">ICML 2025</strong>.</li>
-    <li>May 2025: <a href="https://arxiv.org/pdf/2506.21957">Exploring Semantic Masked Autoencoder for Self-supervised Point Cloud Understanding</a> was accepted by <strong style="color:rgb(240, 92, 38);">IJCAI 2025</strong>.</li>
-    <li>Jan. 2025: <a href="https://openreview.net/forum?id=Tisu1L0Jwt">State Space Model Meets Transformer: A New Paradigm for 3D Object Detection</a> was accepted by <strong style="color:rgb(240, 92, 38);">ICLR 2025</strong>.</li>
-    <li>Dec. 2024: <a href="https://ieeexplore.ieee.org/document/10815033">RMAE3D: Rethinking Masked Representation Learning for 3D Point Cloud Understanding</a> was accepted by <strong style="color:rgb(240, 92, 38);">TIP 2024</strong>.</li>
-    <li>Aug. 2024: <a href="https://arxiv.org/abs/2406.17442">Pamba: Enhancing Global Interaction in Point Clouds via State Space Model</a> was accepted by <strong style="color:rgb(240, 92, 38);">AAAI 2025</strong>.</li>
-    <li>Oct. 2023: <a href="https://openaccess.thecvf.com/content/ICCV2023/papers/Wang_Not_Every_Side_Is_Equal_Localization_Uncertainty_Estimation_for_Semi-Supervised_ICCV_2023_paper.pdf">Not Every Side Is Equal: Localization Uncertainty Estimation for Semi-Supervised 3D Object Detection</a> were accepted by <strong style="color:rgb(240, 92, 38);">ICCV 2023</strong>.</li>
-    <li>Oct. 2023: <a href="https://openaccess.thecvf.com/content/ICCV2023/papers/Lu_Query_Refinement_Transformer_for_3D_Instance_Segmentation_ICCV_2023_paper.pdf">Query Refinement Transformer for 3D Instance Segmentation</a> were accepted by <strong style="color:rgb(240, 92, 38);">ICCV 2023</strong>.</li>
-    <li>Apr. 2023: <a href="https://openaccess.thecvf.com/content/CVPR2023/papers/Deng_SE-ORNet_Self-Ensembling_Orientation-Aware_Network_for_Unsupervised_Point_Cloud_Shape_Correspondence_CVPR_2023_paper.pdf">SE-ORNet: Self-Ensembling Orientation-aware Network for Unsupervised Point Cloud Shape Correspondence</a> were accepted by <strong style="color:rgb(240, 92, 38);">CVPR 2023</strong>.</li>
-    <li>May. 2023: <a href="https://ieeexplore.ieee.org/abstract/document/10124821">Long-Short Range Adaptive Transformer With Dynamic Sampling for 3D Object Detection</a> were accepted by <strong style="color:rgb(240, 92, 38);">TCSVT 2023</strong>.</li>
+    {% for item in site.data.news.news %}
+    <li>{{ item.date }}: <a href="{{ item.link }}">{{ item.title }}</a> was accepted by <strong style="color:rgb(240, 92, 38);">{{ item.venue }}</strong>.</li>
+    {% endfor %}
   </ul>
 </div>
 
@@ -99,292 +92,42 @@ Previously, I interned with the Visual Computing Group at [Microsoft Research As
 
 \* denotes equal contribution. More publications can be found in <a href="https://scholar.google.com/citations?user=0kS2MgIAAAAJ&hl=en">Google Scholar</a>.
 
-
 <table style="border-collapse: collapse; border: none;">
+{% for pub in site.data.publications.publications %}
   <tr style="border: none;">
     <td style="width: 120px; text-align: center; border: none; vertical-align: middle;">
-      <img src="assets/img/logo-iccv.png" alt="论文图片" style="width: 100%; max-width: 180px; min-width: 100px; height: auto; object-fit: contain; border-radius: 8px;" onerror="this.onerror=null;this.src='https://via.placeholder.com/180x60?text=No+Image';"/>
+      <img src="{{ pub.image }}" alt="论文图片" style="width: 100%; max-width: 180px; min-width: 100px; height: auto; object-fit: contain; border-radius: 8px;" onerror="this.onerror=null;this.src='https://via.placeholder.com/180x60?text=No+Image';"/>
     </td>
     <td style="border: none; vertical-align: middle;">
       <div style="font-size: 1.1em; font-weight: bold; margin-bottom: 2px;">
-        StruMamba3D: Exploring Structural Mamba for Self-supervised Point Cloud Representation Learning
+        {{ pub.title }}
       </div>
       <div style="margin-bottom: 2px;">
-        <b>Chuxin Wang</b>, Yixin Zha, Wenfei Yang, Tianzhu Zhang
+        {{ pub.authors }}
       </div>
       <div style="margin-bottom: 4px;">
-        <span style="color: #ED764A; font-weight: bold;">ICCV 2025</span>
+        <span style="color: #ED764A; font-weight: bold;">{{ pub.venue }}</span>
       </div>
       <div>
-        <a href="https://arxiv.org/pdf/2506.21541" style="border:1px solid #ED764A; border-radius:4px; padding:2px 8px; margin-right:4px; text-decoration:none; color:#ED764A;">Paper</a>
+        {% if pub.links.paper %}
+          <a href="{{ pub.links.paper }}" style="border:1px solid #ED764A; border-radius:4px; padding:2px 8px; margin-right:4px; text-decoration:none; color:#ED764A;">Paper</a>
+        {% endif %}
+        {% if pub.links.webpage %}
+          <a href="{{ pub.links.webpage }}" style="border:1px solid #ED764A; border-radius:4px; padding:2px 8px; margin-right:4px; text-decoration:none; color:#ED764A;">Webpage</a>
+        {% endif %}
+        {% if pub.links.code %}
+          <a href="{{ pub.links.code }}" style="border:1px solid #ED764A; border-radius:4px; padding:2px 8px; margin-right:4px; text-decoration:none; color:#ED764A;">Code</a>
+        {% endif %}
+        {% if pub.links.poster %}
+          <a href="{{ pub.links.poster }}" style="border:1px solid #ED764A; border-radius:4px; padding:2px 8px; margin-right:4px; text-decoration:none; color:#ED764A;">Poster</a>
+        {% endif %}
+        {% if pub.links.bibtex %}
+          <a href="{{ pub.links.bibtex }}" style="border:1px solid #ED764A; border-radius:4px; padding:2px 8px; text-decoration:none; color:#ED764A;">BibTeX</a>
+        {% endif %}
       </div>
     </td>
   </tr>
-
-  <tr style="border: none;">
-    <td style="width: 120px; text-align: center; border: none; vertical-align: middle;">
-      <img src="assets/img/logo-DEST.png" alt="论文图片" style="width: 100%; max-width: 180px; min-width: 100px; height: auto; object-fit: contain; border-radius: 8px;" onerror="this.onerror=null;this.src='https://via.placeholder.com/180x60?text=No+Image';"/>
-    </td>
-    <td style="border: none; vertical-align: middle;">
-      <div style="font-size: 1.1em; font-weight: bold; margin-bottom: 2px;">
-        State Space Model Meets Transformer: A New Paradigm for 3D Object Detection
-      </div>
-      <div style="margin-bottom: 2px;">
-        <b>Chuxin Wang</b>, Wenfei Yang, Xiang Liu, Tianzhu Zhang
-      </div>
-      <div style="margin-bottom: 4px;">
-        <span style="color: #ED764A; font-weight: bold;">ICLR 2025</span>
-      </div>
-      <div>
-        <a href="https://openreview.net/forum?id=Tisu1L0Jwt" style="border:1px solid #ED764A; border-radius:4px; padding:2px 8px; margin-right:4px; text-decoration:none; color:#ED764A;">Paper</a>
-        <a href="https://chuxwa.github.io/project_DEST/" style="border:1px solid #ED764A; border-radius:4px; padding:2px 8px; margin-right:4px; text-decoration:none; color:#ED764A;">Webpage</a>
-        <a href="https://github.com/OpenSpaceAI/DEST3D" style="border:1px solid #ED764A; border-radius:4px; padding:2px 8px; margin-right:4px; text-decoration:none; color:#ED764A;">Code</a>
-        <a href="https://chuxwa.github.io/project_DEST/files/poster.pdf" style="border:1px solid #ED764A; border-radius:4px; padding:2px 8px; margin-right:4px; text-decoration:none; color:#ED764A;">Poster</a>
-        <a href="https://chuxwa.github.io/project_DEST/files/bib.txt" style="border:1px solid #ED764A; border-radius:4px; padding:2px 8px; text-decoration:none; color:#ED764A;">BibTeX</a>
-      </div>
-    </td>
-  </tr>
-
-  <tr style="border: none;">
-    <td style="width: 120px; text-align: center; border: none; vertical-align: middle;">
-      <img src="assets/img/logo-OTMae3D.png" alt="论文图片" style="width: 100%; max-width: 180px; min-width: 100px; height: auto; object-fit: contain; border-radius: 8px;" onerror="this.onerror=null;this.src='https://via.placeholder.com/180x60?text=No+Image';"/>
-    </td>
-    <td style="border: none; vertical-align: middle;">
-      <div style="font-size: 1.1em; font-weight: bold; margin-bottom: 2px;">
-        Rethinking Masked Representation Learning for 3D Point Cloud Understanding
-      </div>
-      <div style="margin-bottom: 2px;">
-        <b>Chuxin Wang</b>, Yixin Zha, Jianfeng He, Wenfei Yang, Tianzhu Zhang
-      </div>
-      <div style="margin-bottom: 4px;">
-        <span style="color: #ED764A; font-weight: bold;">TIP 2024</span>
-      </div>
-      <div>
-        <a href="https://ieeexplore.ieee.org/document/10815033" style="border:1px solid #ED764A; border-radius:4px; padding:2px 8px; margin-right:4px; text-decoration:none; color:#ED764A;">Paper</a>
-        <a href="https://chuxwa.github.io/project_OTMae3D/" style="border:1px solid #ED764A; border-radius:4px; padding:2px 8px; margin-right:4px; text-decoration:none; color:#ED764A;">Webpage</a>
-        <a href="https://github.com/OpenSpaceAI/OTMae3D" style="border:1px solid #ED764A; border-radius:4px; padding:2px 8px; margin-right:4px; text-decoration:none; color:#ED764A;">Code</a>
-        <a href="https://chuxwa.github.io/project_Nesie/files/bib.txt" style="border:1px solid #ED764A; border-radius:4px; padding:2px 8px; text-decoration:none; color:#ED764A;">BibTeX</a>
-      </div>
-    </td>
-  </tr>
-
-  <tr style="border: none;">
-    <td style="width: 120px; text-align: center; border: none; vertical-align: middle;">
-      <img src="assets/img/logo-Nesie.png" alt="论文图片" style="width: 100%; max-width: 180px; min-width: 100px; height: auto; object-fit: contain; border-radius: 8px;" onerror="this.onerror=null;this.src='https://via.placeholder.com/180x60?text=No+Image';"/>
-    </td>
-    <td style="border: none; vertical-align: middle;">
-      <div style="font-size: 1.1em; font-weight: bold; margin-bottom: 2px;">
-        Not Every Side Is Equal: Localization Uncertainty Estimation for Semi-Supervised 3D Object Detection
-      </div>
-      <div style="margin-bottom: 2px;">
-        <b>Chuxin Wang</b>, Wenfei Yang, Tianzhu Zhang
-      </div>
-      <div style="margin-bottom: 4px;">
-        <span style="color: #ED764A; font-weight: bold;">ICCV 2023</span>
-      </div>
-      <div>
-        <a href="https://openaccess.thecvf.com/content/ICCV2023/papers/Wang_Not_Every_Side_Is_Equal_Localization_Uncertainty_Estimation_for_Semi-Supervised_ICCV_2023_paper.pdf" style="border:1px solid #ED764A; border-radius:4px; padding:2px 8px; margin-right:4px; text-decoration:none; color:#ED764A;">Paper</a>
-        <a href="https://chuxwa.github.io/project_Nesie/" style="border:1px solid #ED764A; border-radius:4px; padding:2px 8px; margin-right:4px; text-decoration:none; color:#ED764A;">Webpage</a>
-        <a href="https://github.com/OpenSpaceAI/Nesie" style="border:1px solid #ED764A; border-radius:4px; padding:2px 8px; margin-right:4px; text-decoration:none; color:#ED764A;">Code</a>
-        <a href="https://chuxwa.github.io/project_Nesie/files/bib.txt" style="border:1px solid #ED764A; border-radius:4px; padding:2px 8px; text-decoration:none; color:#ED764A;">BibTeX</a>
-      </div>
-    </td>
-  </tr>
-
-  <tr style="border: none;">
-    <td style="width: 120px; text-align: center; border: none; vertical-align: middle;">
-      <img src="assets/img/logo-LeadNet.png" alt="论文图片" style="width: 100%; max-width: 180px; min-width: 100px; height: auto; object-fit: contain; border-radius: 8px;" onerror="this.onerror=null;this.src='https://via.placeholder.com/180x60?text=No+Image';"/>
-    </td>
-    <td style="border: none; vertical-align: middle;">
-      <div style="font-size: 1.1em; font-weight: bold; margin-bottom: 2px;">
-        Long-short Range Adaptive Transformer with Dynamic Sampling for 3D Object Detection
-      </div>
-      <div style="margin-bottom: 2px;">
-        <b>Chuxin Wang</b>, Jiacheng Deng, Jianfeng He, Tianzhu Zhang, Zhe Zhang, Yongdong Zhang
-      </div>
-      <div style="margin-bottom: 4px;">
-        <span style="color: #ED764A; font-weight: bold;">TCSVT 2023</span>
-      </div>
-      <div>
-        <a href="https://ieeexplore.ieee.org/abstract/document/10124821" style="border:1px solid #ED764A; border-radius:4px; padding:2px 8px; margin-right:4px; text-decoration:none; color:#ED764A;">Paper</a>
-        <a href="https://chuxwa.github.io/project_LeadNet/" style="border:1px solid #ED764A; border-radius:4px; padding:2px 8px; margin-right:4px; text-decoration:none; color:#ED764A;">Webpage</a>
-        <a href="https://chuxwa.github.io/project_LeadNet/files/bib.txt" style="border:1px solid #ED764A; border-radius:4px; padding:2px 8px; text-decoration:none; color:#ED764A;">BibTeX</a>
-      </div>
-    </td>
-  </tr>
-
-  <tr style="border: none;">
-    <td style="width: 120px; text-align: center; border: none; vertical-align: middle;">
-      <img src="assets/img/logo-ijcai.png" alt="论文图片" style="width: 100%; max-width: 180px; min-width: 100px; height: auto; object-fit: contain; border-radius: 8px;" onerror="this.onerror=null;this.src='https://via.placeholder.com/180x60?text=No+Image';"/>
-    </td>
-    <td style="border: none; vertical-align: middle;">
-      <div style="font-size: 1.1em; font-weight: bold; margin-bottom: 2px;">
-        Exploring Semantic Masked Autoencoder for Self-supervised Point Cloud Understanding
-      </div>
-      <div style="margin-bottom: 2px;">
-        Yixin Zha*, <b>Chuxin Wang*</b>, Wenfei Yang, Tianzhu Zhang
-      </div>
-      <div style="margin-bottom: 4px;">
-        <span style="color: #ED764A; font-weight: bold;">IJCAI 2025</span>
-      </div>
-      <div>
-        <a href="https://arxiv.org/pdf/2506.21541" style="border:1px solid #ED764A; border-radius:4px; padding:2px 8px; margin-right:4px; text-decoration:none; color:#ED764A;">Paper</a>
-      </div>
-    </td>
-  </tr>
-
-  <tr style="border: none;">
-    <td style="width: 120px; text-align: center; border: none; vertical-align: middle;">
-      <img src="assets/img/logo-SE-ORNet.png" alt="论文图片" style="width: 100%; max-width: 180px; min-width: 100px; height: auto; object-fit: contain; border-radius: 8px;" onerror="this.onerror=null;this.src='https://via.placeholder.com/180x60?text=No+Image';"/>
-    </td>
-    <td style="border: none; vertical-align: middle;">
-      <div style="font-size: 1.1em; font-weight: bold; margin-bottom: 2px;">
-        SE-ORNet: Self-Ensembling Orientation-aware Network for Unsupervised Point Cloud Shape Correspondence
-      </div>
-      <div style="margin-bottom: 2px;">
-        Jiacheng Deng*, <b>Chuxin Wang*</b>, Jiahao Lu, Jianfeng He, Tianzhu Zhang, Jiyang Yu, Zhe Zhang
-      </div>
-      <div style="margin-bottom: 4px;">
-        <span style="color: #ED764A; font-weight: bold;">CVPR 2023</span>
-      </div>
-      <div>
-        <a href="https://openaccess.thecvf.com/content/CVPR2023/papers/Deng_SE-ORNet_Self-Ensembling_Orientation-Aware_Network_for_Unsupervised_Point_Cloud_Shape_Correspondence_CVPR_2023_paper.pdf" style="border:1px solid #ED764A; border-radius:4px; padding:2px 8px; margin-right:4px; text-decoration:none; color:#ED764A;">Paper</a>
-        <a href="https://chuxwa.github.io/project_SE-ORNet/" style="border:1px solid #ED764A; border-radius:4px; padding:2px 8px; margin-right:4px; text-decoration:none; color:#ED764A;">Webpage</a>
-        <a href="https://github.com/OpenSpaceAI/SE-ORNet" style="border:1px solid #ED764A; border-radius:4px; padding:2px 8px; margin-right:4px; text-decoration:none; color:#ED764A;">Code</a>
-        <a href="https://chuxwa.github.io/project_SE-ORNet/files/bib.txt" style="border:1px solid #ED764A; border-radius:4px; padding:2px 8px; margin-right:4px; text-decoration:none; color:#ED764A;">BibTeX</a>
-        <a href="https://chuxwa.github.io/project_SE-ORNet/files/cvpr23_poster_SE-ORNet.pdf" style="border:1px solid #ED764A; border-radius:4px; padding:2px 8px; text-decoration:none; color:#ED764A;">Poster</a>
-      </div>
-    </td>
-  </tr>
-
-  <tr style="border: none;">
-    <td style="width: 120px; text-align: center; border: none; vertical-align: middle;">
-      <img src="assets/img/logo-SpareNet.png" alt="论文图片" style="width: 100%; max-width: 180px; min-width: 100px; height: auto; object-fit: contain; border-radius: 8px;" onerror="this.onerror=null;this.src='https://via.placeholder.com/180x60?text=No+Image';"/>
-    </td>
-    <td style="border: none; vertical-align: middle;">
-      <div style="font-size: 1.1em; font-weight: bold; margin-bottom: 2px;">
-        Style-based Point Generator with Adversarial Rendering for Point Cloud Completion
-      </div>
-      <div style="margin-bottom: 2px;">
-        Chulin Xie*, <b>Chuxin Wang*</b>, Bo Zhang, Hao Yang, Dong Chen, Fang Wen
-      </div>
-      <div style="margin-bottom: 4px;">
-        <span style="color: #ED764A; font-weight: bold;">CVPR 2021</span>
-      </div>
-      <div>
-        <a href="https://arxiv.org/abs/2103.02535" style="border:1px solid #ED764A; border-radius:4px; padding:2px 8px; margin-right:4px; text-decoration:none; color:#ED764A;">Paper</a>
-        <a href="https://alphapav.github.io/SpareNet/" style="border:1px solid #ED764A; border-radius:4px; padding:2px 8px; margin-right:4px; text-decoration:none; color:#ED764A;">Webpage</a>
-        <a href="https://github.com/microsoft/SpareNet" style="border:1px solid #ED764A; border-radius:4px; padding:2px 8px; margin-right:4px; text-decoration:none; color:#ED764A;">Code</a>
-        <a href="https://alphapav.github.io/SpareNet/files/bib.txt" style="border:1px solid #ED764A; border-radius:4px; padding:2px 8px; text-decoration:none; color:#ED764A;">BibTeX</a>
-        <a href="https://alphapav.github.io/SpareNet/files/cvpr21_poster_sparenet.pdf" style="border:1px solid #ED764A; border-radius:4px; padding:2px 8px; text-decoration:none; color:#ED764A;">Poster</a>
-      </div>
-    </td>
-  </tr>
-
-  <tr style="border: none;">
-    <td style="width: 120px; text-align: center; border: none; vertical-align: middle;">
-      <img src="assets/img/logo-PETL.png" alt="论文图片" style="width: 100%; max-width: 180px; min-width: 100px; height: auto; object-fit: contain; border-radius: 8px;" onerror="this.onerror=null;this.src='https://via.placeholder.com/180x60?text=No+Image';"/>
-    </td>
-    <td style="border: none; vertical-align: middle;">
-      <div style="font-size: 1.1em; font-weight: bold; margin-bottom: 2px;">
-        Exploring Vision Semantic Prompt for Efficient Point Cloud Understanding
-      </div>
-      <div style="margin-bottom: 2px;">
-        Yixin Zha, <b>Chuxin Wang</b>, Wenfei Yang, Xiang Liu, Tianzhu Zhang, Feng Wu
-      </div>
-      <div style="margin-bottom: 4px;">
-        <span style="color: #ED764A; font-weight: bold;">ICML 2025</span>
-      </div>
-      <div>
-        <a href="https://openreview.net/pdf?id=0gX9f5xTrD" style="border:1px solid #ED764A; border-radius:4px; padding:2px 8px; margin-right:4px; text-decoration:none; color:#ED764A;">Paper</a>
-      </div>
-    </td>
-  </tr>
-
-  <tr style="border: none;">
-    <td style="width: 120px; text-align: center; border: none; vertical-align: middle;">
-      <img src="assets/img/logo-QRT3D.png" alt="论文图片" style="width: 100%; max-width: 180px; min-width: 100px; height: auto; object-fit: contain; border-radius: 8px;" onerror="this.onerror=null;this.src='https://via.placeholder.com/180x60?text=No+Image';"/>
-    </td>
-    <td style="border: none; vertical-align: middle;">
-      <div style="font-size: 1.1em; font-weight: bold; margin-bottom: 2px;">
-        QRT3D: Query Refinement Transformer for 3D Instance Segmentation
-      </div>
-      <div style="margin-bottom: 2px;">
-        Jiahao Lu, Jiacheng Deng, <b>Chuxin Wang</b>, Jianfeng He, Tianzhu Zhang
-      </div>
-      <div style="margin-bottom: 4px;">
-        <span style="color: #ED764A; font-weight: bold;">ICCV 2023</span>
-      </div>
-      <div>
-        <a href="https://openaccess.thecvf.com/content/ICCV2023/papers/Lu_Query_Refinement_Transformer_for_3D_Instance_Segmentation_ICCV_2023_paper.pdf" style="border:1px solid #ED764A; border-radius:4px; padding:2px 8px; margin-right:4px; text-decoration:none; color:#ED764A;">Paper</a>
-      </div>
-    </td>
-  </tr>
-
-  <tr style="border: none;">
-    <td style="width: 120px; text-align: center; border: none; vertical-align: middle;">
-      <img src="assets/img/logo-Pamba.png" alt="论文图片" style="width: 100%; max-width: 180px; min-width: 100px; height: auto; object-fit: contain; border-radius: 8px;" onerror="this.onerror=null;this.src='https://via.placeholder.com/180x60?text=No+Image';"/>
-    </td>
-    <td style="border: none; vertical-align: middle;">
-      <div style="font-size: 1.1em; font-weight: bold; margin-bottom: 2px;">
-        Pamba: Enhancing Global Interaction in Point Clouds via State Space Model
-      </div>
-      <div style="margin-bottom: 2px;">
-        Zhuoyuan Li, Yubo Ai, Jiahao Lu, <b>Chuxin Wang</b>, Jiacheng Deng, Hanzhi Chang, Yanzhe Liang, Wenfei Yang, Shifeng Zhang, Tianzhu Zhang
-      </div>
-      <div style="margin-bottom: 4px;">
-        <span style="color: #ED764A; font-weight: bold;">AAAI 2025</span>
-      </div>
-      <div>
-        <a href="https://arxiv.org/abs/2406.17442" style="border:1px solid #ED764A; border-radius:4px; padding:2px 8px; margin-right:4px; text-decoration:none; color:#ED764A;">Paper</a>
-      </div>
-    </td>
-  </tr>
-
-  <tr style="border: none;">
-    <td style="width: 120px; text-align: center; border: none; vertical-align: middle;">
-      <img src="assets/img/logo-ScaleDepth.png" alt="论文图片" style="width: 100%; max-width: 180px; min-width: 100px; height: auto; object-fit: contain; border-radius: 8px;" onerror="this.onerror=null;this.src='https://via.placeholder.com/180x60?text=No+Image';"/>
-    </td>
-    <td style="border: none; vertical-align: middle;">
-      <div style="font-size: 1.1em; font-weight: bold; margin-bottom: 2px;">
-        ScaleDepth: Decomposing Metric Depth Estimation into Scale Prediction and Relative Depth Estimation
-      </div>
-      <div style="margin-bottom: 2px;">
-        Ruijie Zhu, <b>Chuxin Wang</b>, Ziyang Song, Li Liu, Tianzhu Zhang, Yongdong Zhang
-      </div>
-      <div style="margin-bottom: 4px;">
-        <span style="color: #ED764A; font-weight: bold;">Arxiv 2024</span>
-      </div>
-      <div>
-        <a href="https://arxiv.org/abs/2407.08187" style="border:1px solid #ED764A; border-radius:4px; padding:2px 8px; margin-right:4px; text-decoration:none; color:#ED764A;">Paper</a>
-        <a href="https://ruijiezhu94.github.io/ScaleDepth" style="border:1px solid #ED764A; border-radius:4px; padding:2px 8px; margin-right:4px; text-decoration:none; color:#ED764A;">Webpage</a>
-        <a href="https://github.com/RuijieZhu94/mmdepth/tree/main/projects/ScaleDepth" style="border:1px solid #ED764A; border-radius:4px; padding:2px 8px; text-decoration:none; color:#ED764A;">Code</a>
-      </div>
-    </td>
-  </tr>
-
-  <tr style="border: none;">
-    <td style="width: 120px; text-align: center; border: none; vertical-align: middle;">
-      <img src="assets/img/logo-ECDepth.png" alt="论文图片" style="width: 100%; max-width: 180px; min-width: 100px; height: auto; object-fit: contain; border-radius: 8px;" onerror="this.onerror=null;this.src='https://via.placeholder.com/180x60?text=No+Image';"/>
-    </td>
-    <td style="border: none; vertical-align: middle;">
-      <div style="font-size: 1.1em; font-weight: bold; margin-bottom: 2px;">
-        EC-Depth: Exploring the consistency of self-supervised monocular depth estimation under challenging scenes
-      </div>
-      <div style="margin-bottom: 2px;">
-        Ziyang Song*, Ruijie Zhu*, <b>Chuxin Wang</b>, Jiacheng Deng, Jianfeng He, Tianzhu Zhang
-      </div>
-      <div style="margin-bottom: 4px;">
-        <span style="color: #ED764A; font-weight: bold;">Arxiv 2023</span>
-      </div>
-      <div>
-        <a href="http://arxiv.org/abs/2310.08044" style="border:1px solid #ED764A; border-radius:4px; padding:2px 8px; margin-right:4px; text-decoration:none; color:#ED764A;">Paper</a>
-        <a href="https://ruijiezhu94.github.io/ECDepth_page/" style="border:1px solid #ED764A; border-radius:4px; padding:2px 8px; margin-right:4px; text-decoration:none; color:#ED764A;">Webpage</a>
-        <a href="https://github.com/RuijieZhu94/EC-Depth" style="border:1px solid #ED764A; border-radius:4px; padding:2px 8px; text-decoration:none; color:#ED764A;">Code</a>
-      </div>
-    </td>
-  </tr>
-
+{% endfor %}
 </table>
 
 <div style="height: 30px;"></div> <!-- 空行 -->

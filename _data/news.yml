@@ -1,0 +1,50 @@
+news:
+  - date: "Jun. 2025"
+    title: "StruMamba3D: Exploring Structural Mamba for Self-supervised Point Cloud Representation Learning"
+    link: "https://arxiv.org/pdf/2506.21541"
+    venue: "ICCV 2025"
+
+  - date: "May 2025"
+    title: "Exploring Vision Semantic Prompt for Efficient Point Cloud Understanding"
+    link: "https://openreview.net/pdf?id=0gX9f5xTrD"
+    venue: "ICML 2025"
+
+  - date: "May 2025"
+    title: "Exploring Semantic Masked Autoencoder for Self-supervised Point Cloud Understanding"
+    link: "https://arxiv.org/pdf/2506.21957"
+    venue: "IJCAI 2025"
+
+  - date: "Jan. 2025"
+    title: "State Space Model Meets Transformer: A New Paradigm for 3D Object Detection"
+    link: "https://openreview.net/forum?id=Tisu1L0Jwt"
+    venue: "ICLR 2025"
+
+  - date: "Dec. 2024"
+    title: "RMAE3D: Rethinking Masked Representation Learning for 3D Point Cloud Understanding"
+    link: "https://ieeexplore.ieee.org/document/10815033"
+    venue: "TIP 2024"
+
+  - date: "Aug. 2024"
+    title: "Pamba: Enhancing Global Interaction in Point Clouds via State Space Model"
+    link: "https://arxiv.org/abs/2406.17442"
+    venue: "AAAI 2025"
+
+  - date: "Oct. 2023"
+    title: "Not Every Side Is Equal: Localization Uncertainty Estimation for Semi-Supervised 3D Object Detection"
+    link: "https://openaccess.thecvf.com/content/ICCV2023/papers/Wang_Not_Every_Side_Is_Equal_Localization_Uncertainty_Estimation_for_Semi-Supervised_ICCV_2023_paper.pdf"
+    venue: "ICCV 2023"
+
+  - date: "Oct. 2023"
+    title: "Query Refinement Transformer for 3D Instance Segmentation"
+    link: "https://openaccess.thecvf.com/content/ICCV2023/papers/Lu_Query_Refinement_Transformer_for_3D_Instance_Segmentation_ICCV_2023_paper.pdf"
+    venue: "ICCV 2023"
+
+  - date: "Apr. 2023"
+    title: "SE-ORNet: Self-Ensembling Orientation-aware Network for Unsupervised Point Cloud Shape Correspondence"
+    link: "https://openaccess.thecvf.com/content/CVPR2023/papers/Deng_SE-ORNet_Self-Ensembling_Orientation-Aware_Network_for_Unsupervised_Point_Cloud_Shape_Correspondence_CVPR_2023_paper.pdf"
+    venue: "CVPR 2023"
+
+  - date: "May. 2023"
+    title: "Long-Short Range Adaptive Transformer With Dynamic Sampling for 3D Object Detection"
+    link: "https://ieeexplore.ieee.org/abstract/document/10124821"
+    venue: "TCSVT 2023" 
