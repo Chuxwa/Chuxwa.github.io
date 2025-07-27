@@ -148,10 +148,18 @@ header {
 }
 
 /* Optimized Button styles */
-.paper-links, .paper-links-detailed {
+.paper-links {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 0.6rem;
+    margin: 1.2rem 0;
+}
+
+.paper-links-detailed {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; /* 改为左对齐 */
     gap: 0.6rem;
     margin: 1.2rem 0;
 }
@@ -160,7 +168,7 @@ header {
     display: inline-flex;
     align-items: center;
     padding: 0.5rem 1rem;
-    background: linear-gradient(135deg, #3498db, #2980b9);
+    background: linear-gradient(135deg, #7bb3db, #6a9bd1); /* 降低饱和度的蓝色 */
     color: white;
     border-radius: 18px;
     text-decoration: none;
@@ -180,24 +188,25 @@ header {
     filter: brightness(1.05);
 }
 
+/* 降低饱和度的按钮颜色 */
 .btn-code { 
-    background: linear-gradient(135deg, #27ae60, #229954);
+    background: linear-gradient(135deg, #7db68a, #6ca777); /* 降低饱和度的绿色 */
     border-color: rgba(255,255,255,0.2);
 }
 .btn-paper { 
-    background: linear-gradient(135deg, #e74c3c, #c0392b);
+    background: linear-gradient(135deg, #e09b93, #d18379); /* 降低饱和度的红色 */
     border-color: rgba(255,255,255,0.2);
 }
 .btn-website { 
-    background: linear-gradient(135deg, #f39c12, #e67e22);
+    background: linear-gradient(135deg, #e6b566, #dca54d); /* 降低饱和度的橙色 */
     border-color: rgba(255,255,255,0.2);
 }
 .btn-poster { 
-    background: linear-gradient(135deg, #9b59b6, #8e44ad);
+    background: linear-gradient(135deg, #b690c4, #a97eb3); /* 降低饱和度的紫色 */
     border-color: rgba(255,255,255,0.2);
 }
 .btn-bibtex { 
-    background: linear-gradient(135deg, #34495e, #2c3e50);
+    background: linear-gradient(135deg, #8a9ba8, #7a8b98); /* 降低饱和度的灰蓝色 */
     border-color: rgba(255,255,255,0.2);
 }
 
@@ -239,6 +248,7 @@ figcaption {
     padding: 0 1rem;
 }
 
+/* Results layout styles */
 .results-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -246,17 +256,37 @@ figcaption {
     margin: 2rem 0;
 }
 
-/* Contributions section */
+.results-container {
+    margin: 2rem 0;
+}
+
+.results-single {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.results-pair {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.results-pair .result-figure {
+    margin: 0;
+}
+
+/* Compact Contributions section */
 .contributions {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 2rem;
-    margin: 2rem 0;
+    gap: 1.2rem; /* 减少间距从2rem到1.2rem */
+    margin: 1.5rem 0; /* 减少外边距 */
 }
 
 .contribution-item {
     background: #f8f9fa;
-    padding: 1.5rem;
+    padding: 1.2rem; /* 减少内边距从1.5rem到1.2rem */
     border-radius: 8px;
     border-left: 4px solid #3498db;
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
@@ -264,15 +294,18 @@ figcaption {
 
 .contribution-item h4 {
     color: #2c3e50;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.4rem; /* 减少标题下边距 */
+    font-size: 1.1rem; /* 稍微减小字体 */
 }
 
 .contribution-item p {
     text-align: left;
     margin: 0;
+    font-size: 0.95rem; /* 稍微减小字体 */
+    line-height: 1.5; /* 紧凑行高 */
 }
 
-/* Paper info section */
+/* Paper info section - 左对齐优化 */
 .paper-info {
     display: flex;
     gap: 2rem;
@@ -281,6 +314,7 @@ figcaption {
     padding: 2rem;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    text-align: left; /* 确保内容左对齐 */
 }
 
 .paper-thumbnail img {
@@ -296,18 +330,21 @@ figcaption {
 .paper-details h3 {
     margin: 0 0 1rem 0;
     color: #2c3e50;
+    text-align: left; /* 确保标题左对齐 */
 }
 
 .paper-authors {
     font-weight: 500;
     color: #34495e;
     margin: 0.5rem 0;
+    text-align: left; /* 确保作者左对齐 */
 }
 
 .paper-venue {
     color: #3498db;
     font-weight: 600;
     margin: 0.5rem 0 1rem 0;
+    text-align: left; /* 确保会议信息左对齐 */
 }
 
 /* Shadow effect */
@@ -361,7 +398,7 @@ footer {
     
     .paper-info {
         flex-direction: column;
-        text-align: center;
+        text-align: left; /* 移动端也保持左对齐 */
     }
     
     .paper-thumbnail img {
@@ -374,6 +411,26 @@ footer {
     
     figcaption {
         padding: 0;
+    }
+    
+    /* 移动端results并排显示调整 */
+    .results-pair {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    /* 紧凑contributions在移动端 */
+    .contributions {
+        gap: 1rem;
+    }
+    
+    .contribution-item {
+        padding: 1rem;
+    }
+    
+    /* 移动端按钮布局调整 */
+    .paper-links-detailed {
+        justify-content: flex-start;
     }
 }
 
@@ -398,9 +455,18 @@ footer {
         justify-content: center;
     }
     
-    .paper-links, .paper-links-detailed {
+    .paper-links {
         flex-direction: column;
         align-items: center;
+    }
+    
+    .paper-links-detailed {
+        flex-direction: column;
+        align-items: flex-start; /* 小屏幕保持左对齐 */
+    }
+    
+    .results-pair {
+        grid-template-columns: 1fr;
     }
 }
 
