@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Meta tags will be populated by JavaScript -->
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+    
+    <title>Loading...</title>
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="./css2" as="style">
+    <link rel="preload" href="./paper-data.json" as="fetch" crossorigin>
+    
+    <!-- Stylesheets -->
+    <link href="./css2" rel="stylesheet">
+    <link href="./main.css" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../assets/icons/favicon.ico">
+    
+    <!-- Schema.org structured data will be populated by JavaScript -->
+    <script type="application/ld+json" id="structured-data">
+    </script>
+</head>
+
+<body>
+    <!-- Loading indicator -->
+    <div id="loading" class="loading-container">
+        <div class="loading-spinner"></div>
+        <p>Loading paper data...</p>
+    </div>
+
+    <!-- Main content (initially hidden) -->
+    <div id="main-content" style="display: none;">
+        <!-- Header Section -->
+        <header>
+            <div id="conference-badge" class="conference-badge"></div>
+            <h1 id="paper-title"></h1>
+            
+            <div id="authors" class="authors"></div>
+            <div id="affiliations" class="affiliations"></div>
+            
+            <nav id="paper-links" class="paper-links"></nav>
+        </header>
+
+        <!-- Main Content -->
+        <main>
+            <!-- Abstract Section -->
+            <section id="abstract">
+                <h2>Abstract</h2>
+                <p id="abstract-content"></p>
+            </section>
+
+            <!-- Dynamic sections will be populated by JavaScript -->
+            <div id="dynamic-sections"></div>
+
+            <!-- Contributions -->
+            <section id="conclusion">
+                <h2>Key Contributions</h2>
+                <div id="contributions" class="contributions"></div>
+            </section>
+
+            <!-- Paper Section -->
+            <section id="paper">
+                <h2>Publication</h2>
+                <div class="paper-info">
+                    <div class="paper-thumbnail">
+                        <img id="paper-thumbnail" alt="" loading="lazy" class="shadow">
+                    </div>
+                    <div class="paper-details">
+                        <h3 id="paper-title-detail"></h3>
+                        <p id="paper-authors" class="paper-authors"></p>
+                        <p id="paper-venue" class="paper-venue"></p>
+                        <div id="paper-links-detailed" class="paper-links-detailed"></div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <p id="last-update">Last update: </p>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="./jquery-1.12.4.min.js"></script>
+    <script src="./paper-renderer.js"></script>
+    <script>
+        // Initialize the paper renderer when DOM is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            window.paperRenderer.init('./paper-data.json');
+        });
+    </script>
+</body>
+</html>

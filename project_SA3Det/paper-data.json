@@ -1,0 +1,149 @@
+{
+  "metadata": {
+    "title": "SA3Det++: Side-Aware Quality Estimation for Semi-Supervised 3D Object Detection",
+    "shortTitle": "SA3Det++: Side-Aware Quality Estimation for Semi-Supervised 3D Detection",
+    "conference": "TPAMI 2025",
+    "conferenceUrl": "https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=34",
+    "keywords": ["Semi-Supervised Learning", "3D Object Detection", "Point Cloud", "Quality Estimation", "Pseudo-Labels", "Side-Aware Detection"],
+    "description": "SA3Det++: A novel side-aware quality estimation method for semi-supervised 3D object detection that effectively estimates localization and classification quality of pseudo-labels at the side level",
+    "lastUpdate": "July 2025"
+  },
+  "authors": [
+    {
+      "name": "Wenfei Yang",
+      "url": "https://scholar.google.com/citations?user=rtO5VmQAAAAJ&hl=en",
+      "affiliations": ["1", "2"]
+    },
+    {
+      "name": "Chuxin Wang",
+      "url": "https://chuxwa.github.io/",
+      "affiliations": ["1", "2"],
+      "isFirstStudent": true
+    },
+    {
+      "name": "Tianzhu Zhang",
+      "url": "http://staff.ustc.edu.cn/~tzzhang/",
+      "affiliations": ["1", "2"]
+    },
+    {
+      "name": "Yongdong Zhang",
+      "url": "",
+      "affiliations": ["1"]
+    },
+    {
+      "name": "Feng Wu",
+      "url": "",
+      "affiliations": ["1"]
+    }
+  ],
+  "affiliations": {
+    "1": {
+      "name": "University of Science and Technology of China",
+      "url": "http://en.ustc.edu.cn/"
+    },
+    "2": {
+      "name": "National Key Laboratory of Deep Space Exploration, Deep Space Exploration Laboratory",
+      "url": "http://www.dsel.cc/"
+    }
+  },
+  "links": {
+    "paper": {
+      "url": "https://chuxwa.github.io/project_SA3Det/",
+      "text": "IEEE TPAMI Paper",
+      "icon": "📄"
+    },
+    "code": {
+      "url": "https://github.com/OpenSpaceAI/Nesie",
+      "text": "Code Repository",
+      "icon": "💻"
+    },
+    "website": {
+      "url": "https://chuxwa.github.io/project_SA3Det/",
+      "text": "Project Page",
+      "icon": "🌐"
+    },
+    "bibtex": {
+      "url": "https://chuxwa.github.io/project_SA3Det/files/bib.txt",
+      "text": "BibTeX",
+      "icon": "📖"
+    }
+  },
+  "abstract": "Semi-supervised 3D object detection from point cloud aims to train a detector with a small number of labeled data and a large number of unlabeled data. Among existing methods, the pseudo-label based methods have achieved superior performance, and the core lies in how to select high-quality pseudo-labels with the designed quality evaluation criterion. Despite the success of these methods, they all consider the localization and classification quality estimation from a global perspective. For localization quality, they use a global score threshold to filter out low-quality pseudo-labels and assign equal importance to each side during training, ignoring the fact that sides with different localization quality should not be treated equally. Besides, a large number of pseudo-labels are discarded due to the high global threshold, which may also contain some correctly predicted sides that are helpful for model training. For the classification quality, they usually combine the objectness score and classification confidence score to filter out pseudo-labels. In this paper, we propose SA3Det++, a side-aware quality estimation method for semi-supervised object detection, which consists of a probabilistic side localization strategy, a side-aware quality estimation strategy, and a soft pseudo-label selection strategy. Extensive results demonstrate that the proposed method consistently outperforms the baseline methods under different scenes and evaluation criterions.",
+  "sections": {
+    "motivation": {
+      "title": "Problem & Motivation",
+      "content": "Existing semi-supervised 3D object detection methods face critical limitations in pseudo-label quality estimation. Current approaches consider localization and classification quality from a global perspective, using global score thresholds that treat all sides of a bounding box equally. This leads to two major issues: (1) Sides with different localization quality are treated uniformly, ignoring the fact that some sides may be more accurately predicted than others; (2) High global thresholds cause many pseudo-labels to be discarded, potentially losing correctly predicted sides that could benefit model training. For classification quality, existing methods focus on designing effective confidence evaluation metrics while neglecting the importance of predicting better objectness scores."
+    },
+    "overview": {
+      "title": "Method Overview",
+      "content": "SA3Det++ introduces a comprehensive side-aware quality estimation framework consisting of three core strategies: (1) Probabilistic Side Prediction Strategy that decouples localization by dividing bounding boxes into independent sides and rotation angles, predicting each side's position as a probability distribution; (2) Side-Aware Quality Estimation Strategy that extracts geometric-aware features for each side and combines distribution properties to predict localization quality; (3) Side-Aware Soft Pseudo-Label Selection Strategy that uses low thresholds to maintain recall while applying objectness scores and side quality as weights for classification and regression losses respectively.",
+      "figure": {
+        "src": "./figures/Figure_1_00.png",
+        "alt": "Side-aware quality estimation module architecture",
+        "caption": "The side-aware quality estimation module. Geometric features and distribution properties are extracted to estimate pseudo-label quality. N represents the number of seed points, D represents the number of segments when generating side points, and M represents the number of bins in the side distribution."
+      },
+      "subsections": [
+        {
+          "title": "Probabilistic Side Prediction Strategy",
+          "content": "We decouple the localization task by dividing object bounding boxes into independent sides and rotation angles. Each side's position is predicted as a probability distribution over an interval, which determines the location and enables subsequent quality estimation. This approach includes an extra scale prediction module that helps better predict side locations, and a side-aware rotation quality estimation branch for improved localization quality assessment of rotated bounding boxes."
+        },
+        {
+          "title": "Side-Aware Quality Estimation Strategy", 
+          "content": "We extract geometric-aware features for each side by analyzing local structure, then combine distribution properties with side-aware geometric features. The concatenated features are processed by an MLP to predict each side's localization quality. Simultaneously, side-aware geometric features from all sides are concatenated and fed into an MLP to predict objectness scores. A quality regression loss guides the quality estimation for each side and rotation angle.",
+          "figure": {
+            "src": "./figures/Figure_2_00.png",
+            "alt": "Side-aware quality estimation module detailed architecture",
+            "caption": "Detailed architecture of the side-aware quality estimation module showing how geometric features and distribution properties are combined to estimate pseudo-label quality."
+          }
+        },
+        {
+          "title": "Side-Aware Soft Pseudo-Label Selection Strategy",
+          "content": "Instead of using high global thresholds, we employ low thresholds to filter pseudo-labels while maintaining recall rate. The objectness score weights the pseudo-label classification loss, while side quality weights different sides in bounding box regression loss. This strategy suppresses interference from low-quality sides while fully utilizing higher-quality sides, and suppresses pseudo-labels with low classification quality."
+        }
+      ]
+    },
+    "results": {
+      "title": "Experimental Results",
+      "content": "We conduct extensive experiments on multiple challenging datasets including ScanNet, SUNRGB-D, and KITTI. Results demonstrate that SA3Det++ consistently outperforms baseline methods under different scenes and evaluation criteria. The method shows significant improvements across various baseline detectors, verifying the effectiveness and generalizability of our approach. All results are reported as mean ± standard deviation across 3 runs with random data splits.",
+      "figures": [
+        {
+          "src": "./figures/result_1.png",
+          "alt": "Results on ScanNet Val dataset",
+          "caption": "Results on ScanNet Val dataset. Results are reported as mean ± standard deviation across 3 runs with random data splits. The rows with gray color represent the baseline model. * denotes baseline model with the proposed probabilistic side localization strategy. VoteNet* (Aug) and SA3Det++ (Aug) represent using data augmentation strategy in DPKE."
+        },
+        {
+          "src": "./figures/result_2.png",
+          "alt": "Results on SUNRGB-D Val dataset", 
+          "caption": "Results on SUNRGB-D Val dataset. Results are reported as mean ± standard deviation across 3 runs with random data splits. The rows with gray color represent the baseline model. * denotes baseline model with the proposed probabilistic side localization strategy. VoteNet* (Aug) and SA3Det++ (Aug) represent using data augmentation strategy in DPKE."
+        },
+        {
+          "src": "./figures/result_3.png",
+          "alt": "Results on KITTI Val set",
+          "caption": "Results on KITTI Val set. The results are reported as mean ± standard deviation across 3 runs with random data splits. The row with gray color represent the baseline model. * denotes baseline model with the proposed probabilistic side localization strategy."
+        }
+      ]
+    }
+  },
+  "contributions": [
+    {
+      "title": "Side-Aware Quality Estimation Framework",
+      "content": "We introduce a novel side-aware quality estimation method that includes probabilistic side prediction, side-aware quality estimation, and side-aware soft pseudo-label selection strategies, enabling effective side-level localization and classification quality assessment."
+    },
+    {
+      "title": "Probabilistic Side Localization",
+      "content": "We propose a probabilistic side prediction strategy that decouples localization by treating each side independently and predicting positions as probability distributions, with enhanced scale prediction and rotation quality estimation modules."
+    },
+    {
+      "title": "Geometric-Aware Quality Assessment",
+      "content": "We design a side-aware quality estimation strategy that combines geometric-aware features with distribution properties to predict both side-level localization quality and global objectness scores for comprehensive pseudo-label evaluation."
+    },
+    {
+      "title": "Consistent Performance Improvements",
+      "content": "Extensive experimental results show that our method consistently improves performance of different baseline detectors under various scenes and evaluation criteria on ScanNet, SUNRGB-D, and KITTI datasets, demonstrating broad applicability and effectiveness."
+    }
+  ],
+  "paper": {
+    "thumbnail": "./figures/firstpage.png",
+    "thumbnailAlt": "SA3Det++ paper first page thumbnail"
+  }
+} 

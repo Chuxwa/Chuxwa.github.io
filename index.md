@@ -90,7 +90,7 @@ Previously, I interned with the Visual Computing Group at [Microsoft Research As
 <div style="height: 30px;"></div> <!-- 空行 -->
 <h2 id="publications"><span style="color:rgb(237, 118, 74); font-size: 1.5em;">Publications</span></h2>
 
-\* denotes equal contribution. More publications can be found in <a href="https://scholar.google.com/citations?user=0kS2MgIAAAAJ&hl=en">Google Scholar</a>.
+\* denotes Equal Contribution. \+ denotes First Student Author. More publications can be found in <a href="https://scholar.google.com/citations?user=0kS2MgIAAAAJ&hl=en">Google Scholar</a>.
 
 <table style="border-collapse: collapse; border: none;">
 {% for pub in site.data.publications.publications %}

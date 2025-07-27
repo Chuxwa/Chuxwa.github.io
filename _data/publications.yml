@@ -6,6 +6,8 @@ publications:
     image: "assets/img/logo-iccv.png"
     links:
       paper: "https://arxiv.org/pdf/2506.21541"
+      webpage: "https://chuxwa.github.io/project_StruMamba3D/"
+      bibtex: "https://chuxwa.github.io/project_StruMamba3D/files/bib.txt"
 
   - title: "State Space Model Meets Transformer: A New Paradigm for 3D Object Detection"
     authors: "<b>Chuxin Wang</b>, Wenfei Yang, Xiang Liu, Tianzhu Zhang"

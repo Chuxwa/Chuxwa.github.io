@@ -1,0 +1,548 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: #ffffff;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+    color: #333;
+    background-color: #ffffff;
+    line-height: 1.6;
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 1200px;
+}
+
+/* Loading styles */
+.loading-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 50vh;
+    text-align: center;
+}
+
+.loading-spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid #3498db;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 1rem;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto', sans-serif;
+    margin: 0 0 1rem 0;
+    font-weight: 300;
+}
+
+h1 {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    text-align: center;
+    color: #2c3e50;
+    margin: 1rem 0 2rem 0;
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: 1.8rem;
+    color: #34495e;
+    margin: 2rem 0 1rem 0;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #3498db;
+}
+
+h3 {
+    font-size: 1.4rem;
+    color: #2c3e50;
+    margin: 1.5rem 0 0.75rem 0;
+}
+
+h4 {
+    font-size: 1.2rem;
+    color: #34495e;
+    margin: 1rem 0 0.5rem 0;
+}
+
+p {
+    font-size: 16px;
+    margin: 0 0 1rem 0;
+    text-align: justify;
+}
+
+/* Links */
+a {
+    color: #3498db;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #e74c3c;
+    text-decoration: underline;
+}
+
+/* Header styles */
+header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #ecf0f1;
+}
+
+.conference-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    color: white;
+    padding: 0.4rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+}
+
+.authors {
+    margin: 1.5rem 0;
+    font-size: 1.1rem;
+}
+
+.author {
+    display: inline-block;
+    margin: 0 0.4rem;
+    color: #2c3e50;
+}
+
+.author:hover {
+    color: #3498db;
+}
+
+.affiliations {
+    margin: 1rem 0 2rem 0;
+    font-size: 0.95rem;
+    color: #7f8c8d;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.8rem;
+}
+
+.affiliation {
+    margin: 0.2rem;
+}
+
+/* Optimized Button styles */
+.paper-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.6rem;
+    margin: 1.2rem 0;
+}
+
+.paper-links-detailed {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; /* 改为左对齐 */
+    gap: 0.6rem;
+    margin: 1.2rem 0;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    background: linear-gradient(135deg, #7bb3db, #6a9bd1); /* 降低饱和度的蓝色 */
+    color: white;
+    border-radius: 18px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+    font-size: 0.85rem;
+    white-space: nowrap;
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16);
+    color: white;
+    text-decoration: none;
+    filter: brightness(1.05);
+}
+
+/* 降低饱和度的按钮颜色 */
+.btn-code { 
+    background: linear-gradient(135deg, #7db68a, #6ca777); /* 降低饱和度的绿色 */
+    border-color: rgba(255,255,255,0.2);
+}
+.btn-paper { 
+    background: linear-gradient(135deg, #e09b93, #d18379); /* 降低饱和度的红色 */
+    border-color: rgba(255,255,255,0.2);
+}
+.btn-website { 
+    background: linear-gradient(135deg, #e6b566, #dca54d); /* 降低饱和度的橙色 */
+    border-color: rgba(255,255,255,0.2);
+}
+.btn-poster { 
+    background: linear-gradient(135deg, #b690c4, #a97eb3); /* 降低饱和度的紫色 */
+    border-color: rgba(255,255,255,0.2);
+}
+.btn-bibtex { 
+    background: linear-gradient(135deg, #8a9ba8, #7a8b98); /* 降低饱和度的灰蓝色 */
+    border-color: rgba(255,255,255,0.2);
+}
+
+/* Section styles */
+section {
+    margin: 3rem 0;
+}
+
+/* Figure styles */
+.main-figure, .method-figure, .result-figure {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.main-figure img, .method-figure img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.main-figure img:hover, .method-figure img:hover {
+    transform: scale(1.02);
+}
+
+.result-figure img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+figcaption {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #7f8c8d;
+    text-align: left;
+    padding: 0 1rem;
+}
+
+/* Results layout styles */
+.results-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.results-container {
+    margin: 2rem 0;
+}
+
+.results-single {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.results-pair {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.results-pair .result-figure {
+    margin: 0;
+}
+
+/* Compact Contributions section */
+.contributions {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.2rem; /* 减少间距从2rem到1.2rem */
+    margin: 1.5rem 0; /* 减少外边距 */
+}
+
+.contribution-item {
+    background: #f8f9fa;
+    padding: 1.2rem; /* 减少内边距从1.5rem到1.2rem */
+    border-radius: 8px;
+    border-left: 4px solid #3498db;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.contribution-item h4 {
+    color: #2c3e50;
+    margin-bottom: 0.4rem; /* 减少标题下边距 */
+    font-size: 1.1rem; /* 稍微减小字体 */
+}
+
+.contribution-item p {
+    text-align: left;
+    margin: 0;
+    font-size: 0.95rem; /* 稍微减小字体 */
+    line-height: 1.5; /* 紧凑行高 */
+}
+
+/* Paper info section - 左对齐优化 */
+.paper-info {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    text-align: left; /* 确保内容左对齐 */
+}
+
+.paper-thumbnail img {
+    width: 150px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.paper-details {
+    flex: 1;
+}
+
+.paper-details h3 {
+    margin: 0 0 1rem 0;
+    color: #2c3e50;
+    text-align: left; /* 确保标题左对齐 */
+}
+
+.paper-authors {
+    font-weight: 500;
+    color: #34495e;
+    margin: 0.5rem 0;
+    text-align: left; /* 确保作者左对齐 */
+}
+
+.paper-venue {
+    color: #3498db;
+    font-weight: 600;
+    margin: 0.5rem 0 1rem 0;
+    text-align: left; /* 确保会议信息左对齐 */
+}
+
+/* Shadow effect */
+.shadow {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    border-radius: 8px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid #ecf0f1;
+    color: #7f8c8d;
+    font-size: 0.9rem;
+}
+
+/* Error styles */
+.error-container {
+    text-align: center;
+    padding: 2rem;
+    color: #e74c3c;
+}
+
+.error-container h2 {
+    color: #e74c3c;
+    border-bottom: 2px solid #e74c3c;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+    
+    .affiliations {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
+    }
+    
+    .paper-links, .paper-links-detailed {
+        gap: 0.5rem;
+    }
+    
+    .btn {
+        padding: 0.45rem 0.9rem;
+        font-size: 0.8rem;
+    }
+    
+    .paper-info {
+        flex-direction: column;
+        text-align: left; /* 移动端也保持左对齐 */
+    }
+    
+    .paper-thumbnail img {
+        width: 120px;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    figcaption {
+        padding: 0;
+    }
+    
+    /* 移动端results并排显示调整 */
+    .results-pair {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    /* 紧凑contributions在移动端 */
+    .contributions {
+        gap: 1rem;
+    }
+    
+    .contribution-item {
+        padding: 1rem;
+    }
+    
+    /* 移动端按钮布局调整 */
+    .paper-links-detailed {
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+    
+    .authors {
+        font-size: 1rem;
+        line-height: 1.8;
+    }
+    
+    .author {
+        display: block;
+        margin: 0.2rem 0;
+    }
+    
+    .btn {
+        width: 100%;
+        margin: 0.2rem 0;
+        justify-content: center;
+    }
+    
+    .paper-links {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .paper-links-detailed {
+        flex-direction: column;
+        align-items: flex-start; /* 小屏幕保持左对齐 */
+    }
+    
+    .results-pair {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Print styles */
+@media print {
+    body {
+        max-width: none;
+        padding: 0;
+    }
+    
+    .btn {
+        display: none;
+    }
+    
+    .shadow {
+        box-shadow: none;
+    }
+    
+    section {
+        page-break-inside: avoid;
+    }
+    
+    .loading-container {
+        display: none;
+    }
+}
+
+/* Loading animation for images */
+img[loading="lazy"] {
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+img[loading="lazy"].loaded {
+    opacity: 1;
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* Focus styles for better accessibility */
+.btn:focus, a:focus {
+    outline: 2px solid #3498db;
+    outline-offset: 2px;
+}
+
+/* Light theme optimization */
+body {
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    color: #2c3e50;
+}
+
+/* Enhanced button styling for light theme */
+.btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    transition: left 0.5s;
+}
+
+.btn:hover::before {
+    left: 100%;
+}
