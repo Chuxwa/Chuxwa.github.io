@@ -31,10 +31,10 @@ body {
 }
 
 .loading-spinner {
-    width: 50px;
-    height: 50px;
-    border: 4px solid #f3f3f3;
-    border-top: 4px solid #3498db;
+    width: 40px;
+    height: 40px;
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid #3498db;
     border-radius: 50%;
     animation: spin 1s linear infinite;
     margin-bottom: 1rem;
@@ -110,12 +110,12 @@ header {
     display: inline-block;
     background: linear-gradient(135deg, #3498db, #2980b9);
     color: white;
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
-    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.85rem;
     font-weight: 500;
     margin-bottom: 1rem;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.08);
 }
 
 .authors {
@@ -125,7 +125,7 @@ header {
 
 .author {
     display: inline-block;
-    margin: 0 0.5rem;
+    margin: 0 0.4rem;
     color: #2c3e50;
 }
 
@@ -140,48 +140,66 @@ header {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 1rem;
+    gap: 0.8rem;
 }
 
 .affiliation {
-    margin: 0.25rem;
+    margin: 0.2rem;
 }
 
-/* Button styles */
+/* Optimized Button styles */
 .paper-links, .paper-links-detailed {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 1rem;
-    margin: 1.5rem 0;
+    gap: 0.6rem;
+    margin: 1.2rem 0;
 }
 
 .btn {
     display: inline-flex;
     align-items: center;
-    padding: 0.75rem 1.5rem;
+    padding: 0.5rem 1rem;
     background: linear-gradient(135deg, #3498db, #2980b9);
     color: white;
-    border-radius: 25px;
+    border-radius: 18px;
     text-decoration: none;
     font-weight: 500;
     transition: all 0.3s ease;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    font-size: 0.9rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+    font-size: 0.85rem;
+    white-space: nowrap;
+    border: 1px solid rgba(255,255,255,0.2);
 }
 
 .btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transform: translateY(-1px);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16);
     color: white;
     text-decoration: none;
+    filter: brightness(1.05);
 }
 
-.btn-code { background: linear-gradient(135deg, #27ae60, #229954); }
-.btn-paper { background: linear-gradient(135deg, #e74c3c, #c0392b); }
-.btn-website { background: linear-gradient(135deg, #f39c12, #e67e22); }
-.btn-poster { background: linear-gradient(135deg, #9b59b6, #8e44ad); }
-.btn-bibtex { background: linear-gradient(135deg, #34495e, #2c3e50); }
+.btn-code { 
+    background: linear-gradient(135deg, #27ae60, #229954);
+    border-color: rgba(255,255,255,0.2);
+}
+.btn-paper { 
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+    border-color: rgba(255,255,255,0.2);
+}
+.btn-website { 
+    background: linear-gradient(135deg, #f39c12, #e67e22);
+    border-color: rgba(255,255,255,0.2);
+}
+.btn-poster { 
+    background: linear-gradient(135deg, #9b59b6, #8e44ad);
+    border-color: rgba(255,255,255,0.2);
+}
+.btn-bibtex { 
+    background: linear-gradient(135deg, #34495e, #2c3e50);
+    border-color: rgba(255,255,255,0.2);
+}
 
 /* Section styles */
 section {
@@ -329,16 +347,16 @@ footer {
     .affiliations {
         flex-direction: column;
         text-align: center;
+        gap: 0.5rem;
     }
     
     .paper-links, .paper-links-detailed {
-        flex-direction: column;
-        align-items: center;
+        gap: 0.5rem;
     }
     
     .btn {
-        width: 200px;
-        justify-content: center;
+        padding: 0.45rem 0.9rem;
+        font-size: 0.8rem;
     }
     
     .paper-info {
@@ -371,12 +389,18 @@ footer {
     
     .author {
         display: block;
-        margin: 0.25rem 0;
+        margin: 0.2rem 0;
     }
     
     .btn {
         width: 100%;
-        margin: 0.25rem 0;
+        margin: 0.2rem 0;
+        justify-content: center;
+    }
+    
+    .paper-links, .paper-links-detailed {
+        flex-direction: column;
+        align-items: center;
     }
 }
 
@@ -404,39 +428,6 @@ footer {
     }
 }
 
-/* Dark mode support */
-@media (prefers-color-scheme: dark) {
-    html, body {
-        background-color: #1a1a1a;
-        color: #e0e0e0;
-    }
-    
-    h1, h2, h3, h4 {
-        color: #f0f0f0;
-    }
-    
-    h2 {
-        border-bottom-color: #3498db;
-    }
-    
-    .contribution-item {
-        background: #2a2a2a;
-        color: #e0e0e0;
-    }
-    
-    .paper-info {
-        background: #2a2a2a;
-    }
-    
-    header {
-        border-bottom-color: #333;
-    }
-    
-    footer {
-        border-top-color: #333;
-    }
-}
-
 /* Loading animation for images */
 img[loading="lazy"] {
     opacity: 0;
@@ -461,4 +452,31 @@ img[loading="lazy"].loaded {
 .btn:focus, a:focus {
     outline: 2px solid #3498db;
     outline-offset: 2px;
+}
+
+/* Light theme optimization */
+body {
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    color: #2c3e50;
+}
+
+/* Enhanced button styling for light theme */
+.btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    transition: left 0.5s;
+}
+
+.btn:hover::before {
+    left: 100%;
 }
