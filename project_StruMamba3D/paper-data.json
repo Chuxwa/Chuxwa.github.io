@@ -1,0 +1,149 @@
+{
+  "metadata": {
+    "title": "StruMamba3D: Exploring Structural Mamba for Self-supervised Point Cloud Representation Learning",
+    "shortTitle": "StruMamba3D: Structural Mamba for Point Cloud Learning",
+    "conference": "ICCV 2025",
+    "conferenceUrl": "https://arxiv.org/abs/2506.21541",
+    "keywords": ["Point Cloud Representation Learning", "State Space Model", "Mamba", "Self-supervised Learning", "3D Computer Vision", "Structural SSM"],
+    "description": "StruMamba3D: A novel paradigm for self-supervised point cloud representation learning using structural Mamba with spatial states and sequence length adaptation",
+    "lastUpdate": "June 2025"
+  },
+  "authors": [
+    {
+      "name": "Chuxin Wang",
+      "url": "https://chuxwa.github.io/",
+      "affiliations": ["1", "2"]
+    },
+    {
+      "name": "Yixin Zha",
+      "url": "",
+      "affiliations": ["1"]
+    },
+    {
+      "name": "Wenfei Yang", 
+      "url": "https://scholar.google.com/citations?user=rtO5VmQAAAAJ&hl=zh-CN",
+      "affiliations": ["1", "2"]
+    },
+    {
+      "name": "Tianzhu Zhang",
+      "url": "http://staff.ustc.edu.cn/~tzzhang/",
+      "affiliations": ["1", "2"]
+    }
+  ],
+  "affiliations": {
+    "1": {
+      "name": "University of Science and Technology of China",
+      "url": "http://en.ustc.edu.cn/"
+    },
+    "2": {
+      "name": "National Key Laboratory of Deep Space Exploration, Deep Space Exploration Laboratory", 
+      "url": "http://en.ustc.edu.cn/"
+    }
+  },
+  "links": {
+    "paper": {
+      "url": "https://arxiv.org/abs/2506.21541",
+      "text": "arXiv Paper",
+      "icon": "📄"
+    },
+    "code": {
+      "url": "https://github.com/Chuxwa/StruMamba3D",
+      "text": "Code (Coming Soon)", 
+      "icon": "💻"
+    },
+    "website": {
+      "url": "https://chuxwa.github.io/project_StruMamba3D/",
+      "text": "Project Page",
+      "icon": "🌐"
+    },
+    "poster": {
+      "url": "https://chuxwa.github.io/project_StruMamba3D/files/poster.pdf",
+      "text": "Poster",
+      "icon": "📊"
+    },
+    "bibtex": {
+      "url": "https://chuxwa.github.io/project_StruMamba3D/files/bib.txt",
+      "text": "BibTeX",
+      "icon": "📖"
+    }
+  },
+  "abstract": "Recently, Mamba-based methods have demonstrated impressive performance in point cloud representation learning by leveraging State Space Model (SSM) with the efficient context modeling ability and linear complexity. However, these methods still face two key issues that limit the potential of SSM: Destroying the adjacency of 3D points during SSM processing and failing to retain long-sequence memory as the input length increases in downstream tasks. To address these issues, we propose StruMamba3D, a novel paradigm for self-supervised point cloud representation learning. It enjoys several merits. First, we design spatial states and use them as proxies to preserve spatial dependencies among points. Second, we enhance the SSM with a state-wise update strategy and incorporate a lightweight convolution to facilitate interactions between spatial states for efficient structure modeling. Third, our method reduces the sensitivity of pre-trained Mamba-based models to varying input lengths by introducing a sequence length-adaptive strategy. Experimental results across four downstream tasks showcase the superior performance of our method. In addition, our method attains the SOTA 95.1% accuracy on ModelNet40 and 92.75% accuracy on the most challenging split of ScanObjectNN without voting strategy.",
+  "sections": {
+    "motivation": {
+      "title": "Problem & Motivation",
+      "content": "Existing Mamba-based methods for point cloud learning face two critical issues: (1) Destroying the adjacency of 3D points during SSM processing - spatially adjacent points cannot maintain their neighborhood relationships in 1D sequences, hampering fine-grained structure modeling. (2) Failing to retain long-sequence memory as input length increases - the selection mechanism doesn't account for input sequence length variations, causing frequent state updates that struggle to retain long-sequence memory in downstream tasks.",
+      "figure": {
+        "src": "./figures/Figure_1_00.png",
+        "alt": "Comparison of different paradigms for point cloud processing",
+        "caption": "(a): Transformer-based paradigm uses the attention block with quadratic complexity to model the dependencies between points. (b): Mamba-based paradigm uses the selective SSM with linear complexity. However, serialized points destroy the adjacency of 3D points, and the pre-trained selection mechanism fails to retain long-sequence memory. (c): Our StruMamba3D paradigm uses the structural SSM to maintain the spatial dependencies among points and the sequence length-adaptive strategy to retain long-sequence memory. (d): Our StruMamba3D significantly outperforms existing Transformer-based and Mamba-based methods."
+      }
+    },
+    "overview": {
+      "title": "Method Overview", 
+      "content": "StruMamba3D consists of two core components: structural SSM block and sequence length-adaptive strategy. The structural SSM block leverages states in SSM to model spatial relationships among points by assigning positional attributes to states as proxies for local structure. We enhance the SSM with a state-wise update strategy and incorporate lightweight convolution to facilitate interactions between spatial states. The sequence length-adaptive strategy adjusts state update frequency based on input length to preserve long-sequence memory, ensuring that longer sequences can maintain contextual information across the entire sequence.",
+      "figure": {
+        "src": "./figures/Figure_2_00.png",
+        "alt": "Overall framework of StruMamba3D method",
+        "caption": "Overall framework of StruMamba3D showing the structural SSM block design and sequence length-adaptive strategy for effective point cloud representation learning."
+      },
+      "subsections": [
+        {
+          "title": "Structural SSM Block",
+          "content": "We design spatial states as proxies to preserve spatial dependencies among points. The structural SSM enhances the standard SSM with a state-wise update strategy and incorporates lightweight convolution to facilitate interactions between spatial states. This design maintains the spatial structure information that is crucial for point cloud understanding while preserving the linear complexity advantage of SSM. The block consists of: (1) Spatial state initialization that assigns positional attributes to states, (2) State-wise update mechanism that adaptively updates states based on local structure, and (3) Lightweight convolution operations that facilitate efficient interactions between spatial states."
+        },
+        {
+          "title": "Sequence Length-adaptive Strategy",
+          "content": "To address the issue of long-sequence memory retention, we introduce a sequence length-adaptive strategy that dynamically adjusts the frequency of state updates based on input sequence length. This ensures that longer sequences can maintain contextual information across the entire sequence, improving performance on downstream tasks with varying input lengths. The strategy automatically modulates the selection mechanism based on the ratio between current sequence length and pre-training sequence length, preventing frequent state updates that would otherwise lead to memory loss in longer sequences.",
+          "figure": {
+            "src": "./figures/Figure_3_00.png", 
+            "alt": "Sequence length-adaptive strategy illustration",
+            "caption": "Illustration of the sequence length-adaptive strategy showing how state update frequency is adjusted for different input lengths to maintain long-sequence memory."
+          }
+        }
+      ]
+    },
+    "results": {
+      "title": "Experimental Results",
+      "content": "Our method achieves state-of-the-art performance across multiple downstream tasks. On ModelNet40, we achieve 95.1% accuracy, and on the challenging ScanObjectNN dataset, we reach 92.75% accuracy without voting strategy. Comprehensive experiments across four downstream tasks demonstrate the superior performance and effectiveness of our approach, including classification, part segmentation, few-shot learning, and transfer learning scenarios.",
+      "figures": [
+        {
+          "src": "./figures/results_01.png",
+          "alt": "Performance comparison on ModelNet40 and ScanObjectNN classification tasks",
+          "caption": "Classification results showing our method achieves SOTA performance on both ModelNet40 (95.1%) and ScanObjectNN (92.75%) datasets."
+        },
+        {
+          "src": "./figures/results_02.png", 
+          "alt": "Part Segmentation results on ShapeNetPart dataset",
+          "caption": "Part Segmentation on ShapeNetPart: Our method demonstrates superior performance in fine-grained part segmentation tasks, showing the effectiveness of spatial state modeling."
+        },
+        {
+          "src": "./figures/results_03.png",
+          "alt": "Few-Shot Classification results on ModelNet40 dataset",
+          "caption": "Few-Shot Classification on ModelNet40: Performance comparison in few-shot learning scenarios, demonstrating the robust representation learning capability of our approach."
+        }
+      ]
+    }
+  },
+  "contributions": [
+    {
+      "title": "Spatial States Design",
+      "content": "We design spatial states and use them as proxies to preserve spatial dependencies among points, addressing the issue of adjacency destruction in traditional Mamba-based methods for point clouds."
+    },
+    {
+      "title": "Enhanced SSM with State-wise Updates", 
+      "content": "We enhance the SSM with a state-wise update strategy and incorporate lightweight convolution to facilitate interactions between spatial states for efficient structure modeling while maintaining linear complexity."
+    },
+    {
+      "title": "Sequence Length-adaptive Strategy",
+      "content": "We introduce a sequence length-adaptive strategy that reduces the sensitivity of pre-trained Mamba-based models to varying input lengths by dynamically adjusting state update frequency."
+    },
+    {
+      "title": "State-of-the-Art Performance",
+      "content": "Our method achieves SOTA 95.1% accuracy on ModelNet40 and 92.75% accuracy on ScanObjectNN, demonstrating superior performance across four downstream tasks in point cloud representation learning."
+    }
+  ],
+  "paper": {
+    "thumbnail": "./figures/firstpage.png",
+    "thumbnailAlt": "StruMamba3D paper first page thumbnail"
+  }
+} 

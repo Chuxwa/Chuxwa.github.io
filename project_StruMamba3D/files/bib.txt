@@ -1,0 +1,6 @@
+@article{wang2025strumamba3d,
+  title={StruMamba3D: Exploring Structural Mamba for Self-supervised Point Cloud Representation Learning},
+  author={Wang, Chuxin and Zha, Yixin and Yang, Wenfei and Zhang, Tianzhu},
+  journal={arXiv preprint arXiv:2506.21541},
+  year={2025}
+}
