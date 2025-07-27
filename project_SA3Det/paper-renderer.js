@@ -168,13 +168,13 @@ window.paperRenderer = (function() {
         if (hasFirstStudent || hasCorrespondingAuthor) {
             affiliationsHTML += '<div class="author-notes" style="margin-top: 10px; font-size: 0.9em; color: #666;">';
             if (hasFirstStudent) {
-                affiliationsHTML += '<span style="color: #ED764A; font-weight: bold;">+</span> 第一学生作者 (First Student Author)';
+                affiliationsHTML += '<span style="color: #ED764A; font-weight: bold;">+</span> First Student Author';
             }
             if (hasFirstStudent && hasCorrespondingAuthor) {
                 affiliationsHTML += ' &nbsp;&nbsp; ';
             }
             if (hasCorrespondingAuthor) {
-                affiliationsHTML += '<span style="color: #ED764A; font-weight: bold;">*</span> 通讯作者 (Corresponding Author)';
+                affiliationsHTML += '<span style="color: #ED764A; font-weight: bold;">*</span> Corresponding Author';
             }
             affiliationsHTML += '</div>';
         }
