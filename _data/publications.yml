@@ -83,6 +83,15 @@ publications:
       bibtex: "https://alphapav.github.io/SpareNet/files/bib.txt"
       poster: "https://alphapav.github.io/SpareNet/files/cvpr21_poster_sparenet.pdf"
 
+  - title: "SA3Det++: Side-Aware Quality Estimation for Semi-Supervised 3D Object Detection"
+    authors: "Wenfei Yang, <b>Chuxin Wang+</b>, Tianzhu Zhang, Yongdong Zhang, Feng Wu"
+    venue: "TPAMI 2025"
+    year: 2025
+    image: "assets/img/logo-SA3Det.png"
+    links:
+      webpage: "https://chuxwa.github.io/project_SA3Det/"
+      code: "https://github.com/OpenSpaceAI/Nesie"
+
   - title: "Exploring Vision Semantic Prompt for Efficient Point Cloud Understanding"
     authors: "Yixin Zha, <b>Chuxin Wang</b>, Wenfei Yang, Xiang Liu, Tianzhu Zhang, Feng Wu"
     venue: "ICML 2025"
@@ -119,8 +128,8 @@ publications:
 
   - title: "ER-Depth: Enhancing the Robustness of Self-Supervised Monocular Depth Estimation in Challenging Scenes."
     authors: "Ziyang Song*, Ruijie Zhu*, <b>Chuxin Wang</b>, Jiacheng Deng, Jianfeng He, Tianzhu Zhang"
-    venue: "Arxiv 2023"
-    year: 2023
+    venue: "TOMM 2025"
+    year: 2025
     image: "assets/img/logo-ECDepth.png"
     links:
       paper: "https://dl.acm.org/doi/10.1145/3750050"

@@ -8,7 +8,7 @@ author1:
   # Used at the bottom of each page and at the top of the `about` layout
   # Markdown enabled, can use multiple paragraphs (enabled by `|`)
   about:             |
-    Hi! I am a PhD student in Department of Automation at [University of Science and Technology of China](https://www.ustc.edu.cn/), advised by Prof. [Weiren Wu](https://en.wikipedia.org/wiki/Wu_Weiren) and [Tianzhu Zhang](https://scholar.google.com/citations?user=9sCGe-gAAAAJ&hl=zh-CN).
+    Hi! I am a PhD student in Department of Automation at [University of Science and Technology of China](https://www.ustc.edu.cn/), advised by Prof. [Weiren Wu](https://en.wikipedia.org/wiki/Wu_Weiren) and [Tianzhu Zhang](https://scholar.google.com/citations?user=9sCGe-gAAAAJ&hl=en).
 
     My research primarily focuses on 3D computer vision, including point cloud representation learning, point cloud completion, point cloud detection, and point cloud segmentation.
     
@@ -29,7 +29,7 @@ author1:
   # You can also provide an absolute URL (starting with https://) instead of usernames
   social:
     email:           wcx0602@mail.ustc.edu.cn
-    google:          0kS2MgIAAAAJ
+    google:          https://scholar.google.com/citations?user=0kS2MgIAAAAJ&hl=en
     github:          Chuxwa
     # rss:             https://<url>/feed.xml
     linkedin:        楚鑫-王-3452711b2

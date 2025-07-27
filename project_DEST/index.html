@@ -1,176 +1,107 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<!-- saved from url=(0036)https://chuxwa.github.io/project_DEST/ -->
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
-  <meta name="keywords" content="DEST">
-  <meta name="description" content="DEST">
-  <link href="./main.css" media="all" rel="stylesheet">
-  <link rel="icon" type="image/png" href="https://chuxwa.github.io/project_DEST/">
-  <title>State Space Model Meets Transformer: A New Paradigm for 3D Object Detection</title>
-  <link rel="preconnect" href="https://fonts.gstatic.com/">
-  <link href="./css2" rel="stylesheet">
-  <script type="text/javascript" src="./jquery-1.12.4.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Meta tags will be populated by JavaScript -->
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+    
+    <title>Loading...</title>
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="./css2" as="style">
+    <link rel="preload" href="./paper-data.json" as="fetch" crossorigin>
+    
+    <!-- Stylesheets -->
+    <link href="./css2" rel="stylesheet">
+    <link href="./main.css" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../assets/icons/favicon.ico">
+    
+    <!-- Schema.org structured data will be populated by JavaScript -->
+    <script type="application/ld+json" id="structured-data">
+    </script>
 </head>
 
-<!-- cover -->
-
 <body>
-  <h3 align="center">ICLR 2025</h3>
-  <h1 align="center">State Space Model Meets Transformer: A New Paradigm for 3D Object Detection</h1>
+    <!-- Loading indicator -->
+    <div id="loading" class="loading-container">
+        <div class="loading-spinner"></div>
+        <p>Loading paper data...</p>
+    </div>
 
-  <p align="center" style="font-size:18px">
-    <a href="https://chuxwa.github.io/"><span>Chuxin Wang</span></a><sup>1,2</sup>
-    <a href="https://scholar.google.com/citations?user=rtO5VmQAAAAJ&hl=zh-CN"><span>Wenfei Yang</span></a><sup>1</sup>
-    <a><span>Xiang Liu</span></a><sup>4</sup>
-    <a href="http://staff.ustc.edu.cn/~tzzhang/"><span>Tianzhu Zhang</span></a><sup>1,2,3</sup>
-  </p>
-  <p align="center" style="font-size:18px">
-    <sup>1</sup><a href="http://en.ustc.edu.cn/">University of Science and Technology of China</a> 
-    <sup>2</sup><a href="http://en.ustc.edu.cn/">National Key Laboratory of Deep Space Exploration, Deep Space Exploration Laboratory</a> 
-    <sup>3</sup><a href="http://en.ustc.edu.cn/">Hainan Aerospace Technology Innovation Center</a> 
-    <sup>4</sup><a href="http://en.ustc.edu.cn/">Dongguan University of Technology</a> 
-  </p>
-  <p>
+    <!-- Main content (initially hidden) -->
+    <div id="main-content" style="display: none;">
+        <!-- Header Section -->
+        <header>
+            <div id="conference-badge" class="conference-badge"></div>
+            <h1 id="paper-title"></h1>
+            
+            <div id="authors" class="authors"></div>
+            <div id="affiliations" class="affiliations"></div>
+            
+            <nav id="paper-links" class="paper-links"></nav>
+        </header>
 
-  </p>
+        <!-- Main Content -->
+        <main>
+            <!-- Abstract Section -->
+            <section id="abstract">
+                <h2>Abstract</h2>
+                <p id="abstract-content"></p>
+            </section>
 
-  <p align="center">
-    <a href="https://openreview.net/forum?id=Tisu1L0Jwt">[Paper]</a>
-    <a href="https://github.com/OpenSpaceAI/DEST3D">[Code]</a>
-    <a href="https://chuxwa.github.io/project_DEST/">[Website]</a>
-    <a href="https://chuxwa.github.io/project_DEST/files/poster.pdf">[Poster]</a>
-    <a href="https://chuxwa.github.io/project_DEST/files/bib.txt">[BibTeX]</a>
-  </p>
-  <h2>Abstract</h2>
-  <hr>
+            <!-- Dynamic sections will be populated by JavaScript -->
+            <div id="dynamic-sections"></div>
 
-  <p>
-    DETR-based methods, which use multi-layer transformer decoders to refine object queries iteratively, have shown promising performance in 3D indoor object detection. However, the scene point features in the transformer decoder remain fixed, leading to minimal contributions from later decoder layers, thereby limiting performance improvement. Recently, State Space Models (SSM) have shown efficient context modeling ability with linear complexity through iterative interactions between system states and inputs. Inspired by SSMs, we propose a new 3D object DEtection paradigm with an interactive STate space model (DEST). In the interactive SSM, we design a novel state-dependent SSM parameterization method that enables system states to effectively serve as queries in 3D indoor detection tasks. In addition, we introduce four key designs tailored to the characteristics of point cloud and SSM: The serialization and bidirectional scanning strategies enable bidirectional feature interaction among scene points within the SSM. The inter-state attention mechanism models the relationships between state points, while the gated feed-forward network enhances inter-channel correlations.
-    To the best of our knowledge, this is the first method to model queries as system states and scene points as system inputs, which can simultaneously update scene point features and query features with linear complexity. Extensive experiments on two challenging datasets demonstrate the effectiveness of our DEST-based method. Our method improves the GroupFree baseline in terms of AP<sub>50</sub> on ScanNet V2 (+5.3) and SUN RGB-D (+3.2) datasets. Based on the VDETR baseline, Our method sets a new SOTA on the ScanNetV2 and SUN RGB-D datasets.
-  </p>
-  <br>
+            <!-- Contributions -->
+            <section id="conclusion">
+                <h2>Key Contributions</h2>
+                <div id="contributions" class="contributions"></div>
+            </section>
 
-  <!-- <h2>Video</h2>
-  <hr>
-  <p align="center">
-    <iframe width="960" height="540" src="https://www.youtube.com/embed/zX0lpcbzxwk?si=5wnBUaucNpaKGYSV"
-      title="YouTube video player" frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      allowfullscreen></iframe>
-  </p> -->
+            <!-- Paper Section -->
+            <section id="paper">
+                <h2>Publication</h2>
+                <div class="paper-info">
+                    <div class="paper-thumbnail">
+                        <img id="paper-thumbnail" alt="" loading="lazy" class="shadow">
+                    </div>
+                    <div class="paper-details">
+                        <h3 id="paper-title-detail"></h3>
+                        <p id="paper-authors" class="paper-authors"></p>
+                        <p id="paper-venue" class="paper-venue"></p>
+                        <div id="paper-links-detailed" class="paper-links-detailed"></div>
+                    </div>
+                </div>
+            </section>
+        </main>
 
-  <h2>Nesie</h2>
-  <hr>
-  <br><br>
-  <table id="tbInformation" width="100%">
-    <tbody>
-      <tr>
-        <p align="center">
-          <img src="./figures/Figure_1_00.png" width="850" alt="centered image">
-        </p>
-        <p>
-          Based on the query refinement module, DETR-based methods have achieved the best performance in indoor object detection tasks. However, DETR-based methods still face a key issue that limits their performance. These methods employ multi-layer transformer decoders (Carion et al., 2020) to iteratively refine the object queries. While the transformer decoder layers update the query point features, they do not simultaneously update the scene point features as shown in the Figure (a). As a result, each decoder layer uses the same scene point features to refine the queries, leading to only marginal improvements from the later layers. As shown in Figure (b), we evaluate the detection accuracy improvements of different decoder layers in two DETR-based models (Liu et al., 2021; Shen et al., 2024) on the ScanNet V2 (Dai et al., 2017) dataset. GroupFree (Liu et al., 2021) achieves only a 2.12 performance improvement in the last six layers, while VDETR (Shen et al., 2024) shows a mere 0.64 improvement in the last four layers. Based on the above analysis, the fixed scene point features constrain the potential performance enhancement of the models.
-        </p>
-      </tr>
-    </tbody>
-  </table>
+        <!-- Footer -->
+        <footer>
+            <p id="last-update">Last update: </p>
+        </footer>
+    </div>
 
-  <h2>Overview</h2>
-  <hr>
-  <p align="center">
-    <img src="./figures/Figure_2_00.png" width="850" alt="centered image">
-  </p>
-  <p>
-    <strong>The overall framework of the DEST-based method for 3D object detection.</strong> We first utilize an encoder to extract 3D features, followed by a state sampling module to select state points, referred to as queries in DETR architecture. Subsequently, we input both the scene points and state points into the ISSM-based decoder for simultaneous updates. Finally, the updated state points are fed into a detection head to predict the 3D bounding boxes.
-  </p>
-  <br>
-
-  <h3>Interactive State Space Model</h3>
-  <hr>
-  <p align="center">
-    <img src="./figures/Figure_3_00.png" width="850" alt="centered image">
-  </p>
-  <p>
-    In the ISSM, we model the query points as the system states and the scene points as the system inputs. Unlike previous SSMs (Gu et al., 2021a; Gu & Dao, 2023; Dao & Gu, 2024), the proposed ISSM determines how to update the system states based on both the system states and system inputs. Specifically, we modify the SSM parameters (∆, B, C) to be dependent on the system states and design a spatial correlation module to model the relationship between state points and scene points. Therefore, the system states in the ISSM can effectively fulfill the role of queries in complex 3D indoor detection tasks.
-  </p>
-  <br>
-
-  <h3>ISSM-based Decoder Block</h3>
-  <hr>
-  <p align="center">
-    <img src="./figures/Figure_4_00.png" width="850" alt="centered image">
-  </p>
-  <p>
-    The ISSM-based decoder consists of four core components: a Hilbert-based point cloud serialization strategy, an inter-state attention module, an ISSM-based Bidirectional Scan (IBS) module, and a Gated Feed-Forward Network (GFFN). The proposed serialization strategy is designed to serialize the scene points based on the Hilbert curve (Hilbert & Hilbert, 1935), benefiting from its locality-preserving properties. The IBS module is designed to achieve bidirectional interaction among different scene points, while the inter-state attention module is designed to capture the relationships between state points. Lastly, the GFFN is designed to enhance inter-channel correlations through a gated linear unit. The ISSM-based decoder can replace the transformer decoder in DETR-based methods to address the performance limitations caused by
-    fixed scene point features.
-  </p>
-  <br>
-
-  <br>
-  <h2>Results</h2>
-  <hr>
-
-  <p align="center">
-    <img src="./figures/results_01.png" width="850" class="center">
-    <img src="./figures/results_02.png" width="850" class="center">
-    <img src="./figures/results_03.png" width="850" class="center">
-  </p>
-  <br>
-
-
-  <h2>Conclusion</h2>
-  <hr>
-  <p>(1) We propose a novel SSM-based 3D object detection paradigm DEST to overcome the performance limitations caused by fixed scene point features during the query refinement process. To the best of our knowledge, this is the first method to model queries as system states within an SSM framework.
-  </p>
-  <p>(2) We design a novel ISSM whose system states can effectively function as queries in complex 3D indoor detection tasks. In addition, we develop an ISSM-based decoder tailored to the characteristics of 3D point clouds, fully harnessing the potential of the ISSM for 3D object detection.
-  </p>
-  <p>(3) Extensive experimental results demonstrate that the proposed SSM-based 3D object detection method consistently enhances the performance of baseline detectors on two challenging indoor datasets, i.e., ScanNet V2 (Dai et al., 2017) and SUN RGB-D (Song et al., 2015). Moreover, comprehensive ablation studies validate the effectiveness of each designed component.
-  </p>
-  <br>
-  <h2>Paper</h2>
-  <hr>
-  <table id="tbInformation" width="100%">
-    <tbody>
-      <tr>
-        <td rowspan="3">
-          <div class="shadow">
-            <img src="./figures/firstpage.png" width="170">
-          </div>
-        </td>
-        <td>
-          <div class="paper">
-            <p>
-              <b>State Space Model Meets Transformer: A New Paradigm for 3D Object Detection</b>
-              <br>
-              Chuxin Wang, Wenfei Yang, Xiang Liu, Tianzhu Zhang
-              <br>
-              ICLR 2025
-              <br>
-              <br>
-              <!-- <a href="https://ieeexplore.ieee.org/abstract/document/10124821">[PDF]</a> -->
-              <a href="https://github.com/OpenSpaceAI/DEST3D">[Code]</a>
-              <a href="https://openreview.net/forum?id=Tisu1L0Jwt">[Paper]</a> 
-              <a href="https://chuxwa.github.io/project_DEST/">[Website]</a>
-              <a href="https://chuxwa.github.io/project_DEST/files/poster.pdf">[Poster]</a>
-              <a href="https://chuxwa.github.io/project_DEST/files/bib.txt">[BibTeX]</a>
-            </p>
-          </div>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-
-  <br>
-
-  <p align="center">
-    <font color="#999999">Last update: March 17, 2025</font>
-  </p>
-
-  <div class="jvectormap-tip"></div>
-
+    <!-- Scripts -->
+    <script src="./jquery-1.12.4.min.js"></script>
+    <script src="./paper-renderer.js"></script>
+    <script>
+        // Initialize the paper renderer when DOM is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            window.paperRenderer.init('./paper-data.json');
+        });
+    </script>
 </body>
-
 </html>

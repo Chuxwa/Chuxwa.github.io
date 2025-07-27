@@ -1,4 +1,9 @@
 news:
+  - date: "Jul. 2025"
+    title: "SA3Det++: Side-Aware Quality Estimation for Semi-Supervised 3D Object Detection"
+    link: "https://chuxwa.github.io/project_SA3Det/"
+    venue: "TPAMI 2025"
+
   - date: "Jun. 2025"
     title: "StruMamba3D: Exploring Structural Mamba for Self-supervised Point Cloud Representation Learning"
     link: "https://arxiv.org/pdf/2506.21541"
