@@ -1,6 +1,7 @@
 news:
   - date: "Feb. 2026"
     title: "GeoGuide: Hierarchical Geometric Guidance for Open-Vocabulary 3D Semantic Segmentation"
+    link: "https://arxiv.org/abs/2603.26260"
     venue: "CVPR 2026"
 
   - date: "Feb. 2026"
@@ -14,10 +15,12 @@ news:
 
   - date: "Dec. 2025"
     title: "PointChain: Learning Generalizable Point Cloud Representations via Structural Chain Modeling"
+    link: "https://ojs.aaai.org/index.php/AAAI/article/view/37961"
     venue: "AAAI 2026"
 
   - date: "Dec. 2025"
     title: "State Space Models for Long-Term Temporal Context in 3D Single Object Tracking"
+    link: "https://ieeexplore.ieee.org/document/11223714"
     venue: "TCSVT 2025"
 
   - date: "Aug. 2025"
@@ -37,6 +40,7 @@ news:
 
   - date: "Jun. 2025"
     title: "Gaussian Variation Field Diffusion for High-fidelity Video-to-4D Synthesis"
+    link: "https://arxiv.org/abs/2507.23785"
     venue: "ICCV 2025"
 
   - date: "May 2025"
