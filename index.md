@@ -12,11 +12,11 @@ cover: true
 
 <h2 id="about"><span style="color:rgb(237, 118, 74); font-size: 1.5em;">Biography</span></h2>
 
-Hi! I received my PhD degree from the Department of Automation at [University of Science and Technology of China](https://www.ustc.edu.cn/), advised by Prof. [Weiren Wu](https://en.wikipedia.org/wiki/Wu_Weiren) and [Tianzhu Zhang](https://scholar.google.com/citations?user=9sCGe-gAAAAJ&hl=zh-CN). I am currently working at [Tongyi Lab](https://tongyi.aliyun.com/), Alibaba Group, as a member of the Wan team.
+Hi! I am a researcher at the Wan team, [Tongyi Lab](https://tongyi.aliyun.com/), Alibaba Group. My research primarily focuses on <strong style="color:rgb(240, 92, 38);">multimodal large models</strong>, <strong style="color:rgb(240, 92, 38);">video generation</strong>, and <strong style="color:rgb(240, 92, 38);">image generation</strong>.
 
-My research primarily focuses on <strong style="color:rgb(240, 92, 38);">multimodal large models</strong>, <strong style="color:rgb(240, 92, 38);">video generation</strong>, and <strong style="color:rgb(240, 92, 38);">image generation</strong>. Previously, my research covered 3D computer vision, including 3D foundation models, self-supervised/semi-supervised learning, 3D scene understanding, and representation learning.
+Previously, I received my PhD degree from the Department of Automation at [University of Science and Technology of China](https://www.ustc.edu.cn/), advised by Prof. [Weiren Wu](https://en.wikipedia.org/wiki/Wu_Weiren) and [Tianzhu Zhang](https://scholar.google.com/citations?user=9sCGe-gAAAAJ&hl=zh-CN). During my PhD, my research covered <strong style="color:rgb(240, 92, 38);">spatial intelligence</strong> and <strong style="color:rgb(240, 92, 38);">foundation models</strong>.
 
-Previously, I interned with the Visual Computing Group at [Microsoft Research Asia](https://www.microsoft.com/en-us/research/lab/microsoft-research-asia/) (2020-2021) and [Deep Space Exploration Laboratory](http://www.dsel.cc/#/spaceFile/index) (2024-2025).
+I interned with the Visual Computing Group at [Microsoft Research Asia](https://www.microsoft.com/en-us/research/lab/microsoft-research-asia/) (2020-2021) and [Deep Space Exploration Laboratory](http://www.dsel.cc/#/spaceFile/index) (2024-2025).
 
 <div style="height: 10px;"></div> <!-- 空行 -->
 **News 🔥**
@@ -65,10 +65,10 @@ Previously, I interned with the Visual Computing Group at [Microsoft Research As
 </style>
 
 <div class="experience-item">
-  <span class="experience-date">Dec. 2025 - Now:</span> Algorithm Engineer, Tongyi Lab (Wan Team)
+  <span class="experience-date">Dec. 2025 - Now:</span> Researcher, Tongyi Lab (Wan Team)
 </div>
 <div class="experience-item">
-  <span class="experience-date">Feb. 2024 - Jun. 2025:</span> Algorithm development intern, DSEL
+  <span class="experience-date">Feb. 2024 - Jun. 2025:</span> Research intern, DSEL
 </div>
 <div class="experience-item">
   <span class="experience-date">Sep. 2021 - Jun. 2025:</span> PhD Student, USTC
