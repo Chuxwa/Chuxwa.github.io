@@ -1,12 +1,42 @@
 news:
+  - date: "Feb. 2026"
+    title: "GeoGuide: Hierarchical Geometric Guidance for Open-Vocabulary 3D Semantic Segmentation"
+    venue: "CVPR 2026"
+
+  - date: "Feb. 2026"
+    title: "ComPose: A Unified Completion-Pose Framework with Geometric Relation Modeling for Category-Level Object Pose Estimation"
+    venue: "CVPR 2026"
+
+  - date: "Jan. 2026"
+    title: "ScaleDepth: Decomposing Metric Depth Estimation into Scale Prediction and Relative Depth Estimation"
+    link: "https://arxiv.org/abs/2407.08187"
+    venue: "TCSVT 2026"
+
+  - date: "Dec. 2025"
+    title: "PointChain: Learning Generalizable Point Cloud Representations via Structural Chain Modeling"
+    venue: "AAAI 2026"
+
+  - date: "Dec. 2025"
+    title: "State Space Models for Long-Term Temporal Context in 3D Single Object Tracking"
+    venue: "TCSVT 2025"
+
+  - date: "Aug. 2025"
+    title: "ER-Depth: Enhancing the Robustness of Self-Supervised Monocular Depth Estimation in Challenging Scenes"
+    link: "https://dl.acm.org/doi/10.1145/3750050"
+    venue: "TOMM 2025"
+
   - date: "Jul. 2025"
     title: "SA3Det++: Side-Aware Quality Estimation for Semi-Supervised 3D Object Detection"
-    link: "https://chuxwa.github.io/project_SA3Det/"
+    link: "https://chuxwa.github.io/projects/sa3det/"
     venue: "TPAMI 2025"
 
   - date: "Jun. 2025"
     title: "StruMamba3D: Exploring Structural Mamba for Self-supervised Point Cloud Representation Learning"
     link: "https://arxiv.org/pdf/2506.21541"
+    venue: "ICCV 2025"
+
+  - date: "Jun. 2025"
+    title: "Gaussian Variation Field Diffusion for High-fidelity Video-to-4D Synthesis"
     venue: "ICCV 2025"
 
   - date: "May 2025"
@@ -52,4 +82,9 @@ news:
   - date: "May. 2023"
     title: "Long-Short Range Adaptive Transformer With Dynamic Sampling for 3D Object Detection"
     link: "https://ieeexplore.ieee.org/abstract/document/10124821"
-    venue: "TCSVT 2023" 
+    venue: "TCSVT 2023"
+
+  - date: "Mar. 2021"
+    title: "Style-based Point Generator with Adversarial Rendering for Point Cloud Completion"
+    link: "https://arxiv.org/abs/2103.02535"
+    venue: "CVPR 2021"

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<!-- saved from url=(0036)https://chuxwa.github.io/projects/se-ornet/ -->
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <meta name="keywords" content="SE-ORNet">
+  <meta name="description" content="SE-ORNet">
+  <link href="./main.css" media="all" rel="stylesheet">
+  <link rel="icon" type="image/png" href="https://chuxwa.github.io/projects/se-ornet/">
+  <title>SE-ORNet:Self-Ensembling Orientation-aware Network for Unsupervised Point Cloud Shape
+    Correspondence</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com/">
+  <link href="./google-fonts.css" rel="stylesheet">
+
+</head>
+
+<!-- cover -->
+
+<body>
+  <h3 align="center">CVPR 2023</h3>
+  <h1 align="center">SE-ORNet:Self-Ensembling Orientation-aware Network for Unsupervised Point Cloud Shape
+    Correspondence</h1>
+
+  <p align="center" style="font-size:18px">
+    <a href="https://github.com/JiachengDeng"><span>Jiacheng Deng</span></a><sup>1</sup>*
+    <a href="https://chuxwa.github.io/"><span>Chuxin Wang</span></a><sup>1</sup>*
+    <a href="https://github.com/peoplelu"><span>Jiahao Lu</span></a><sup>1</sup>
+    <a href="https://github.com/Hevans123"><span>Jianfeng He</span></a><sup>1</sup>
+    <a href="http://staff.ustc.edu.cn/~tzzhang/"><span>Tianzhu Zhang</span></a><sup>1,3</sup>
+    <span>Jiyang Yu</span></a><sup>2</sup>
+    <span>Zhe Zhang</span></a><sup>3</sup>
+  </p>
+  <p align="center" style="font-size:18px">
+    <sup>1</sup><a href="http://en.ustc.edu.cn/">University of Science and Technology of China</a>   <sup>2</sup><a
+      href="https://www.cast.cn/english">China Academy of Space Technology</a>  
+    <br><br> <sup>3</sup><a href="https://special.zhaopin.com/Flying/pagepublish/140408317/index.html#">Deep Space
+      Exploration Lab</a>
+  </p>
+  <p>
+
+  </p>
+  <p align="center">
+    *Equal contribution
+  </p>
+
+
+  <p align="center">
+    <a href="https://arxiv.org/abs/2304.05395">[Paper]</a>
+    <a href="https://github.com/OpenSpaceAI/SE-ORNet">[Code]</a>
+    <a href="https://chuxwa.github.io/projects/se-ornet/">[Website]</a>
+    <a href="https://chuxwa.github.io/projects/se-ornet/files/bib.txt">[BibTeX]</a>
+  </p>
+  <h2>Abstract</h2>
+  <hr>
+
+  <p>
+    Unsupervised point cloud shape correspondence aims to obtain dense point-to-point correspondences between point
+    clouds without manually annotated pairs. However, humans and some animals have bilateral symmetry and various
+    orientations, which lead to severe mispredictions of symmetrical parts. Besides, point cloud noise disrupts
+    consistent representations for point cloud and thus degrades the shape correspondence accuracy. To address the above
+    issues, we propose a Self-Ensembling ORientation-aware Network termed SE-ORNet. The key of our approach is to
+    exploit an orientation estimation module with a domain adaptive discriminator to align the orientations of point
+    cloud pairs, which significantly alleviates the mispredictions of symmetrical parts. Additionally, we design a
+    selfensembling framework for unsupervised point cloud shape correspondence. In this framework, the disturbances of
+    point cloud noise are overcome by perturbing the inputs of the student and teacher networks with different data
+    augmentations and constraining the consistency of predictions. Extensive experiments on both human and animal
+    datasets show that our SE-ORNet can surpass state-of-the-art unsupervised point cloud shape correspondence methods.
+  </p>
+  <br>
+
+  <h2>Video</h2>
+  <hr>
+  <p align="center">
+    <iframe width="960" height="540" src="https://www.youtube.com/embed/P6tZDed1ahg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </p>
+
+  <h2>Overview</h2>
+  <hr>
+  <p align="center">
+    <img src="./figures/framework-00.png" width="850" alt="centered image">
+  </p>
+
+
+  <p>
+    The overview of our self-ensembling orientation-aware network for unsupervised point cloud shape correspondence. Xs
+    is generated from the raw source point cloud X by random rotation and Gaussian noise, while Ys is only augmented by
+    Gaussian noise. We design the Orientation Estimation Module to estimate the rotation θ of the source with respect to
+    the target and align the point cloud in position space. Afterward, the aligned point cloud pairs are input to the
+    teacher and student models, respectively, and the correspondence is predicted through a DGCNN backbone. Finally, we
+    supervise the student model by the consistency losses and the construction losses, and the teacher model updates the
+    parameters using the exponential moving average (EMA) strategy. The gradient reversal layer (GRL) acts as the
+    identity function during forward propagation, but is multiplied by -1 during backward propagation.
+  </p>
+  <br>
+
+  <br>
+  <h2>Results</h2>
+  <hr>
+  <p align="center">
+    <img src="./figures/human-00.png" width="700" class="center">
+  </p>
+  <p align="center">
+    Visual Comparison on SHREC’19 test set.
+  </p>
+  <p align="center">
+    <img src="./figures/animal-00.png" width="700" class="center">
+  </p>
+
+  <p align="center">
+    Visual Comparison on TOSCA test set.
+  </p>
+  <br>
+
+
+  <h2>Paper</h2>
+  <hr>
+
+
+  <table id="tbInformation" width="100%">
+    <tbody>
+      <tr>
+        <td rowspan="3">
+          <div class="shadow">
+            <img src="./figures/firstpage.png" width="170">
+          </div>
+
+        </td>
+        <td>
+          <div class="paper">
+            <p>
+              <b>SE-ORNet:Self-Ensembling Orientation-aware Network for Unsupervised Point Cloud Shape
+                Correspondence</b>
+              <br>
+              Jiacheng Deng*, Chuxin Wang*, Jiahao Lu, Jianfeng He, Tianzhu Zhang, Jiyang Yu, Zhe Zhang
+              <br>
+              Conference on Computer Vision and Pattern Recongnition (CVPR), 2023
+              <br>
+              <br>
+              <a href="https://arxiv.org/abs/2304.05395">[PDF]</a>
+              <a href="https://github.com/OpenSpaceAI/SE-ORNet">[Code]</a>
+              <a href="https://chuxwa.github.io/projects/se-ornet/">[Website]</a>
+              <a href="https://chuxwa.github.io/projects/se-ornet/files/cvpr23-poster-se-ornet.pdf">[Poster]</a>
+              <a href="https://chuxwa.github.io/projects/se-ornet/files/bib.txt">[BibTeX]</a>
+            </p>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <br>
+
+  <p align="center">
+    <font color="#999999">Last update: Mar, 2021</font>
+  </p>
+
+  <div class="jvectormap-tip"></div>
+
+</body>
+
+</html>

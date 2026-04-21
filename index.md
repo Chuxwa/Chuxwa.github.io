@@ -12,9 +12,9 @@ cover: true
 
 <h2 id="about"><span style="color:rgb(237, 118, 74); font-size: 1.5em;">Biography</span></h2>
 
-Hi! I am a PhD student in Department of Automation at [University of Science and Technology of China](https://www.ustc.edu.cn/), advised by Prof. [Weiren Wu](https://en.wikipedia.org/wiki/Wu_Weiren) and [Tianzhu Zhang](https://scholar.google.com/citations?user=9sCGe-gAAAAJ&hl=zh-CN).
+Hi! I received my PhD degree from the Department of Automation at [University of Science and Technology of China](https://www.ustc.edu.cn/), advised by Prof. [Weiren Wu](https://en.wikipedia.org/wiki/Wu_Weiren) and [Tianzhu Zhang](https://scholar.google.com/citations?user=9sCGe-gAAAAJ&hl=zh-CN). I am currently working at [Tongyi Lab](https://tongyi.aliyun.com/), Alibaba Group, as a member of the Wan team.
 
-My research primarily focuses on <strong style="color:rgb(240, 92, 38);">3D computer vision</strong>, including 3D foundation models, self-supervised/semi-supervised learning, 3D scene understanding, and representation learning. 
+My research primarily focuses on <strong style="color:rgb(240, 92, 38);">multimodal large models</strong>, <strong style="color:rgb(240, 92, 38);">video generation</strong>, and <strong style="color:rgb(240, 92, 38);">image generation</strong>. Previously, my research covered 3D computer vision, including 3D foundation models, self-supervised/semi-supervised learning, 3D scene understanding, and representation learning.
 
 Previously, I interned with the Visual Computing Group at [Microsoft Research Asia](https://www.microsoft.com/en-us/research/lab/microsoft-research-asia/) (2020-2021) and [Deep Space Exploration Laboratory](http://www.dsel.cc/#/spaceFile/index) (2024-2025).
 
@@ -65,10 +65,13 @@ Previously, I interned with the Visual Computing Group at [Microsoft Research As
 </style>
 
 <div class="experience-item">
-  <span class="experience-date">Feb. 2024 - Now:</span> Algorithm development intern, DSEL
+  <span class="experience-date">Dec. 2025 - Now:</span> Algorithm Engineer, Tongyi Lab (Wan Team)
 </div>
 <div class="experience-item">
-  <span class="experience-date">Sep. 2021 - Now:</span> PhD Student, USTC
+  <span class="experience-date">Feb. 2024 - Jun. 2025:</span> Algorithm development intern, DSEL
+</div>
+<div class="experience-item">
+  <span class="experience-date">Sep. 2021 - Jun. 2025:</span> PhD Student, USTC
 </div>
 <div class="experience-item">
   <span class="experience-date">Jul. 2020 - Jun. 2021:</span> Research intern, MSRA (VC Group)
@@ -82,6 +85,7 @@ Previously, I interned with the Visual Computing Group at [Microsoft Research As
 <div class="logo" style="display: flex; justify-content: left; align-items: center; gap: 20px;">
   <!-- <a href="https://en.nwpu.edu.cn/"><img src="images/logo_NWPU.png" alt="NWPU" style="height: 100px; width: auto;"></a> -->
   <!-- <a href="https://www.huawei.com/en/"><img src="images/logo_HUAWEI.jpeg" alt="HUAWEI" style="height: 100px; width: auto;"></a> -->
+  <a><img src="assets/img/logo-wan.webp" alt="Wan" style="height: 120px; width: auto;"></a>
   <a><img src="assets/img/logo-ustc.png" alt="USTC" style="height: 120px; width: auto;"></a>
   <a><img src="assets/img/logo-msra.png" alt="MSRA" style="height: 100px; width: auto;"></a>
   <a><img src="assets/img/logo-dsel.png" alt="DSEL" style="height: 130px; width: auto;"></a>
@@ -96,7 +100,7 @@ Previously, I interned with the Visual Computing Group at [Microsoft Research As
 {% for pub in site.data.publications.publications %}
   <tr style="border: none;">
     <td style="width: 120px; text-align: center; border: none; vertical-align: middle;">
-      <img src="{{ pub.image }}" alt="论文图片" style="width: 100%; max-width: 180px; min-width: 100px; height: auto; object-fit: contain; border-radius: 8px;" onerror="this.onerror=null;this.src='https://via.placeholder.com/180x60?text=No+Image';"/>
+      <img src="{{ pub.image }}" alt="论文图片" style="width: 100%; max-width: 180px; min-width: 100px; height: auto; object-fit: contain; border-radius: 8px; background: #f5f5f5;"/>
     </td>
     <td style="border: none; vertical-align: middle;">
       <div style="font-size: 1.1em; font-weight: bold; margin-bottom: 2px;">
@@ -144,7 +148,7 @@ Previously, I interned with the Visual Computing Group at [Microsoft Research As
 - International Conference on Artificial Intelligence and Statistics (AISTATS)
 
 *Journal Reviewer*
-<!-- - IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI) -->
+- IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI)
 - IEEE Transactions on Image Processing (TIP)
 - IEEE Transactions on Circuits and Systems for Video Technology (TCSVT)
 
@@ -163,6 +167,15 @@ Previously, I interned with the Visual Computing Group at [Microsoft Research As
 </style>
 
 <div class="honor-item">
+  <span class="honor-date">Oct. 2025:</span> <strong style="color:rgb(240, 92, 38);">National Scholarship of China (PhD)</strong>
+</div>
+<div class="honor-item">
+  <span class="honor-date">Oct. 2025:</span> Outstanding Student, Deep Space Exploration Laboratory, USTC
+</div>
+<div class="honor-item">
+  <span class="honor-date">Oct. 2025:</span> First-Class Academic Scholarship for PhD Students, USTC
+</div>
+<div class="honor-item">
   <span class="honor-date">Oct. 2024:</span> First-Class Academic Scholarship for PhD Students, USTC
 </div>
 <div class="honor-item">
@@ -173,6 +186,9 @@ Previously, I interned with the Visual Computing Group at [Microsoft Research As
 </div>
 <div class="honor-item">
   <span class="honor-date">Oct. 2023:</span> <strong style="color:rgb(240, 92, 38);">National Scholarship of China (Master)</strong>
+</div>
+<div class="honor-item">
+  <span class="honor-date">Jun. 2022:</span> <strong style="color:rgb(240, 92, 38);">1st Place, International Urban-Scale Point Cloud 3D Semantic Segmentation Challenge</strong>
 </div>
 <div class="honor-item">
   <span class="honor-date">Oct. 2022:</span> First-Class Academic Scholarship for Master Students, USTC
