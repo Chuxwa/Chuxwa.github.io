@@ -3,7 +3,7 @@ publications:
     authors: "<b>Chuxin Wang</b>, Yixin Zha, Wenfei Yang, Tianzhu Zhang"
     venue: "ICCV 2025"
     year: 2025
-    image: "assets/img/logo-iccv.png"
+    image: "/assets/img/logo-iccv.png"
     links:
       paper: "https://arxiv.org/pdf/2506.21541"
       webpage: "https://chuxwa.github.io/projects/strumamba3d/"
@@ -13,7 +13,7 @@ publications:
     authors: "<b>Chuxin Wang</b>, Wenfei Yang, Xiang Liu, Tianzhu Zhang"
     venue: "ICLR 2025"
     year: 2025
-    image: "assets/img/logo-dest.png"
+    image: "/assets/img/logo-dest.png"
     links:
       paper: "https://openreview.net/forum?id=Tisu1L0Jwt"
       webpage: "https://chuxwa.github.io/projects/dest/"
@@ -25,7 +25,7 @@ publications:
     authors: "<b>Chuxin Wang</b>, Yixin Zha, Jianfeng He, Wenfei Yang, Tianzhu Zhang"
     venue: "TIP 2024"
     year: 2024
-    image: "assets/img/logo-otmae3d.png"
+    image: "/assets/img/logo-otmae3d.png"
     links:
       paper: "https://ieeexplore.ieee.org/document/10815033"
       webpage: "https://chuxwa.github.io/projects/otmae3d/"
@@ -36,7 +36,7 @@ publications:
     authors: "<b>Chuxin Wang</b>, Wenfei Yang, Tianzhu Zhang"
     venue: "ICCV 2023"
     year: 2023
-    image: "assets/img/logo-nesie.png"
+    image: "/assets/img/logo-nesie.png"
     links:
       paper: "https://openaccess.thecvf.com/content/ICCV2023/papers/Wang_Not_Every_Side_Is_Equal_Localization_Uncertainty_Estimation_for_Semi-Supervised_ICCV_2023_paper.pdf"
       webpage: "https://chuxwa.github.io/projects/nesie/"
@@ -47,7 +47,7 @@ publications:
     authors: "<b>Chuxin Wang</b>, Jiacheng Deng, Jianfeng He, Tianzhu Zhang, Zhe Zhang, Yongdong Zhang"
     venue: "TCSVT 2023"
     year: 2023
-    image: "assets/img/logo-leadnet.png"
+    image: "/assets/img/logo-leadnet.png"
     links:
       paper: "https://ieeexplore.ieee.org/abstract/document/10124821"
       webpage: "https://chuxwa.github.io/projects/leadnet/"
@@ -57,15 +57,15 @@ publications:
     authors: "Luyang Wang*, <b>Chuxin Wang*</b>, Qiao Li, Tianzhu Zhang"
     venue: "AAAI 2026"
     year: 2026
-    image: "assets/img/logo-pamba.png"
+    image: "/assets/img/logo-pamba.png"
     links:
-      paper: ""
+      paper: "https://ojs.aaai.org/index.php/AAAI/article/view/37961"
 
   - title: "Exploring Semantic Masked Autoencoder for Self-supervised Point Cloud Understanding"
     authors: "Yixin Zha*, <b>Chuxin Wang*</b>, Wenfei Yang, Tianzhu Zhang"
     venue: "IJCAI 2025"
     year: 2025
-    image: "assets/img/logo-ijcai.png"
+    image: "/assets/img/logo-ijcai.png"
     links:
       paper: "https://arxiv.org/pdf/2506.21541"
 
@@ -73,7 +73,7 @@ publications:
     authors: "Jiacheng Deng*, <b>Chuxin Wang*</b>, Jiahao Lu, Jianfeng He, Tianzhu Zhang, Jiyang Yu, Zhe Zhang"
     venue: "CVPR 2023"
     year: 2023
-    image: "assets/img/logo-se-ornet.png"
+    image: "/assets/img/logo-se-ornet.png"
     links:
       paper: "https://openaccess.thecvf.com/content/CVPR2023/papers/Deng_SE-ORNet_Self-Ensembling_Orientation-Aware_Network_for_Unsupervised_Point_Cloud_Shape_Correspondence_CVPR_2023_paper.pdf"
       webpage: "https://chuxwa.github.io/projects/se-ornet/"
@@ -85,7 +85,7 @@ publications:
     authors: "Chulin Xie*, <b>Chuxin Wang*</b>, Bo Zhang, Hao Yang, Dong Chen, Fang Wen"
     venue: "CVPR 2021"
     year: 2021
-    image: "assets/img/logo-sparenet.png"
+    image: "/assets/img/logo-sparenet.png"
     links:
       paper: "https://arxiv.org/abs/2103.02535"
       webpage: "https://alphapav.github.io/SpareNet/"
@@ -97,15 +97,17 @@ publications:
     authors: "Bowen Zhang, Sicheng Xu, <b>Chuxin Wang</b>, Jiaolong Yang, Feng Zhao, Dong Chen, Baining Guo"
     venue: "ICCV 2025"
     year: 2025
-    image: "assets/img/logo-iccv.png"
+    image: "/assets/img/logo-iccv.png"
     links:
-      paper: ""
+      paper: "https://arxiv.org/abs/2507.23785"
+      webpage: "https://gvfdiffusion.github.io/"
+      code: "https://github.com/ForeverFancy/GVFDiffusion"
 
   - title: "SA3Det++: Side-Aware Quality Estimation for Semi-Supervised 3D Object Detection"
     authors: "Wenfei Yang, <b>Chuxin Wang+</b>, Tianzhu Zhang, Yongdong Zhang, Feng Wu"
     venue: "TPAMI 2025"
     year: 2025
-    image: "assets/img/logo-sa3det.png"
+    image: "/assets/img/logo-sa3det.png"
     links:
       webpage: "https://chuxwa.github.io/projects/sa3det/"
       code: "https://github.com/OpenSpaceAI/Nesie"
@@ -114,15 +116,15 @@ publications:
     authors: "Xujing Tao, <b>Chuxin Wang</b>, Yubo Ai, Zhixin Cheng, Zhuoyuan Li, Yujia Chen, Xinjun Li, Qiao Li, Wenfei Yang, Tianzhu Zhang"
     venue: "CVPR 2026"
     year: 2026
-    image: "assets/img/logo-sparenet.png"
+    image: "/assets/img/logo-sparenet.png"
     links:
-      paper: ""
+      paper: "https://arxiv.org/abs/2603.26260"
 
   - title: "ComPose: A Unified Completion-Pose Framework with Geometric Relation Modeling for Category-Level Object Pose Estimation"
     authors: "Huan Ren, Yihan Chen, <b>Chuxin Wang</b>, Nailong Liu, Wenfei Yang, Tianzhu Zhang"
     venue: "CVPR 2026"
     year: 2026
-    image: "assets/img/logo-sparenet.png"
+    image: "/assets/img/logo-sparenet.png"
     links:
       paper: ""
 
@@ -130,7 +132,7 @@ publications:
     authors: "Yixin Zha, <b>Chuxin Wang</b>, Wenfei Yang, Xiang Liu, Tianzhu Zhang, Feng Wu"
     venue: "ICML 2025"
     year: 2025
-    image: "assets/img/logo-petl.png"
+    image: "/assets/img/logo-petl.png"
     links:
       paper: "https://openreview.net/pdf?id=0gX9f5xTrD"
 
@@ -138,7 +140,7 @@ publications:
     authors: "Jiahao Lu, Jiacheng Deng, <b>Chuxin Wang</b>, Jianfeng He, Tianzhu Zhang"
     venue: "ICCV 2023"
     year: 2023
-    image: "assets/img/logo-qrt3d.png"
+    image: "/assets/img/logo-qrt3d.png"
     links:
       paper: "https://openaccess.thecvf.com/content/ICCV2023/papers/Lu_Query_Refinement_Transformer_for_3D_Instance_Segmentation_ICCV_2023_paper.pdf"
 
@@ -146,7 +148,7 @@ publications:
     authors: "Zhuoyuan Li, Yubo Ai, Jiahao Lu, <b>Chuxin Wang</b>, Jiacheng Deng, Hanzhi Chang, Yanzhe Liang, Wenfei Yang, Shifeng Zhang, Tianzhu Zhang"
     venue: "AAAI 2025"
     year: 2025
-    image: "assets/img/logo-pamba.png"
+    image: "/assets/img/logo-pamba.png"
     links:
       paper: "https://arxiv.org/abs/2406.17442"
 
@@ -154,15 +156,15 @@ publications:
     authors: "Jie Xiao, Yinchao Ma, Yuyang Tang, <b>Chuxin Wang</b>, Tianzhu Zhang"
     venue: "TCSVT 2025"
     year: 2025
-    image: "assets/img/logo-leadnet.png"
+    image: "/assets/img/logo-leadnet.png"
     links:
-      paper: ""
+      paper: "https://ieeexplore.ieee.org/document/11223714"
 
   - title: "ScaleDepth: Decomposing Metric Depth Estimation into Scale Prediction and Relative Depth Estimation"
     authors: "Ruijie Zhu, <b>Chuxin Wang</b>, Ziyang Song, Li Liu, Tianzhu Zhang, Yongdong Zhang"
     venue: "TCSVT 2026"
     year: 2026
-    image: "assets/img/logo-scaledepth.png"
+    image: "/assets/img/logo-scaledepth.png"
     links:
       paper: "https://arxiv.org/abs/2407.08187"
       webpage: "https://ruijiezhu94.github.io/ScaleDepth"
@@ -172,7 +174,7 @@ publications:
     authors: "Ziyang Song*, Ruijie Zhu*, <b>Chuxin Wang</b>, Jiacheng Deng, Jianfeng He, Tianzhu Zhang"
     venue: "TOMM 2025"
     year: 2025
-    image: "assets/img/logo-ecdepth.png"
+    image: "/assets/img/logo-ecdepth.png"
     links:
       paper: "https://dl.acm.org/doi/10.1145/3750050"
       webpage: "https://ruijiezhu94.github.io/ERDepth_page/"
