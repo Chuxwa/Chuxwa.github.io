@@ -78,7 +78,7 @@ permalink:             /:categories/:year-:month-:day-:title/
 # ---------------------------------------------------------------------------------------
 
 # This will use the gem `jekyll-theme-hydejack`, as defined in the sibling `Gemfile`.
-theme: jekyll-theme-hydejack
+# theme: jekyll-theme-hydejack
 
 # You can uncomment `theme` above and replace it with `remote_theme` here iff you are using the 
 # `jekyll-remote-theme` plugin (which is the case when using the legacy GitHub Pages pipeline).
@@ -327,6 +327,7 @@ plugins:
   - jekyll-readme-index
   - jekyll-redirect-from
   - jekyll-relative-links
+  - jekyll-remote-theme
   - jekyll-seo-tag
   - jekyll-sitemap
   - jekyll-titles-from-headings
